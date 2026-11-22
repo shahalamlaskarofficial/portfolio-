@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="Shahalam Laskar — Developer. Builder. Digital Creator. Cinematic 3D developer portfolio featuring Android systems, voice AI, and interactive web engineering." />
+  <meta name="description" content="Shahalam Laskar — Developer. Builder. Digital Architect. Interactive 3D technology portfolio featuring Android systems, voice AI, and modern web engineering." />
   <meta name="theme-color" content="#02040a" />
-  <title>Shahalam Laskar — Digital Architect &amp; Developer</title>
+  <title>Shahalam Laskar — Developer &amp; Digital Architect</title>
 
-  <!-- Illuminated SL Monogram Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%237dd3fc'/%3E%3Cstop offset='100%25' stop-color='%232563eb'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%2302040a'/%3E%3Cpolygon points='32,5 56,18.5 56,45.5 32,59 8,45.5 8,18.5' fill='none' stroke='url(%23g)' stroke-width='2.8'/%3E%3Cpath d='M30 21H19l-2 9h10l-1.5 11H14l1-5h7l.5-3H13l2.5-15h15zM35 21h5.5L38 36h9.5l-1 5H32z' fill='url(%23g)'/%3E%3C/svg%3E" />
+  <!-- Tech Core Favicon (No Personal Monogram) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3CradialGradient id='c' cx='50%25' cy='50%25' r='50%25'%3E%3Cstop offset='0%25' stop-color='%23e0f2fe'/%3E%3Cstop offset='50%25' stop-color='%2338bdf8'/%3E%3Cstop offset='100%25' stop-color='%232563eb'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%2302040a'/%3E%3Cellipse cx='32' cy='32' rx='24' ry='10' fill='none' stroke='%2338bdf8' stroke-width='2.2' transform='rotate(-28 32 32)'/%3E%3Cellipse cx='32' cy='32' rx='24' ry='10' fill='none' stroke='%232563eb' stroke-width='2.2' transform='rotate(28 32 32)'/%3E%3Ccircle cx='32' cy='32' r='9' fill='url(%23c)'/%3E%3C/svg%3E" />
 
   <!-- Editorial & Futuristic Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,11 +27,11 @@
     :root {
       --bg-void: #02040a;
       --bg-deep: #050a16;
-      --surface: rgba(8, 15, 30, 0.62);
-      --surface-strong: rgba(10, 19, 38, 0.86);
-      --surface-pill: rgba(9, 17, 34, 0.72);
+      --surface: rgba(8, 15, 30, 0.64);
+      --surface-strong: rgba(10, 19, 38, 0.88);
+      --surface-pill: rgba(9, 17, 34, 0.74);
       --border: rgba(96, 165, 250, 0.16);
-      --border-strong: rgba(56, 189, 248, 0.45);
+      --border-strong: rgba(56, 189, 248, 0.48);
       --text: #f8fafc;
       --text-secondary: #94a3b8;
       --text-muted: #64748b;
@@ -58,9 +58,9 @@
     [data-theme="light"] {
       --bg-void: #edf3ff;
       --bg-deep: #e2ecff;
-      --surface: rgba(255, 255, 255, 0.76);
+      --surface: rgba(255, 255, 255, 0.78);
       --surface-strong: rgba(255, 255, 255, 0.94);
-      --surface-pill: rgba(255, 255, 255, 0.82);
+      --surface-pill: rgba(255, 255, 255, 0.84);
       --border: rgba(37, 99, 235, 0.16);
       --border-strong: rgba(37, 99, 235, 0.5);
       --text: #061024;
@@ -113,7 +113,7 @@
     }
 
     /* =========================================================================
-       LAYERED ATMOSPHERIC ENVIRONMENT (FIXED 3D + DEPTH GRID + FILM GRAIN)
+       LAYERED ATMOSPHERIC ENVIRONMENT
     ========================================================================= */
     .environment-backdrop {
       position: fixed;
@@ -134,7 +134,6 @@
         linear-gradient(180deg, #f4f8ff 0%, #e5efff 55%, #eef4ff 100%);
     }
 
-    /* Subtle architectural coordinate grid */
     .depth-grid {
       position: fixed;
       inset: 0;
@@ -149,17 +148,15 @@
       -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, #000 18%, transparent 80%);
     }
 
-    /* Ultra-subtle cinema film grain (zero external assets) */
     .film-grain {
       position: fixed;
       inset: 0;
       z-index: 4;
       pointer-events: none;
-      opacity: 0.032;
+      opacity: 0.03;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
     }
 
-    /* Persistent Full-Viewport Three.js Canvas */
     #worldCanvas {
       position: fixed;
       inset: 0;
@@ -169,7 +166,48 @@
       pointer-events: none;
     }
 
-    /* Desktop reactive cursor aura */
+    /* Interactive 3D Tech Ecosystem Floating Tooltip */
+    .tech-tooltip {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 170;
+      pointer-events: none;
+      padding: 8px 14px;
+      border-radius: 12px;
+      background: rgba(4, 11, 26, 0.9);
+      border: 1px solid rgba(56, 189, 248, 0.55);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55), 0 0 22px rgba(56, 189, 248, 0.35);
+      transform: translate(-50%, -125%) scale(0.92);
+      opacity: 0;
+      transition: opacity 180ms var(--ease), transform 180ms var(--ease);
+      white-space: nowrap;
+    }
+
+    .tech-tooltip.visible {
+      opacity: 1;
+      transform: translate(-50%, -135%) scale(1);
+    }
+
+    .tech-tooltip strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 0.88rem;
+      color: #f8fafc;
+      line-height: 1.2;
+    }
+
+    .tech-tooltip span {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.67rem;
+      color: #7dd3fc;
+      letter-spacing: 0.04em;
+      margin-top: 2px;
+    }
+
     .cursor-aura {
       position: fixed;
       top: 0;
@@ -189,7 +227,6 @@
       .cursor-aura { display: none; }
     }
 
-    /* Scroll Telemetry Top Bar & Side Progress Rail */
     .scroll-rail-top {
       position: fixed;
       top: 0;
@@ -211,7 +248,6 @@
       flex-direction: column;
       align-items: center;
       gap: 10px;
-      pointer-events: auto;
     }
 
     .story-dot {
@@ -262,17 +298,17 @@
     }
 
     .preloader-emblem {
-      width: 78px;
-      height: 78px;
+      width: 74px;
+      height: 74px;
       filter: drop-shadow(0 0 28px rgba(56, 189, 248, 0.8));
-      animation: emblemPulse 1.6s ease-in-out infinite;
+      animation: corePulse 1.6s ease-in-out infinite;
     }
 
     .preloader-label {
       font-family: var(--font-mono);
       font-size: 0.72rem;
-      letter-spacing: 0.28em;
-      color: rgba(147, 197, 253, 0.8);
+      letter-spacing: 0.24em;
+      color: rgba(147, 197, 253, 0.85);
       text-transform: uppercase;
     }
 
@@ -293,9 +329,9 @@
       animation: trackSweep 0.85s ease-in-out infinite;
     }
 
-    @keyframes emblemPulse {
-      0%, 100% { transform: scale(1) translateY(0); }
-      50% { transform: scale(1.06) translateY(-5px); }
+    @keyframes corePulse {
+      0%, 100% { transform: scale(1) rotate(0deg); }
+      50% { transform: scale(1.07) rotate(12deg); }
     }
 
     @keyframes trackSweep {
@@ -303,7 +339,6 @@
       100% { transform: translateX(260%); }
     }
 
-    /* Dual Shutter Page Transition */
     .shutter-wrap {
       position: fixed;
       inset: 0;
@@ -336,13 +371,13 @@
       z-index: 295;
       pointer-events: none;
       opacity: 0;
-      width: 64px;
-      height: 64px;
+      width: 62px;
+      height: 62px;
       filter: drop-shadow(0 0 24px rgba(56, 189, 248, 0.9));
     }
 
     /* =========================================================================
-       ANIMATED GLASS NAVIGATION (NO GITHUB LINK)
+       ANIMATED GLASS NAVIGATION (CLEAN WORDMARK — NO MONOGRAM)
     ========================================================================= */
     .navbar {
       position: fixed;
@@ -373,22 +408,19 @@
     .brand {
       display: inline-flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       font-family: var(--font-display);
       font-weight: 700;
-      font-size: 1.04rem;
+      font-size: 1.05rem;
       letter-spacing: -0.02em;
     }
 
-    .brand-mark {
-      width: 38px;
-      height: 38px;
-      filter: drop-shadow(0 0 14px rgba(56, 189, 248, 0.6));
-      transition: transform 320ms var(--ease);
-    }
-
-    .brand:hover .brand-mark {
-      transform: scale(1.08) rotate(-6deg);
+    .brand-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #e0f2fe 15%, var(--cyan) 55%, var(--blue) 100%);
+      box-shadow: 0 0 14px var(--cyan);
     }
 
     .nav-dock {
@@ -477,7 +509,6 @@
 
     .menu-toggle { display: none; }
 
-    /* Mobile Glass Drawer */
     .mobile-drawer {
       position: fixed;
       inset: 0;
@@ -522,7 +553,7 @@
     }
 
     /* =========================================================================
-       BUTTONS & MAGNETIC MICRO-INTERACTIONS
+       BUTTONS & MICRO-INTERACTIONS
     ========================================================================= */
     .btn {
       position: relative;
@@ -580,45 +611,47 @@
     .btn-sm { padding: 9px 18px; font-size: 0.83rem; }
 
     /* =========================================================================
-       CHAPTER 01 — IMMERSIVE 3D HERO STAGE
+       CHAPTER 01 — IMMERSIVE 3D TECHNOLOGY ECOSYSTEM HERO
     ========================================================================= */
     .hero {
       position: relative;
       min-height: 100svh;
-      padding: calc(var(--nav-h) + 30px) 0 88px;
+      padding: calc(var(--nav-h) + 26px) 0 88px;
       display: flex;
       align-items: center;
       z-index: 3;
       overflow: hidden;
     }
 
-    /* Interactive Drag Zone over 3D canvas */
     .hero-drag-surface {
       position: absolute;
       inset: 0;
       z-index: 2;
       touch-action: pan-y;
+      cursor: grab;
     }
+
+    .hero-drag-surface:active { cursor: grabbing; }
 
     .hero-planet {
       position: absolute;
-      top: -110px;
-      right: -110px;
+      top: -120px;
+      right: -120px;
       width: 460px;
       height: 460px;
       border-radius: 50%;
-      background: radial-gradient(circle at 28% 34%, rgba(147, 197, 253, 0.24), rgba(10, 18, 38, 0.82) 48%, rgba(2, 4, 10, 0.96) 76%);
-      box-shadow: inset 20px 20px 55px rgba(96, 165, 250, 0.25), 0 0 90px rgba(37, 99, 235, 0.22);
-      opacity: 0.58;
+      background: radial-gradient(circle at 28% 34%, rgba(147, 197, 253, 0.22), rgba(10, 18, 38, 0.82) 48%, rgba(2, 4, 10, 0.96) 76%);
+      box-shadow: inset 20px 20px 55px rgba(96, 165, 250, 0.22), 0 0 90px rgba(37, 99, 235, 0.2);
+      opacity: 0.52;
       pointer-events: none;
       z-index: 1;
     }
 
-    [data-theme="light"] .hero-planet { opacity: 0.16; }
+    [data-theme="light"] .hero-planet { opacity: 0.14; }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.06fr 0.94fr;
+      grid-template-columns: 1.02fr 0.98fr;
       align-items: center;
       gap: 28px;
       min-height: calc(100svh - 190px);
@@ -627,7 +660,8 @@
     .hero-copy {
       position: relative;
       z-index: 4;
-      max-width: 620px;
+      max-width: 600px;
+      pointer-events: auto;
     }
 
     .status-chip {
@@ -640,7 +674,7 @@
       border: 1px solid var(--border);
       backdrop-filter: blur(14px);
       font-family: var(--font-mono);
-      font-size: 0.76rem;
+      font-size: 0.75rem;
       letter-spacing: 0.04em;
       color: var(--ice);
       margin-bottom: 22px;
@@ -687,7 +721,7 @@
 
     .hero-title .t-blue {
       display: block;
-      font-size: clamp(3.15rem, 7.1vw, 5.95rem);
+      font-size: clamp(3.15rem, 7vw, 5.85rem);
       background: linear-gradient(130deg, #bae6fd 0%, #38bdf8 34%, #2563eb 78%, #1d4ed8 100%);
       -webkit-background-clip: text;
       background-clip: text;
@@ -697,7 +731,7 @@
 
     .hero-tagline {
       font-family: var(--font-display);
-      font-size: clamp(1.12rem, 2.2vw, 1.55rem);
+      font-size: clamp(1.12rem, 2.2vw, 1.52rem);
       font-weight: 700;
       margin: 0 0 14px;
       letter-spacing: -0.02em;
@@ -711,7 +745,7 @@
     .hero-desc {
       margin: 0 0 30px;
       color: var(--text-secondary);
-      font-size: clamp(0.96rem, 1.5vw, 1.08rem);
+      font-size: clamp(0.96rem, 1.5vw, 1.07rem);
       max-width: 50ch;
     }
 
@@ -719,7 +753,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
-      margin-bottom: 36px;
+      margin-bottom: 34px;
     }
 
     .hero-telemetry {
@@ -745,14 +779,19 @@
       color: var(--text-muted);
     }
 
-    .telemetry-item strong {
+    .telemetry-item strong,
+    .telemetry-item a {
       font-family: var(--font-display);
       font-size: 0.92rem;
+      font-weight: 700;
       color: var(--text);
+      transition: color 200ms ease;
     }
 
+    .telemetry-item a:hover { color: var(--cyan); }
+
     .hero-stage-hud {
-      min-height: 450px;
+      min-height: 460px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -768,13 +807,13 @@
       gap: 8px;
       padding: 6px 14px;
       border-radius: 999px;
-      background: rgba(2, 6, 18, 0.6);
+      background: rgba(2, 6, 18, 0.62);
       border: 1px solid rgba(56, 189, 248, 0.28);
       backdrop-filter: blur(10px);
       font-family: var(--font-mono);
-      font-size: 0.7rem;
+      font-size: 0.69rem;
       letter-spacing: 0.08em;
-      color: rgba(186, 230, 253, 0.85);
+      color: rgba(186, 230, 253, 0.88);
       text-transform: uppercase;
     }
 
@@ -834,7 +873,6 @@
       width: 100%;
       height: 1px;
       background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.28), transparent);
-      margin-bottom: 0;
       position: relative;
       z-index: 3;
     }
@@ -884,7 +922,7 @@
     }
 
     /* =========================================================================
-       CHAPTER 02 — ABOUT ME (ART-DIRECTED HOLOGRAPHIC DOSSIER)
+       CHAPTER 02 — ABOUT ME
     ========================================================================= */
     .dossier-shell {
       position: relative;
@@ -934,7 +972,6 @@
       object-fit: cover;
     }
 
-    /* Animated subtle holographic scanline */
     .holo-portrait::after {
       content: "";
       position: absolute;
@@ -994,10 +1031,7 @@
       color: var(--ice);
     }
 
-    .focus-stack {
-      display: grid;
-      gap: 12px;
-    }
+    .focus-stack { display: grid; gap: 12px; }
 
     .focus-tile {
       display: flex;
@@ -1028,18 +1062,8 @@
       border: 1px solid rgba(56, 189, 248, 0.34);
     }
 
-    .focus-tile strong {
-      display: block;
-      font-size: 0.89rem;
-      margin-bottom: 2px;
-    }
-
-    .focus-tile span {
-      display: block;
-      font-size: 0.8rem;
-      color: var(--text-secondary);
-      line-height: 1.38;
-    }
+    .focus-tile strong { display: block; font-size: 0.89rem; margin-bottom: 2px; }
+    .focus-tile span { display: block; font-size: 0.8rem; color: var(--text-secondary); line-height: 1.38; }
 
     /* =========================================================================
        CHAPTER 03 — CINEMATIC 3D PROJECT SHOWCASES
@@ -1060,11 +1084,7 @@
 
     .filter-bar[hidden] { display: none; }
 
-    .chip-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
+    .chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
 
     .chip {
       padding: 7px 15px;
@@ -1135,20 +1155,10 @@
       box-shadow: var(--shadow-deep);
     }
 
-    .project-card[data-accent="blue"] {
-      --p-glow: rgba(37, 99, 235, 0.36);
-      --p-rim: rgba(56, 189, 248, 0.58);
-    }
-    .project-card[data-accent="violet"] {
-      --p-glow: rgba(124, 58, 237, 0.36);
-      --p-rim: rgba(167, 139, 250, 0.58);
-    }
-    .project-card[data-accent="emerald"] {
-      --p-glow: rgba(16, 185, 129, 0.34);
-      --p-rim: rgba(52, 211, 153, 0.56);
-    }
+    .project-card[data-accent="blue"] { --p-glow: rgba(37, 99, 235, 0.36); --p-rim: rgba(56, 189, 248, 0.58); }
+    .project-card[data-accent="violet"] { --p-glow: rgba(124, 58, 237, 0.36); --p-rim: rgba(167, 139, 250, 0.58); }
+    .project-card[data-accent="emerald"] { --p-glow: rgba(16, 185, 129, 0.34); --p-rim: rgba(52, 211, 153, 0.56); }
 
-    /* Dynamic Reactive Specular Glare */
     .project-card::before {
       content: "";
       position: absolute;
@@ -1166,7 +1176,6 @@
 
     .project-card:hover::before { opacity: 0.95; }
 
-    /* Cinematic Preview Stage */
     .project-stage {
       height: 184px;
       border-radius: 15px;
@@ -1191,9 +1200,7 @@
       transition: transform 420ms var(--ease);
     }
 
-    .project-card:hover .project-stage svg {
-      transform: scale(1.07) translateY(-4px);
-    }
+    .project-card:hover .project-stage svg { transform: scale(1.07) translateY(-4px); }
 
     .stage-badge {
       position: absolute;
@@ -1283,12 +1290,6 @@
       transform: translateZ(16px);
     }
 
-    .card-mini-group {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
     .mini-orb {
       width: 36px;
       height: 36px;
@@ -1369,7 +1370,6 @@
     }
 
     .skill-tile {
-      position: relative;
       padding: 16px;
       border-radius: 16px;
       background: var(--surface);
@@ -1412,11 +1412,7 @@
       letter-spacing: 0.06em;
     }
 
-    .skill-tile strong {
-      display: block;
-      font-size: 0.94rem;
-      margin-bottom: 6px;
-    }
+    .skill-tile strong { display: block; font-size: 0.94rem; margin-bottom: 6px; }
 
     .skill-bar {
       height: 4px;
@@ -1466,9 +1462,7 @@
       pointer-events: none;
     }
 
-    .timeline-rail-bg {
-      background: rgba(148, 163, 184, 0.18);
-    }
+    .timeline-rail-bg { background: rgba(148, 163, 184, 0.18); }
 
     .timeline-rail-fill {
       background: linear-gradient(90deg, var(--blue), var(--cyan), #e0f2fe);
@@ -1518,25 +1512,15 @@
       color: var(--cyan);
     }
 
-    .milestone-card h3 {
-      font-family: var(--font-display);
-      margin: 0;
-      font-size: 1.08rem;
-    }
-
-    .milestone-card p {
-      margin: 0;
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      line-height: 1.5;
-    }
+    .milestone-card h3 { font-family: var(--font-display); margin: 0; font-size: 1.08rem; }
+    .milestone-card p { margin: 0; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; }
 
     /* =========================================================================
-       CHAPTER 06 — TRANSMISSION (CONTACT SECTION, NO GITHUB)
+       CHAPTER 06 — CONTACT (EMAIL, PHONE +91 9101318482, INSTAGRAM)
     ========================================================================= */
     .contact-shell {
       display: grid;
-      grid-template-columns: 0.86fr 1.28fr 0.86fr;
+      grid-template-columns: 0.84fr 1.24fr 0.92fr;
       gap: 24px;
       align-items: start;
     }
@@ -1606,12 +1590,7 @@
       box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.14);
     }
 
-    .field-err {
-      font-size: 0.75rem;
-      color: var(--danger);
-      min-height: 1em;
-      margin-top: 4px;
-    }
+    .field-err { font-size: 0.75rem; color: var(--danger); min-height: 1em; margin-top: 4px; }
 
     .form-actions {
       display: flex;
@@ -1621,12 +1600,7 @@
     }
 
     .form-actions .btn-electric { flex: 1; }
-
-    .form-status {
-      font-size: 0.85rem;
-      color: var(--emerald);
-      min-height: 1.2em;
-    }
+    .form-status { font-size: 0.85rem; color: var(--emerald); min-height: 1.2em; }
 
     .channel-card {
       padding: 24px;
@@ -1659,7 +1633,16 @@
     }
 
     .channel-row strong { display: block; font-size: 0.9rem; margin-bottom: 2px; }
-    .channel-row small { display: block; font-size: 0.8rem; color: var(--text-secondary); word-break: break-all; }
+    .channel-row small,
+    .channel-row a.channel-link {
+      display: block;
+      font-size: 0.81rem;
+      color: var(--text-secondary);
+      word-break: break-all;
+      transition: color 200ms ease;
+    }
+
+    .channel-row a.channel-link:hover { color: var(--cyan); }
 
     .copy-pill {
       margin-top: 7px;
@@ -1763,11 +1746,7 @@
       backdrop-filter: blur(18px);
     }
 
-    .detail-card h2 {
-      font-family: var(--font-display);
-      margin: 0 0 14px;
-      font-size: 1.24rem;
-    }
+    .detail-card h2 { font-family: var(--font-display); margin: 0 0 14px; font-size: 1.24rem; }
 
     .detail-card ul {
       margin: 0;
@@ -1864,10 +1843,7 @@
       transition: opacity 240ms ease, transform 240ms ease;
     }
 
-    .toast.show {
-      opacity: 1;
-      transform: translateX(-50%) translateY(0);
-    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
     /* =========================================================================
        ANDROID-FIRST RESPONSIVE BREAKPOINTS
@@ -1879,32 +1855,20 @@
       .detail-cols {
         grid-template-columns: 1fr;
       }
-      .projects-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-      .timeline-track {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-      .timeline-rail-bg,
-      .timeline-rail-fill { display: none; }
-      .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 10px;
-      }
-      .hero-stage-hud {
-        min-height: 290px;
-        order: -1;
-      }
+      .projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .timeline-track { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .timeline-rail-bg, .timeline-rail-fill { display: none; }
+      .hero-grid { grid-template-columns: 1fr; gap: 12px; }
+      .hero-stage-hud { min-height: 310px; order: -1; }
       .hero-copy { max-width: 100%; }
     }
 
     @media (max-width: 760px) {
-      .nav-dock,
-      .nav-cta { display: none; }
+      .nav-dock, .nav-cta { display: none; }
       .menu-toggle { display: grid; }
       section.chapter { padding: 70px 0; }
-      .hero { padding: calc(var(--nav-h) + 14px) 0 74px; }
-      .hero-stage-hud { min-height: 260px; }
+      .hero { padding: calc(var(--nav-h) + 12px) 0 74px; }
+      .hero-stage-hud { min-height: 280px; }
       .scroll-cue { display: none; }
       .projects-grid,
       .timeline-track,
@@ -1913,14 +1877,8 @@
       .form-pair {
         grid-template-columns: 1fr;
       }
-      .skills-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-      .dossier-shell,
-      .journey-stage,
-      .detail-hero {
-        padding: 22px;
-      }
+      .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .dossier-shell, .journey-stage, .detail-hero { padding: 22px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -1933,44 +1891,51 @@
   </style>
 </head>
 <body>
-  <!-- Cinematic Preloader -->
+  <!-- Cinematic Preloader (Energy Core — No Monogram) -->
   <div class="preloader" id="preloader" aria-hidden="true">
     <div class="preloader-box">
       <svg class="preloader-emblem" viewBox="0 0 64 64" fill="none">
         <defs>
-          <linearGradient id="preG" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#bae6fd"/>
-            <stop offset="55%" stop-color="#38bdf8"/>
+          <radialGradient id="preCore" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#e0f2fe"/>
+            <stop offset="50%" stop-color="#38bdf8"/>
             <stop offset="100%" stop-color="#2563eb"/>
-          </linearGradient>
+          </radialGradient>
         </defs>
-        <polygon points="32,4 58,18 58,46 32,60 6,46 6,18" stroke="url(#preG)" stroke-width="2.4" fill="rgba(37,99,235,0.14)"/>
-        <path d="M29.5 21H18.5L16.5 30H26.5L25 41H14L15 36.2H22L22.5 33.4H13L15.4 18H30.5Z M35.5 21H41L38.4 36.2H48L47 41H32.5Z" fill="url(#preG)"/>
+        <ellipse cx="32" cy="32" rx="26" ry="11" stroke="#38bdf8" stroke-width="1.8" transform="rotate(-32 32 32)"/>
+        <ellipse cx="32" cy="32" rx="26" ry="11" stroke="#2563eb" stroke-width="1.8" transform="rotate(32 32 32)"/>
+        <circle cx="32" cy="32" r="22" stroke="rgba(186,230,253,0.35)" stroke-dasharray="4 5" stroke-width="1.2"/>
+        <circle cx="32" cy="32" r="9.5" fill="url(#preCore)"/>
       </svg>
-      <div class="preloader-label">INITIALIZING SL // ENGINE</div>
+      <div class="preloader-label">INITIALIZING TECH ECOSYSTEM</div>
       <div class="preloader-track"></div>
     </div>
   </div>
 
-  <!-- Cinematic Dual-Shutter Route Transition -->
+  <!-- Dual-Shutter Route Transition -->
   <div class="shutter-wrap" aria-hidden="true">
     <div class="shutter-panel shutter-top" id="shutterTop"></div>
     <div class="shutter-panel shutter-bottom" id="shutterBottom"></div>
   </div>
   <svg class="shutter-badge" id="shutterBadge" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-    <polygon points="32,4 58,18 58,46 32,60 6,46 6,18" stroke="#38bdf8" stroke-width="2.4" fill="#030816"/>
-    <path d="M29.5 21H18.5L16.5 30H26.5L25 41H14L15 36.2H22L22.5 33.4H13L15.4 18H30.5Z M35.5 21H41L38.4 36.2H48L47 41H32.5Z" fill="#7dd3fc"/>
+    <ellipse cx="32" cy="32" rx="25" ry="10" stroke="#38bdf8" stroke-width="2" transform="rotate(-30 32 32)"/>
+    <ellipse cx="32" cy="32" rx="25" ry="10" stroke="#60a5fa" stroke-width="2" transform="rotate(30 32 32)"/>
+    <circle cx="32" cy="32" r="8" fill="#bae6fd"/>
   </svg>
 
-  <!-- Layered Environment -->
+  <!-- Layered Atmospheric Environment -->
   <div class="environment-backdrop" aria-hidden="true"></div>
   <div class="depth-grid" aria-hidden="true"></div>
-  <canvas id="worldCanvas" aria-hidden="true"></canvas>
+  <canvas id="worldCanvas" aria-label="Interactive 3D technology ecosystem"></canvas>
+  <div class="tech-tooltip" id="techTooltip" role="tooltip" aria-hidden="true">
+    <strong id="ttName"></strong>
+    <span id="ttRole"></span>
+  </div>
   <div class="cursor-aura" id="cursorAura" aria-hidden="true"></div>
   <div class="film-grain" aria-hidden="true"></div>
   <div class="scroll-rail-top" id="scrollRailTop" aria-hidden="true"></div>
 
-  <!-- Connected Chapter Indicator Rail -->
+  <!-- Story Progress Rail -->
   <aside class="story-rail" id="storyRail" aria-label="Section progress">
     <button type="button" class="story-dot active" data-jump="#home" aria-label="Jump to Hero"></button>
     <button type="button" class="story-dot" data-jump="#about" aria-label="Jump to About"></button>
@@ -1984,17 +1949,7 @@
   <header class="navbar" id="navbar">
     <div class="container nav-inner">
       <a href="#home" class="brand">
-        <svg class="brand-mark" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-          <defs>
-            <linearGradient id="navG" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#bae6fd"/>
-              <stop offset="50%" stop-color="#38bdf8"/>
-              <stop offset="100%" stop-color="#2563eb"/>
-            </linearGradient>
-          </defs>
-          <polygon points="32,4 57,18 57,46 32,60 7,46 7,18" stroke="url(#navG)" stroke-width="2.6" fill="rgba(6,14,32,0.82)"/>
-          <path d="M29.5 21H18.5L16.5 30H26.5L25 41H14L15 36.2H22L22.5 33.4H13L15.4 18H30.5Z M35.5 21H41L38.4 36.2H48L47 41H32.5Z" fill="url(#navG)"/>
-        </svg>
+        <span class="brand-dot" aria-hidden="true"></span>
         <span id="navBrandName">Shahalam Laskar</span>
       </a>
 
@@ -2038,7 +1993,7 @@
        HOME ENVIRONMENT
   ========================================================================= -->
   <main id="homeView" class="home-view">
-    <!-- 01 // CORE — HERO -->
+    <!-- 01 // TECH ECOSYSTEM HERO -->
     <section class="hero" id="home">
       <div class="hero-planet" aria-hidden="true"></div>
       <div class="hero-drag-surface" id="heroDragSurface" aria-hidden="true"></div>
@@ -2047,7 +2002,7 @@
         <div class="hero-copy">
           <div class="status-chip gs-hero">
             <span class="live-dot" aria-hidden="true"></span>
-            <span id="heroStatus">01 // AVAILABLE FOR NEW BUILDS</span>
+            <span id="heroStatus">01 // AVAILABLE FOR PROJECTS</span>
           </div>
 
           <h1 class="hero-title gs-hero">
@@ -2063,7 +2018,7 @@
 
           <div class="hero-actions gs-hero">
             <a href="#projects" class="btn btn-electric magnetic">Explore Projects &rarr;</a>
-            <a href="#about" class="btn btn-glass magnetic">About Identity</a>
+            <a href="#about" class="btn btn-glass magnetic">About Me</a>
           </div>
 
           <div class="hero-telemetry gs-hero">
@@ -2076,14 +2031,14 @@
               <strong>Offline-First Systems</strong>
             </div>
             <div class="telemetry-item">
-              <span>Domain</span>
-              <strong id="heroDomain">shahalamlaskar.click</strong>
+              <span>Instagram</span>
+              <a id="heroInstaLink" href="https://instagram.com/shahalam_laskarr" target="_blank" rel="noopener">@shahalam_laskarr</a>
             </div>
           </div>
         </div>
 
         <div class="hero-stage-hud">
-          <span class="hud-pill">Interactive 3D Core &middot; Drag to Rotate</span>
+          <span class="hud-pill">Hover or Tap Tech Nodes &middot; Drag to Orbit</span>
         </div>
       </div>
 
@@ -2101,7 +2056,7 @@
         <div class="dossier-shell gs-reveal">
           <div class="dossier-grid">
             <div class="holo-portrait" id="avatarFrame">
-              <svg viewBox="0 0 420 340" width="100%" height="100%" fill="none" role="img" aria-label="Shahalam Laskar futuristic silhouette">
+              <svg viewBox="0 0 420 340" width="100%" height="100%" fill="none" role="img" aria-label="Shahalam Laskar futuristic developer silhouette">
                 <defs>
                   <radialGradient id="pSky" cx="50%" cy="32%" r="68%">
                     <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.5"/>
@@ -2133,11 +2088,15 @@
                 <ellipse cx="210" cy="218" rx="196" ry="62" stroke="url(#pRing)" stroke-width="3.2" transform="rotate(-12 210 218)" filter="url(#pGlow)"/>
                 <ellipse cx="210" cy="218" rx="196" ry="62" stroke="url(#pRing)" stroke-width="1.4" transform="rotate(-12 210 218)"/>
                 <path d="M96 340 C104 256 134 214 168 202 C156 180 156 138 174 114 C192 90 232 90 250 114 C268 138 266 178 254 202 C288 214 318 256 326 340 Z" fill="url(#pHood)" stroke="rgba(96,165,250,0.4)" stroke-width="1.6"/>
-                <text x="210" y="280" text-anchor="middle" font-family="Syne, sans-serif" font-weight="800" font-size="32" font-style="italic" fill="#38bdf8" filter="url(#pGlow)" opacity="0.9">SL</text>
-                <text x="210" y="280" text-anchor="middle" font-family="Syne, sans-serif" font-weight="800" font-size="32" font-style="italic" fill="#e0f2fe">SL</text>
+                <!-- Subtle tech circuit pulse on back instead of monogram -->
+                <g stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" opacity="0.72">
+                  <polyline points="196,262 186,272 196,282"/>
+                  <line x1="214" y1="258" x2="206" y2="286"/>
+                  <polyline points="224,262 234,272 224,282"/>
+                </g>
               </svg>
               <div class="portrait-hud">
-                <span>ID // SL-DEV</span>
+                <span>DEV // ANDROID &amp; WEB</span>
                 <span>STATUS: ACTIVE</span>
               </div>
             </div>
@@ -2195,7 +2154,7 @@
             <div>
               <div class="chapter-tag">04 // Tech Arsenal</div>
               <h2 class="chapter-title">Systems &amp; Craft</h2>
-              <p class="chapter-sub">From native Android Kotlin architecture and cloud CI automation to zero-bloat WebGL web interfaces.</p>
+              <p class="chapter-sub">From native Android Kotlin architecture and cloud automation to zero-bloat WebGL web interfaces.</p>
             </div>
           </div>
 
@@ -2236,7 +2195,7 @@
           <div>
             <div class="chapter-tag">06 // Transmission</div>
             <h2 class="chapter-title">Start a Conversation</h2>
-            <p class="chapter-sub">Have an Android app idea, a custom web experience, or a collaboration in mind? Let's connect.</p>
+            <p class="chapter-sub">Have an Android app idea, a custom web experience, or a collaboration in mind? Reach out directly.</p>
           </div>
         </div>
 
@@ -2244,7 +2203,7 @@
           <div>
             <h3 style="font-family:var(--font-display); margin:0 0 10px; font-size:1.35rem;">Direct Signal</h3>
             <p style="margin:0; color:var(--text-secondary); font-size:0.94rem;">
-              Every message lands straight in my inbox. Use the interactive form or copy my email with a single tap.
+              Connect via email, call directly, or message me on Instagram. You can also send a pre-filled inquiry using the form.
             </p>
             <div class="social-orbs" id="directLinks"></div>
           </div>
@@ -2274,7 +2233,7 @@
           <div class="channel-card">
             <div class="channel-row">
               <div class="channel-orb">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
               </div>
               <div>
                 <strong>Email Me</strong>
@@ -2285,11 +2244,23 @@
 
             <div class="channel-row">
               <div class="channel-orb">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               </div>
               <div>
-                <strong>Web Presence</strong>
-                <small id="contactDomainDisplay"></small>
+                <strong>Phone</strong>
+                <a class="channel-link" id="contactPhoneLink" href="tel:+919101318482">+91 9101318482</a>
+                <button type="button" class="copy-pill" id="copyPhoneBtn">Copy Number</button>
+              </div>
+            </div>
+
+            <div class="channel-row">
+              <div class="channel-orb">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </div>
+              <div>
+                <strong>Instagram</strong>
+                <a class="channel-link" id="contactInstaLink" href="https://instagram.com/shahalam_laskarr" target="_blank" rel="noopener">@shahalam_laskarr</a>
+                <button type="button" class="copy-pill" id="copyInstaBtn">Copy Handle</button>
               </div>
             </div>
           </div>
@@ -2309,9 +2280,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
-        <strong style="font-family:var(--font-display); color:var(--text);">
-          <span style="color:var(--cyan); font-style:italic; margin-right:6px;">SL</span> Shahalam Laskar
-        </strong>
+        <strong style="font-family:var(--font-display); color:var(--text);">Shahalam Laskar</strong>
         <span style="opacity:0.35;">|</span>
         <span>Crafted as an interactive digital environment.</span>
       </div>
@@ -2331,8 +2300,11 @@
     ========================================================================= */
     const SITE_DATA = {
       name: "Shahalam Laskar",
-      domain: "shahalamlaskar.click",
       email: "shahalamlaskar.official@gmail.com",
+      phone: "+91 9101318482",
+      phoneRaw: "+919101318482",
+      instagramHandle: "shahalam_laskarr",
+      instagramUrl: "https://instagram.com/shahalam_laskarr",
       // Optional: upload a portrait to assets/avatar.jpg and set "./assets/avatar.jpg"
       avatarImage: "",
       // Optional: paste a Formspree endpoint (e.g. "https://formspree.io/f/xxxxxx")
@@ -2373,8 +2345,7 @@
           decisions: [
             "Engineered local-first persistence so poor mobile signal never blocks study sessions.",
             "Built modular Compose screens so syllabus expansions stay fast and maintainable."
-          ],
-          liveUrl: ""
+          ]
         },
         {
           slug: "jarvis-assistant",
@@ -2398,12 +2369,11 @@
           decisions: [
             "Integrated Android Assist and Device Admin permissions cleanly for reliable hardware actions.",
             "Refined voice recognition thresholds to filter background noise on mobile."
-          ],
-          liveUrl: ""
+          ]
         },
         {
           slug: "personal-web-platform",
-          title: "SL 3D Portfolio Engine",
+          title: "3D Portfolio Engine",
           category: "Web",
           year: "2026",
           featured: false,
@@ -2411,36 +2381,35 @@
           visualType: "engine",
           status: "Live",
           role: "Creative Developer & Art Director",
-          summary: "Cinematic single-file 3D developer portfolio with scroll-choreographed Three.js lighting, GSAP transitions, and deep project routing.",
+          summary: "Cinematic single-file 3D developer portfolio with an interactive WebGL tech ecosystem, GSAP transitions, and deep project routing.",
           overview: "Art-directed to deliver studio-grade WebGL visuals, glassmorphic depth, and direct-linkable case studies inside a zero-build static architecture that stays fast on Android phones.",
           stack: ["Three.js", "GSAP", "HTML5 / CSS3", "WebGL"],
           features: [
-            "Persistent Three.js SL monogram crystal core choreographed across every scroll chapter.",
-            "Volumetric neon bloom via procedural canvas glow textures for cool Android GPU thermals.",
+            "Interactive 3D technology ecosystem with glowing energy core and orbiting official tech logos.",
+            "Real-time raycast hover & touch inspection with depth-of-field atmospheric scaling.",
             "Dual-shutter GSAP route transitions with direct-linkable project URLs.",
             "Zero bundler overhead—instantly editable and maintainable from mobile."
           ],
           decisions: [
-            "Replaced heavy post-processing shaders with procedural glow sprites to lock high FPS on phones.",
+            "Used procedural vector-to-canvas textures and additive glow sprites to maintain smooth FPS on Android.",
             "Centralized all site data into one clean configuration object for rapid updates."
-          ],
-          liveUrl: "https://shahalamlaskar.click"
+          ]
         }
       ],
       skills: [
         { name: "Kotlin", code: "Kt", color: "#7c3aed", tier: "Core", level: "90%" },
-        { name: "Jetpack Compose", code: "JC", color: "#16a34a", tier: "Core", level: "88%" },
+        { name: "Android", code: "An", color: "#16a34a", tier: "Core", level: "90%" },
         { name: "HTML5 & CSS3", code: "UI", color: "#0284c7", tier: "Core", level: "94%" },
         { name: "JavaScript", code: "JS", color: "#ca8a04", tier: "Core", level: "88%" },
-        { name: "Three.js / 3D", code: "3D", color: "#2563eb", tier: "Creative", level: "84%" },
+        { name: "Python", code: "Py", color: "#2563eb", tier: "Scripting", level: "82%" },
+        { name: "React", code: "Re", color: "#0891b2", tier: "Frontend", level: "84%" },
+        { name: "Three.js / 3D", code: "3D", color: "#3b82f6", tier: "Creative", level: "85%" },
         { name: "GSAP Motion", code: "GS", color: "#059669", tier: "Creative", level: "86%" },
-        { name: "Android Systems", code: "OS", color: "#0ea5e9", tier: "Systems", level: "85%" },
-        { name: "Cloud CI/CD", code: "CI", color: "#4f46e5", tier: "Workflow", level: "86%" },
-        { name: "DNS & Hosting", code: "DN", color: "#dc2626", tier: "Infra", level: "84%" }
+        { name: "Git & CI/CD", code: "Gt", color: "#dc2626", tier: "Workflow", level: "86%" }
       ],
       journey: [
         { year: "2023", title: "Started Coding", desc: "Wrote my first lines of code and discovered how software turns raw ideas into interactive tools.", icon: "cap" },
-        { year: "2024", title: "First Web Launches", desc: "Built and shipped responsive websites, mastered custom DNS hosting, and refined dark UI craft.", icon: "laptop" },
+        { year: "2024", title: "First Web Launches", desc: "Built and shipped responsive websites, mastered cloud hosting, and refined dark UI craft.", icon: "laptop" },
         { year: "2025", title: "Android & Automation", desc: "Stepped into native Android architecture, cloud APK build workflows, and offline-first design.", icon: "star" },
         { year: "2026 & BEYOND", title: "Cinematic Systems", desc: "Shipping EduTrack, multilingual voice AI, and immersive 3D web experiences built to last.", icon: "rocket" }
       ]
@@ -2465,8 +2434,7 @@
       laptop: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="12" rx="2"/><line x1="2" y1="20" x2="22" y2="20"/></svg>',
       star: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>',
       rocket: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/></svg>',
-      share: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>',
-      external: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>'
+      share: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>'
     };
 
     function getShowcaseVisual(type) {
@@ -2482,7 +2450,6 @@
               <line x1="0" y1="150" x2="360" y2="150"/><line x1="40" y1="190" x2="120" y2="120"/><line x1="320" y1="190" x2="240" y2="120"/>
             </g>
             <ellipse cx="180" cy="162" rx="110" ry="14" fill="rgba(56,189,248,0.22)"/>
-            <!-- Floating Side Stat Card -->
             <g transform="translate(28 62)">
               <rect width="84" height="54" rx="11" fill="rgba(8,18,40,0.88)" stroke="rgba(56,189,248,0.45)"/>
               <rect x="11" y="13" width="38" height="5" rx="2.5" fill="#7dd3fc"/>
@@ -2490,7 +2457,6 @@
               <rect x="11" y="25" width="44" height="6" rx="3" fill="url(#etG)"/>
               <rect x="11" y="38" width="28" height="4" rx="2" fill="#34d399"/>
             </g>
-            <!-- Tilted Hero Phone Device -->
             <g transform="translate(132 16) rotate(-7 50 78)">
               <rect width="98" height="156" rx="18" fill="#061024" stroke="url(#etG)" stroke-width="2.2"/>
               <rect x="33" y="9" width="32" height="4" rx="2" fill="#1e3a8a"/>
@@ -2501,7 +2467,6 @@
               <rect x="12" y="95" width="74" height="20" rx="7" fill="rgba(56,189,248,0.14)"/>
               <rect x="12" y="124" width="50" height="17" rx="8.5" fill="url(#etG)"/>
             </g>
-            <!-- Floating Offline Pill -->
             <g transform="translate(248 52)">
               <rect width="84" height="32" rx="16" fill="rgba(6,18,42,0.9)" stroke="rgba(52,211,153,0.5)"/>
               <circle cx="16" cy="16" r="4" fill="#34d399"/>
@@ -2531,15 +2496,17 @@
       return `
         <svg viewBox="0 0 360 190" fill="none">
           <defs>
-            <linearGradient id="enG" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#6ee7b7"/><stop offset="100%" stop-color="#059669"/>
-            </linearGradient>
+            <radialGradient id="enCore" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#d1fae5"/><stop offset="45%" stop-color="#10b981"/><stop offset="100%" stop-color="#064e3b" stop-opacity="0"/>
+            </radialGradient>
           </defs>
           <ellipse cx="180" cy="162" rx="105" ry="13" fill="rgba(16,185,129,0.22)"/>
-          <polygon points="180,22 246,60 246,134 180,172 114,134 114,60" fill="rgba(16,185,129,0.1)" stroke="url(#enG)" stroke-width="2.2"/>
-          <polygon points="180,44 226,70 226,124 180,150 134,124 134,70" fill="rgba(52,211,153,0.14)" stroke="#6ee7b7" stroke-width="1.4"/>
-          <ellipse cx="180" cy="97" rx="112" ry="26" stroke="#34d399" stroke-width="1.4" opacity="0.65" transform="rotate(-14 180 97)"/>
-          <text x="180" y="108" text-anchor="middle" font-family="Syne, sans-serif" font-weight="800" font-size="30" font-style="italic" fill="#ecfdf5">SL</text>
+          <circle cx="180" cy="94" r="54" fill="url(#enCore)" opacity="0.65"/>
+          <ellipse cx="180" cy="94" rx="114" ry="28" stroke="#34d399" stroke-width="1.5" opacity="0.7" transform="rotate(-18 180 94)"/>
+          <ellipse cx="180" cy="94" rx="114" ry="28" stroke="#38bdf8" stroke-width="1.5" opacity="0.6" transform="rotate(18 180 94)"/>
+          <polygon points="180,58 211,76 211,112 180,130 149,112 149,76" fill="rgba(16,185,129,0.2)" stroke="#6ee7b7" stroke-width="2"/>
+          <circle cx="180" cy="94" r="10" fill="#ecfdf5"/>
+          <circle cx="98" cy="116" r="5" fill="#34d399"/><circle cx="262" cy="72" r="5" fill="#38bdf8"/>
         </svg>`;
     }
 
@@ -2570,340 +2537,615 @@
     }
 
     /* =========================================================================
-       PERSISTENT SCROLL-CHOREOGRAPHED 3D SL MONOGRAM WORLD (THREE.JS)
+       3D TECHNOLOGY ECOSYSTEM — OFFICIAL VECTOR LOGOS ON 3D GLOWING MEDALLIONS
     ========================================================================= */
+    const TECH_ECOSYSTEM = [
+      // Orbit 0 (Inner Ring — Mobile & Core Stack)
+      {
+        name: "Kotlin", role: "Android & Compose", orbit: 0, angle: 0, accent: "#a855f7",
+        svg: `<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 128 128"><defs><linearGradient id="k" x1="100%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#e44857"/><stop offset="50%" stop-color="#c711e1"/><stop offset="100%" stop-color="#7f52ff"/></linearGradient></defs><path fill="url(#k)" d="M18 18h92L64 64l46 46H18z"/></svg>`
+      },
+      {
+        name: "Android", role: "Mobile Platform", orbit: 0, angle: (Math.PI * 2) / 3, accent: "#3ddc84",
+        svg: `<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 128 128"><g fill="#3ddc84"><path d="M84.8 46.8l7.8-13.5a2.6 2.6 0 00-4.5-2.6l-8 13.8a46 46 0 00-32.2 0l-8-13.8a2.6 2.6 0 00-4.5 2.6l7.8 13.5C29.4 54.4 20 68.4 18.6 85h90.8c-1.4-16.6-10.8-30.6-24.6-38.2zM44 71a4.5 4.5 0 110-9 4.5 4.5 0 010 9zm40 0a4.5 4.5 0 110-9 4.5 4.5 0 010 9z"/></g></svg>`
+      },
+      {
+        name: "JavaScript", role: "Interactive Logic", orbit: 0, angle: (Math.PI * 4) / 3, accent: "#f7df1e",
+        svg: `<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 128 128"><rect x="16" y="16" width="96" height="96" rx="14" fill="#f7df1e"/><path fill="#111827" d="M68 95.6c2.6 4.4 6.2 7.6 12.6 7.6 5.4 0 8.8-2.6 8.8-6.4 0-4.4-3.5-6-9.4-8.6l-3.2-1.4c-9.3-4-15.4-8.9-15.4-19.3 0-9.6 7.3-16.9 18.7-16.9 8.1 0 14 2.8 18.2 10.2l-9.9 6.4c-2.2-3.9-4.5-5.5-8.3-5.5-3.8 0-6.2 2.4-6.2 5.5 0 3.8 2.4 5.4 7.9 7.8l3.2 1.4c10.9 4.7 17 9.5 17 20.2 0 11.6-9.1 17.9-21.3 17.9-11.9 0-19.6-5.7-23.4-13.2L68 95.6zM34 96.7c2 3.5 3.8 6.5 8.1 6.5 4.1 0 6.7-1.6 6.7-7.9V52h12.6v43.5c0 13.2-7.7 19.2-19 19.2-10.2 0-16.1-5.3-19.1-11.6L34 96.7z"/></svg>`
+      },
+
+      // Orbit 1 (Middle Ring — Frameworks, Languages & Platforms)
+      {
+        name: "React", role: "UI Library", orbit: 1, angle: 0.35, accent: "#61dafb",
+        svg: `<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 128 128"><circle cx="64" cy="64" r="10.5" fill="#61dafb"/><g fill="none" stroke="#61dafb" stroke-width="5.2"><ellipse cx="64" cy="64" rx="48" ry="18.5"/><ellipse cx="64" cy="64" rx="48" ry="18.5" transform="rotate(60 64 64)"/><ellipse cx="64" cy="64" rx="48" ry="18.5" transform="rotate(120 64 64)"/></g></svg>`
+      },
+      {
+        name: "Python", role: "AI & Automation", orbit: 1, angle: 0.35 + Math.PI / 2, accent: "#3b82f6",
+        svg: `<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 128 128"><path fill="#3776ab" d="M63.4 16c-23.5 0-22 10.2-22 10.2l.1 10.6h22.4V40H32.6S17 38.2 17 62.6s13.6 23.5 13.6 23.5h8.1V74.8s-.4-13.6 13.4-13.6h23s12.9.2 12.9-12.5V27.6S89.9 16 63.4 16zm-12.3 7.4a4.2 4.2 0 110 8.4 4.2 4.2 0 010-8.4z"/><path fill="#ffd43b" d="M64.6 112c23.5 0 22-10.2 22-10.2l-.1-10.6H64.1V88h31.3s15.6 1.8 15.6-22.6-13.6-23.5-13.6-23.5h-8.1v11.3s.4 13.6-13.4 13.6h-23s-12.9-.2-12.9 12.5v21.1S38.1 112 64.6 112zm12.3-7.4a4.2 4.2 0 110-8.4 4.2 4.2 0 010 8.4z"/></svg>`
+      },
+      {
+        name: "GitHub", role: "CI/CD & Cloud Builds", orbit: 1, angle: 0.35 + Math.PI, accent: "#e2e8f0",
+        svg: `<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 128 128"><path fill="#f8fafc" fill-rule="evenodd" clip-rule="evenodd" d="M64 16C37.5 16 16 37.9 16 65c0 21.7 13.8 40 32.8 46.5 2.4.4 3.3-1 3.3-2.3 0-1.1-.1-5-.1-9.1-13.3 2.9-16.1-5.8-16.1-5.8-2.2-5.6-5.3-7.1-5.3-7.1-4.3-3 .3-3 .3-3 4.8.3 7.3 5 7.3 5 4.3 7.5 11.2 5.3 14 4.1.4-3.2 1.7-5.3 3-6.5-10.6-1.2-21.8-5.4-21.8-24.1 0-5.3 1.9-9.7 4.9-13.1-.5-1.2-2.1-6.2.5-12.9 0 0 4-1.3 13.2 5a45 45 0 0124 0c9.2-6.3 13.2-5 13.2-5 2.6 6.7 1 11.7.5 12.9 3.1 3.4 4.9 7.8 4.9 13.1 0 18.8-11.2 22.9-21.9 24.1 1.7 1.5 3.3 4.5 3.3 9 0 6.5-.1 11.8-.1 13.4 0 1.3.9 2.8 3.3 2.3C98.2 105 112 86.7 112 65c0-27.1-21.5-49-48-49z"/></svg>`
+      },
+      {
+        name: "Three.js", role: "3D WebGL Graphics", orbit: 1, angle: 0.35 + (Math.PI * 3) / 2, accent: "#38bdf8",
+        svg: `<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 128 128"><g fill="none" stroke="#e0f2fe" stroke-width="4.2" stroke-linejoin="round"><polygon points="24,104 64,20 104,104"/><polygon points="44,62 84,62 64,104"/><line x1="64" y1="20" x2="64" y2="104"/><line x1="44" y1="62" x2="104" y2="104"/><line x1="84" y1="62" x2="24" y2="104"/></g></svg>`
+      },
+
+      // Orbit 2 (Outer Ring — Web Foundations & Version Control)
+      {
+        name: "HTML5", role: "Semantic Web Core", orbit: 2, angle: 0.8, accent: "#f97316",
+        svg: `<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 128 128"><path fill="#e34f26" d="M22 18l7.6 85.4L64 113l34.4-9.6L106 18H22z"/><path fill="#ef652a" d="M64 25v80.6l27.8-7.7L98.3 25H64z"/><path fill="#ffffff" d="M64 46.5H45.8l1.2 13.5H64v11.8H48.2l1 11.4L64 87.2v12.3l-26.2-7.3-3.7-41.8h-.5l-1.5-17H64v13.1zm0 0v13.5h15.2l-1.5 16.4L64 87.2v12.3l26.2-7.3 3.7-41.6.4-4.1H64zm0-13.1h31.7l1-10.5H64v10.5z"/></svg>`
+      },
+      {
+        name: "CSS3", role: "Glass & Motion UI", orbit: 2, angle: 0.8 + (Math.PI * 2) / 3, accent: "#38bdf8",
+        svg: `<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 128 128"><path fill="#264de4" d="M22 18l7.6 85.4L64 113l34.4-9.6L106 18H22z"/><path fill="#2965f1" d="M64 25v80.6l27.8-7.7L98.3 25H64z"/><path fill="#ffffff" d="M64 59.5H47.2l-.9-10.6H64V37.6H35.2l2.9 32.8H64V59.5zm0 27.6l-13.7-3.7-.9-10.1H38.2l1.6 18.7L64 99.3V87.1zm0-49.5v11.3h15.6l-1 10.6H64v10.9h13.7l-1.3 13L64 87.1v12.2l24.2-7.3 4.6-54.4H64z"/></svg>`
+      },
+      {
+        name: "Git", role: "Version Control", orbit: 2, angle: 0.8 + (Math.PI * 4) / 3, accent: "#f05032",
+        svg: `<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 128 128"><rect x="26" y="26" width="76" height="76" rx="12" fill="#f05032" transform="rotate(45 64 64)"/><g fill="none" stroke="#ffffff" stroke-width="6.5" stroke-linecap="round"><line x1="48" y1="36" x2="64" y2="52"/><line x1="64" y1="52" x2="64" y2="86"/><line x1="64" y1="52" x2="84" y2="72"/></g><circle cx="64" cy="52" r="7.5" fill="#ffffff"/><circle cx="64" cy="86" r="7.5" fill="#ffffff"/><circle cx="84" cy="72" r="7.5" fill="#ffffff"/></svg>`
+      }
+    ];
+
     const worldRig = {
-      posX: 2.35, posY: 0.08, posZ: 0,
-      scale: 1.0, rotY: 0, rotX: 0,
-      ringSpread: 1.0, glowOpacity: 0.88
+      posX: 2.3, posY: 0.08, posZ: 0,
+      scale: 0.95, rotY: 0, rotX: 0,
+      glowOpacity: 0.92
     };
 
-    function createGlowTexture() {
+    function createRadialGlow(innerHex, midHex, outerHex) {
       const c = document.createElement("canvas");
       c.width = 128;
       c.height = 128;
       const ctx = c.getContext("2d");
       const g = ctx.createRadialGradient(64, 64, 4, 64, 64, 64);
-      g.addColorStop(0, "rgba(186, 230, 253, 0.95)");
-      g.addColorStop(0.28, "rgba(56, 189, 248, 0.52)");
-      g.addColorStop(0.62, "rgba(37, 99, 235, 0.16)");
+      g.addColorStop(0, innerHex);
+      g.addColorStop(0.32, midHex);
+      g.addColorStop(0.68, outerHex);
       g.addColorStop(1, "rgba(2, 4, 10, 0)");
       ctx.fillStyle = g;
       ctx.fillRect(0, 0, 128, 128);
       return new THREE.CanvasTexture(c);
     }
 
+    function createTechBadgeTexture(item) {
+      const size = 256;
+      const canvas = document.createElement("canvas");
+      canvas.width = size;
+      canvas.height = size;
+      const ctx = canvas.getContext("2d");
+
+      function drawFrame(logoImg) {
+        ctx.clearRect(0, 0, size, size);
+
+        // Outer ambient halo
+        const halo = ctx.createRadialGradient(128, 128, 72, 128, 128, 126);
+        halo.addColorStop(0, "rgba(56, 189, 248, 0.36)");
+        halo.addColorStop(0.65, "rgba(37, 99, 235, 0.16)");
+        halo.addColorStop(1, "rgba(2, 6, 18, 0)");
+        ctx.fillStyle = halo;
+        ctx.fillRect(0, 0, size, size);
+
+        // Frosted obsidian glass disc
+        const disc = ctx.createRadialGradient(104, 92, 12, 128, 128, 98);
+        disc.addColorStop(0, "rgba(24, 44, 88, 0.92)");
+        disc.addColorStop(0.65, "rgba(7, 15, 34, 0.94)");
+        disc.addColorStop(1, "rgba(3, 8, 22, 0.96)");
+
+        ctx.beginPath();
+        ctx.arc(128, 128, 96, 0, Math.PI * 2);
+        ctx.fillStyle = disc;
+        ctx.fill();
+
+        // Top specular glass highlight
+        const spec = ctx.createLinearGradient(0, 32, 0, 145);
+        spec.addColorStop(0, "rgba(224, 242, 254, 0.24)");
+        spec.addColorStop(1, "rgba(224, 242, 254, 0)");
+        ctx.beginPath();
+        ctx.ellipse(128, 86, 68, 42, 0, 0, Math.PI * 2);
+        ctx.fillStyle = spec;
+        ctx.fill();
+
+        // Glowing electric-blue outer outline
+        ctx.beginPath();
+        ctx.arc(128, 128, 95, 0, Math.PI * 2);
+        ctx.lineWidth = 4.5;
+        ctx.strokeStyle = "rgba(96, 165, 250, 0.85)";
+        ctx.stroke();
+
+        // Subtle brand-colored inner accent arc
+        ctx.beginPath();
+        ctx.arc(128, 128, 88, -Math.PI * 0.72, Math.PI * 0.12);
+        ctx.lineWidth = 2.4;
+        ctx.strokeStyle = item.accent || "#38bdf8";
+        ctx.stroke();
+
+        if (logoImg) {
+          ctx.save();
+          ctx.shadowColor = "rgba(56, 189, 248, 0.45)";
+          ctx.shadowBlur = 16;
+          ctx.drawImage(logoImg, 60, 60, 136, 136);
+          ctx.restore();
+        } else {
+          ctx.fillStyle = "#e0f2fe";
+          ctx.font = "700 44px Space Grotesk, sans-serif";
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          ctx.fillText(item.name.slice(0, 2).toUpperCase(), 128, 128);
+        }
+      }
+
+      drawFrame(null);
+      const tex = new THREE.CanvasTexture(canvas);
+      tex.minFilter = THREE.LinearFilter;
+      tex.magFilter = THREE.LinearFilter;
+
+      const img = new Image();
+      img.onload = () => {
+        drawFrame(img);
+        tex.needsUpdate = true;
+      };
+      img.src = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(item.svg);
+      return tex;
+    }
+
     function initWorld3D() {
       if (typeof THREE === "undefined") return;
       const canvas = $("#worldCanvas");
+      const tooltip = $("#techTooltip");
+      const ttName = $("#ttName");
+      const ttRole = $("#ttRole");
+      const dragSurface = $("#heroDragSurface");
       const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      const isMobile = window.innerWidth < 1080;
+      const isMobileInit = window.innerWidth < 1080;
 
-      const renderer = new THREE.WebGLRenderer({ canvas, antialias: !isMobile, alpha: true, powerPreference: "high-performance" });
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, isMobile ? 1.4 : 1.75));
+      const renderer = new THREE.WebGLRenderer({ canvas, antialias: !isMobileInit, alpha: true, powerPreference: "high-performance" });
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, isMobileInit ? 1.5 : 1.75));
       renderer.setClearColor(0x000000, 0);
 
       const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(42, window.innerWidth / window.innerHeight, 0.1, 100);
-      camera.position.set(0, 0.25, 8.8);
+      const camera = new THREE.PerspectiveCamera(44, window.innerWidth / window.innerHeight, 0.1, 100);
+      camera.position.set(0, 0.15, 10.2);
 
-      // Electric-blue atmospheric lighting rig
-      scene.add(new THREE.AmbientLight(0x1e3a8a, 1.25));
-      const keyLight = new THREE.PointLight(0x38bdf8, 3.8, 24);
-      keyLight.position.set(3.8, 4.5, 5.4);
+      // Cinematic Blue Lighting Rig
+      scene.add(new THREE.AmbientLight(0x1e3a8a, 1.35));
+      const keyLight = new THREE.PointLight(0x38bdf8, 4.2, 26);
+      keyLight.position.set(4.0, 4.5, 6.0);
       scene.add(keyLight);
 
-      const coreLight = new THREE.PointLight(0x2563eb, 4.6, 16);
-      coreLight.position.set(0, 0.4, 2.2);
+      const coreLight = new THREE.PointLight(0x2563eb, 5.0, 18);
+      coreLight.position.set(0, 0, 2.2);
       scene.add(coreLight);
 
-      const rimLight = new THREE.PointLight(0x93c5fd, 2.4, 20);
-      rimLight.position.set(-4.5, -2.0, -3.0);
+      const rimLight = new THREE.PointLight(0x93c5fd, 2.4, 22);
+      rimLight.position.set(-5.0, -2.5, -3.5);
       scene.add(rimLight);
 
       const masterGroup = new THREE.Group();
       scene.add(masterGroup);
 
-      // Volumetric Neon Bloom Sprite (lightweight GPU cost)
-      const glowSprite = new THREE.Sprite(
+      // --- 1. FUTURISTIC CENTRAL GLOWING ENERGY CORE (NO MONOGRAM) ---
+      const coreGroup = new THREE.Group();
+      masterGroup.add(coreGroup);
+
+      // Wide volumetric blue aura + bright white-cyan heart
+      const outerBloom = new THREE.Sprite(
         new THREE.SpriteMaterial({
-          map: createGlowTexture(),
+          map: createRadialGlow("rgba(186,230,253,0.95)", "rgba(56,189,248,0.52)", "rgba(37,99,235,0.18)"),
           transparent: true,
-          opacity: 0.88,
+          opacity: 0.92,
           blending: THREE.AdditiveBlending,
           depthWrite: false
         })
       );
-      glowSprite.scale.set(6.4, 6.4, 1);
-      glowSprite.position.set(0, 0.45, -0.6);
-      masterGroup.add(glowSprite);
+      outerBloom.scale.set(5.4, 5.4, 1);
+      coreGroup.add(outerBloom);
 
-      // --- 1. Faceted Crystal Cube Cage ---
-      const corePivot = new THREE.Group();
-      corePivot.position.set(0, 0.48, 0);
-      masterGroup.add(corePivot);
-
-      const cubeGeo = new THREE.BoxGeometry(2.3, 2.3, 2.3);
-      const crystalCube = new THREE.Mesh(
-        cubeGeo,
-        new THREE.MeshPhongMaterial({
-          color: 0x091a3e,
-          emissive: 0x102a66,
-          emissiveIntensity: 0.72,
-          specular: 0xbae6fd,
-          shininess: 160,
-          transparent: true,
-          opacity: 0.22,
-          depthWrite: false
+      // Luminous inner plasma sphere
+      const plasmaCore = new THREE.Mesh(
+        new THREE.IcosahedronGeometry(0.74, 3),
+        new THREE.MeshStandardMaterial({
+          color: 0xbae6fd,
+          emissive: 0x38bdf8,
+          emissiveIntensity: 1.75,
+          roughness: 0.15,
+          metalness: 0.35
         })
       );
-      crystalCube.rotation.set(Math.PI / 4, Math.PI / 4, 0.2);
-      corePivot.add(crystalCube);
+      coreGroup.add(plasmaCore);
 
-      crystalCube.add(new THREE.LineSegments(
-        new THREE.EdgesGeometry(cubeGeo),
-        new THREE.LineBasicMaterial({ color: 0x7dd3fc, transparent: true, opacity: 0.92 })
-      ));
-      crystalCube.add(new THREE.LineSegments(
-        new THREE.EdgesGeometry(new THREE.BoxGeometry(2.1, 2.1, 2.1)),
-        new THREE.LineBasicMaterial({ color: 0x2563eb, transparent: true, opacity: 0.45 })
-      ));
-
-      // --- 2. Signature Extruded 3D Illuminated "SL" Monogram ---
-      function slantShape(points) {
-        const s = new THREE.Shape();
-        points.forEach(([x, y], i) => {
-          const sx = x + y * 0.25;
-          i === 0 ? s.moveTo(sx, y) : s.lineTo(sx, y);
-        });
-        s.closePath();
-        return s;
-      }
-
-      const sGeo = new THREE.ExtrudeGeometry(slantShape([
-        [0.46, 0.60], [-0.46, 0.60], [-0.46, -0.09], [0.22, -0.09],
-        [0.22, -0.38], [-0.46, -0.38], [-0.46, -0.60], [0.46, -0.60],
-        [0.46, 0.13], [-0.22, 0.13], [-0.22, 0.38], [0.46, 0.38]
-      ]), { depth: 0.3, bevelEnabled: true, bevelThickness: 0.048, bevelSize: 0.036, bevelSegments: 3 });
-
-      const lGeo = new THREE.ExtrudeGeometry(slantShape([
-        [-0.18, 0.60], [-0.40, 0.60], [-0.40, -0.60], [0.44, -0.60],
-        [0.44, -0.38], [-0.18, -0.38]
-      ]), { depth: 0.3, bevelEnabled: true, bevelThickness: 0.048, bevelSize: 0.036, bevelSegments: 3 });
-
-      const slMat = new THREE.MeshStandardMaterial({
-        color: 0x93c5fd,
-        emissive: 0x2563eb,
-        emissiveIntensity: 1.5,
-        metalness: 0.6,
-        roughness: 0.15
-      });
-
-      const slGroup = new THREE.Group();
-      const sMesh = new THREE.Mesh(sGeo, slMat);
-      sMesh.position.set(-0.55, 0, -0.15);
-      const lMesh = new THREE.Mesh(lGeo, slMat);
-      lMesh.position.set(0.50, 0, -0.15);
-      slGroup.add(sMesh, lMesh);
-      slGroup.scale.setScalar(0.94);
-      corePivot.add(slGroup);
-
-      // --- 3. Dual Orbiting Energy Rings + Telemetry Ticks ---
-      const ringPrimary = new THREE.Mesh(
-        new THREE.TorusGeometry(2.45, 0.022, 16, 120),
-        new THREE.MeshBasicMaterial({ color: 0x38bdf8, transparent: true, opacity: 0.88 })
+      // Faceted energy containment lattice
+      const outerCage = new THREE.LineSegments(
+        new THREE.EdgesGeometry(new THREE.IcosahedronGeometry(1.16, 1)),
+        new THREE.LineBasicMaterial({ color: 0x7dd3fc, transparent: true, opacity: 0.82 })
       );
-      ringPrimary.rotation.set(1.24, 0.32, 0);
-      corePivot.add(ringPrimary);
+      coreGroup.add(outerCage);
 
-      const sparkNode = new THREE.Mesh(
-        new THREE.SphereGeometry(0.08, 14, 14),
-        new THREE.MeshBasicMaterial({ color: 0xe0f2fe })
+      const innerLattice = new THREE.LineSegments(
+        new THREE.EdgesGeometry(new THREE.OctahedronGeometry(0.95, 1)),
+        new THREE.LineBasicMaterial({ color: 0x2563eb, transparent: true, opacity: 0.55 })
       );
-      ringPrimary.add(sparkNode);
+      coreGroup.add(innerLattice);
 
-      const ringSecondary = new THREE.Mesh(
-        new THREE.TorusGeometry(2.86, 0.014, 16, 120),
-        new THREE.MeshBasicMaterial({ color: 0x3b82f6, transparent: true, opacity: 0.45 })
-      );
-      ringSecondary.rotation.set(1.62, -0.45, 0.22);
-      corePivot.add(ringSecondary);
-
-      // --- 4. Floating Obsidian Geometric Shards ---
-      const shards = [];
-      const shardGeo = new THREE.OctahedronGeometry(0.2, 0);
-      const shardMat = new THREE.MeshStandardMaterial({ color: 0x0f172a, emissive: 0x0c1e4a, emissiveIntensity: 0.4, metalness: 0.72, roughness: 0.3 });
-      const shardData = [
-        [-2.9, 1.9, -0.8, 1.0], [2.7, 1.7, -1.0, 0.85], [-2.4, -1.4, 0.8, 0.9],
-        [2.6, -1.1, 0.6, 0.95], [0.2, 2.7, -1.5, 0.72], [-1.3, 2.3, 0.4, 0.65]
-      ];
-      shardData.forEach(([x, y, z, s], i) => {
-        const m = new THREE.Mesh(shardGeo, shardMat);
-        m.position.set(x, y, z);
-        m.scale.setScalar(s);
-        m.userData = { y, phase: i * 1.15, speed: 0.55 + i * 0.1 };
-        masterGroup.add(m);
-        shards.push(m);
-      });
-
-      // --- 5. Pedestal Rings Beneath Core ---
-      const pedestal = new THREE.Group();
-      pedestal.position.set(0, -1.96, 0);
-      masterGroup.add(pedestal);
-      const metal = new THREE.MeshStandardMaterial({ color: 0x060c1b, metalness: 0.8, roughness: 0.32 });
-      const t1 = new THREE.Mesh(new THREE.CylinderGeometry(1.48, 1.78, 0.2, 42), metal);
-      const t2 = new THREE.Mesh(new THREE.CylinderGeometry(1.94, 2.26, 0.22, 42), metal);
-      t2.position.y = -0.22;
-      const pRing = new THREE.Mesh(
-        new THREE.TorusGeometry(1.52, 0.02, 10, 64),
+      // High-energy equatorial plasma rings around the core
+      const coreRingA = new THREE.Mesh(
+        new THREE.TorusGeometry(1.42, 0.018, 12, 96),
         new THREE.MeshBasicMaterial({ color: 0x38bdf8, transparent: true, opacity: 0.82 })
       );
-      pRing.rotation.x = Math.PI / 2;
-      pRing.position.y = 0.11;
-      pedestal.add(t1, t2, pRing);
+      coreRingA.rotation.set(1.15, 0.4, 0);
+      coreGroup.add(coreRingA);
 
-      // --- 6. Ambient Cosmic Particle Field ---
-      const count = isMobile ? 200 : 420;
-      const positions = new Float32Array(count * 3);
-      for (let i = 0; i < count; i++) {
-        positions[i * 3] = (Math.random() - 0.5) * 28;
-        positions[i * 3 + 1] = (Math.random() - 0.5) * 18;
-        positions[i * 3 + 2] = -2 - Math.random() * 14;
+      const coreRingB = new THREE.Mesh(
+        new THREE.TorusGeometry(1.62, 0.012, 12, 96),
+        new THREE.MeshBasicMaterial({ color: 0x60a5fa, transparent: true, opacity: 0.45 })
+      );
+      coreRingB.rotation.set(1.85, -0.5, 0.3);
+      coreGroup.add(coreRingB);
+
+      // --- 2. THREE TILTED 3D ORBITAL PLANES + FLOATING TECH LOGOS ---
+      const ORBIT_DEFS = [
+        { radius: 2.15, tiltX: 1.24, tiltY: 0.34, tiltZ: 0.12, speed: 0.34, opacity: 0.32 },
+        { radius: 2.86, tiltX: 1.56, tiltY: -0.42, tiltZ: -0.18, speed: -0.25, opacity: 0.25 },
+        { radius: 3.52, tiltX: 1.02, tiltY: -0.16, tiltZ: 0.26, speed: 0.19, opacity: 0.2 }
+      ];
+
+      const orbitPlanes = ORBIT_DEFS.map(def => {
+        const g = new THREE.Group();
+        g.rotation.set(def.tiltX, def.tiltY, def.tiltZ);
+        const track = new THREE.Mesh(
+          new THREE.TorusGeometry(def.radius, 0.011, 10, 128),
+          new THREE.MeshBasicMaterial({ color: 0x38bdf8, transparent: true, opacity: def.opacity })
+        );
+        g.add(track);
+        masterGroup.add(g);
+        return { group: g, def };
+      });
+
+      const nodeGlowTex = createRadialGlow("rgba(125,211,252,0.8)", "rgba(37,99,235,0.34)", "rgba(37,99,235,0.05)");
+      const techNodes = [];
+      const pickMeshes = [];
+
+      TECH_ECOSYSTEM.forEach((item, idx) => {
+        const plane = orbitPlanes[item.orbit];
+        const nodeGroup = new THREE.Group();
+
+        // Subtle aura sprite behind medallion
+        const aura = new THREE.Sprite(
+          new THREE.SpriteMaterial({
+            map: nodeGlowTex,
+            transparent: true,
+            opacity: 0.55,
+            blending: THREE.AdditiveBlending,
+            depthWrite: false
+          })
+        );
+        aura.scale.set(1.38, 1.38, 1);
+        aura.position.z = -0.06;
+        nodeGroup.add(aura);
+
+        // Glowing 3D neon rim ring
+        const rimMat = new THREE.MeshBasicMaterial({ color: 0x38bdf8, transparent: true, opacity: 0.72 });
+        const rim = new THREE.Mesh(new THREE.TorusGeometry(0.42, 0.018, 12, 48), rimMat);
+        nodeGroup.add(rim);
+
+        // Crisp front-facing logo disc mesh (raycast target)
+        const badgeTex = createTechBadgeTexture(item);
+        const badgeMat = new THREE.MeshBasicMaterial({
+          map: badgeTex,
+          transparent: true,
+          opacity: 1,
+          side: THREE.DoubleSide
+        });
+        const badge = new THREE.Mesh(new THREE.CircleGeometry(0.41, 36), badgeMat);
+        badge.position.z = 0.01;
+        badge.userData = { nodeIndex: idx };
+        nodeGroup.add(badge);
+
+        // Invisible slightly larger hit sphere for effortless touch & mouse hover
+        const hitMesh = new THREE.Mesh(
+          new THREE.SphereGeometry(0.54, 12, 12),
+          new THREE.MeshBasicMaterial({ visible: false })
+        );
+        hitMesh.userData = { nodeIndex: idx };
+        nodeGroup.add(hitMesh);
+        pickMeshes.push(hitMesh);
+
+        plane.group.add(nodeGroup);
+        techNodes.push({
+          item,
+          plane,
+          group: nodeGroup,
+          badgeMat,
+          rimMat,
+          aura,
+          angle: item.angle,
+          bobPhase: idx * 0.9,
+          hoverFactor: 0,
+          worldPos: new THREE.Vector3()
+        });
+      });
+
+      // --- 3. ATMOSPHERIC PARTICLE FIELD + ENERGY SPARKS ---
+      const starCount = isMobileInit ? 190 : 380;
+      const starPos = new Float32Array(starCount * 3);
+      for (let i = 0; i < starCount; i++) {
+        starPos[i * 3] = (Math.random() - 0.5) * 28;
+        starPos[i * 3 + 1] = (Math.random() - 0.5) * 18;
+        starPos[i * 3 + 2] = -2 - Math.random() * 14;
       }
-      const pGeo = new THREE.BufferGeometry();
-      pGeo.setAttribute("position", new THREE.BufferAttribute(positions, 3));
-      const starField = new THREE.Points(
-        pGeo,
+      const starGeo = new THREE.BufferGeometry();
+      starGeo.setAttribute("position", new THREE.BufferAttribute(starPos, 3));
+      const stars = new THREE.Points(
+        starGeo,
         new THREE.PointsMaterial({ color: 0x93c5fd, size: 0.055, transparent: true, opacity: 0.72 })
       );
-      scene.add(starField);
+      scene.add(stars);
 
-      // Layout Calibration
-      function updateViewport() {
+      // Local orbital micro-sparks around core
+      const sparkCount = isMobileInit ? 55 : 110;
+      const sparkPos = new Float32Array(sparkCount * 3);
+      for (let i = 0; i < sparkCount; i++) {
+        const r = 1.6 + Math.random() * 2.7;
+        const theta = Math.random() * Math.PI * 2;
+        const phi = Math.acos(2 * Math.random() - 1);
+        sparkPos[i * 3] = r * Math.sin(phi) * Math.cos(theta);
+        sparkPos[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
+        sparkPos[i * 3 + 2] = r * Math.cos(phi);
+      }
+      const sparkGeo = new THREE.BufferGeometry();
+      sparkGeo.setAttribute("position", new THREE.BufferAttribute(sparkPos, 3));
+      const localSparks = new THREE.Points(
+        sparkGeo,
+        new THREE.PointsMaterial({ color: 0x7dd3fc, size: 0.06, transparent: true, opacity: 0.85, blending: THREE.AdditiveBlending })
+      );
+      masterGroup.add(localSparks);
+
+      // --- 4. RESPONSIVE FRUSTUM CALIBRATION (ZERO CLIPPING ON ANDROID) ---
+      function calibrateViewport() {
         const w = window.innerWidth;
         const h = window.innerHeight;
         renderer.setSize(w, h, false);
         camera.aspect = w / h;
+        const mobile = w < 1080;
+        camera.position.z = mobile ? 11.0 : 10.0;
         camera.updateProjectionMatrix();
-        const mobileNow = w < 1080;
-        worldRig.posX = mobileNow ? 0 : 2.35;
-        worldRig.posY = mobileNow ? 1.65 : 0.05;
-        worldRig.scale = mobileNow ? 0.64 : 1.0;
-      }
-      updateViewport();
-      window.addEventListener("resize", updateViewport);
 
-      // Interactive pointer / drag rotation
-      let targetRX = 0, targetRY = 0, dragY = 0, dragging = false, prevX = 0;
-      const dragSurface = $("#heroDragSurface");
+        const visH = 2 * Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)) * camera.position.z;
+        const visW = visH * camera.aspect;
+
+        if (!mobile) {
+          worldRig.posX = Math.min(2.65, visW * 0.21);
+          worldRig.posY = 0.08;
+          worldRig.scale = Math.min(1.0, (visW * 0.48) / 8.0);
+        } else {
+          worldRig.posX = 0;
+          worldRig.posY = visH * 0.20;
+          worldRig.scale = Math.min(0.76, (visW * 0.88) / 7.9);
+        }
+      }
+      calibrateViewport();
+      window.addEventListener("resize", calibrateViewport);
+
+      // --- 5. INTERACTIVE RAYCASTING (HOVER + MOBILE TAP) & 3D ORBIT DRAG ---
+      const raycaster = new THREE.Raycaster();
+      const pointerNDC = new THREE.Vector2(-9, -9);
+      let activeNodeIdx = -1;
+      let pinnedTimer = null;
+      let targetRX = 0, targetRY = 0;
+      let dragRotY = 0, dragRotX = 0;
+      let isDragging = false, dragDist = 0, prevX = 0, prevY = 0;
+
+      function isHeroInteractive() {
+        return !$("#homeView").hidden && window.scrollY < window.innerHeight * 0.85;
+      }
+
+      function pickTechNode(clientX, clientY) {
+        if (!isHeroInteractive()) return -1;
+        pointerNDC.x = (clientX / window.innerWidth) * 2 - 1;
+        pointerNDC.y = -(clientY / window.innerHeight) * 2 + 1;
+        raycaster.setFromCamera(pointerNDC, camera);
+        const hits = raycaster.intersectObjects(pickMeshes, false);
+        return hits.length ? hits[0].object.userData.nodeIndex : -1;
+      }
+
+      function hideTooltip() {
+        activeNodeIdx = -1;
+        tooltip.classList.remove("visible");
+        tooltip.setAttribute("aria-hidden", "true");
+        dragSurface.style.cursor = isDragging ? "grabbing" : "grab";
+      }
 
       window.addEventListener("pointermove", (e) => {
         const nx = (e.clientX / window.innerWidth) * 2 - 1;
         const ny = (e.clientY / window.innerHeight) * 2 - 1;
-        targetRY = nx * 0.36;
-        targetRX = ny * 0.18;
-        if (dragging) {
-          dragY += (e.clientX - prevX) * 0.009;
+        targetRY = nx * 0.34;
+        targetRX = ny * 0.2;
+
+        if (isDragging) {
+          const dx = e.clientX - prevX;
+          const dy = e.clientY - prevY;
+          dragDist += Math.hypot(dx, dy);
+          dragRotY += dx * 0.008;
+          dragRotX = Math.max(-0.55, Math.min(0.55, dragRotX + dy * 0.005));
           prevX = e.clientX;
+          prevY = e.clientY;
+          return;
+        }
+
+        if (e.pointerType !== "touch") {
+          const hit = pickTechNode(e.clientX, e.clientY);
+          if (hit !== activeNodeIdx) {
+            activeNodeIdx = hit;
+            if (hit >= 0) {
+              ttName.textContent = techNodes[hit].item.name;
+              ttRole.textContent = techNodes[hit].item.role;
+              tooltip.classList.add("visible");
+              tooltip.setAttribute("aria-hidden", "false");
+              dragSurface.style.cursor = "pointer";
+            } else {
+              hideTooltip();
+            }
+          }
         }
       }, { passive: true });
 
       dragSurface.addEventListener("pointerdown", (e) => {
-        dragging = true;
+        isDragging = true;
+        dragDist = 0;
         prevX = e.clientX;
+        prevY = e.clientY;
       }, { passive: true });
-      window.addEventListener("pointerup", () => { dragging = false; }, { passive: true });
 
-      // Connected Scroll-Based 3D Storytelling via GSAP ScrollTrigger
+      window.addEventListener("pointerup", (e) => {
+        const wasTap = isDragging && dragDist < 10;
+        isDragging = false;
+        if (wasTap) {
+          const hit = pickTechNode(e.clientX, e.clientY);
+          clearTimeout(pinnedTimer);
+          if (hit >= 0) {
+            activeNodeIdx = hit;
+            ttName.textContent = techNodes[hit].item.name;
+            ttRole.textContent = techNodes[hit].item.role;
+            tooltip.classList.add("visible");
+            tooltip.setAttribute("aria-hidden", "false");
+            pinnedTimer = setTimeout(hideTooltip, 3200);
+          } else {
+            hideTooltip();
+          }
+        }
+      }, { passive: true });
+
+      window.addEventListener("scroll", () => {
+        if (!isHeroInteractive() && activeNodeIdx >= 0) hideTooltip();
+      }, { passive: true });
+
+      // --- 6. SCROLL-CHOREOGRAPHED CAMERA/RIG DEPTH ---
       if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined" && !reducedMotion) {
         gsap.registerPlugin(ScrollTrigger);
-        const desktop = () => window.innerWidth >= 1080;
+        const isDesktop = () => window.innerWidth >= 1080;
 
         gsap.timeline({
           scrollTrigger: {
             trigger: "#homeView",
             start: "top top",
             end: "bottom bottom",
-            scrub: 1.2
+            scrub: 1.25
           }
         })
           .to(worldRig, {
-            posX: () => desktop() ? -2.2 : 0,
-            posY: () => desktop() ? 0.2 : 0.5,
-            posZ: -2.4,
-            scale: () => desktop() ? 0.78 : 0.56,
-            rotY: Math.PI * 0.65,
-            glowOpacity: 0.52,
+            posX: () => isDesktop() ? -2.2 : 0,
+            posY: () => isDesktop() ? 0.15 : 0.4,
+            posZ: -3.2,
+            scale: () => isDesktop() ? 0.72 : 0.48,
+            rotY: Math.PI * 0.55,
+            glowOpacity: 0.48,
             duration: 1
           })
           .to(worldRig, {
             posX: 0,
-            posY: 0.15,
-            posZ: -3.2,
-            scale: () => desktop() ? 0.72 : 0.52,
-            rotY: Math.PI * 1.4,
-            ringSpread: 1.18,
-            glowOpacity: 0.44,
+            posY: 0.1,
+            posZ: -4.2,
+            scale: () => isDesktop() ? 0.68 : 0.44,
+            rotY: Math.PI * 1.25,
+            glowOpacity: 0.4,
             duration: 1.2
           })
           .to(worldRig, {
-            posX: () => desktop() ? 2.1 : 0,
-            posY: -0.1,
-            posZ: -2.0,
-            scale: () => desktop() ? 0.86 : 0.58,
-            rotY: Math.PI * 2.1,
-            ringSpread: 1.0,
-            glowOpacity: 0.74,
+            posX: () => isDesktop() ? 2.1 : 0,
+            posY: -0.05,
+            posZ: -2.6,
+            scale: () => isDesktop() ? 0.8 : 0.5,
+            rotY: Math.PI * 1.9,
+            glowOpacity: 0.65,
             duration: 1
           });
       }
 
+      // --- 7. CONTINUOUS ANIMATION LOOP WITH DEPTH-OF-FIELD SIMULATION ---
+      const projVec = new THREE.Vector3();
       const clock = new THREE.Clock();
-      function loop() {
-        requestAnimationFrame(loop);
-        if (document.hidden) return;
-        const t = clock.getElapsedTime();
 
-        // Smooth interpolation toward scroll-choreographed rig state
+      function animate() {
+        requestAnimationFrame(animate);
+        if (document.hidden) return;
+        const dt = Math.min(clock.getDelta(), 0.05);
+        const t = clock.elapsedTime;
+
+        // Smooth rig interpolation
         masterGroup.position.x += (worldRig.posX - masterGroup.position.x) * 0.06;
         masterGroup.position.y += (worldRig.posY - masterGroup.position.y) * 0.06;
         masterGroup.position.z += (worldRig.posZ - masterGroup.position.z) * 0.06;
-        const sc = masterGroup.scale.x + (worldRig.scale - masterGroup.scale.x) * 0.06;
-        masterGroup.scale.setScalar(sc);
-        glowSprite.material.opacity += (worldRig.glowOpacity - glowSprite.material.opacity) * 0.06;
+        const nextScale = masterGroup.scale.x + (worldRig.scale - masterGroup.scale.x) * 0.06;
+        masterGroup.scale.setScalar(nextScale);
+        outerBloom.material.opacity += (worldRig.glowOpacity - outerBloom.material.opacity) * 0.06;
 
-        // Fade pedestal gracefully as user scrolls past hero
-        const heroProgress = Math.min(1, window.scrollY / (window.innerHeight * 0.65));
-        pedestal.visible = heroProgress < 0.98 && !$("#homeView").hidden;
-        pedestal.position.y = -1.96 - heroProgress * 1.2;
+        // Interactive tilt & drag
+        masterGroup.rotation.y += ((worldRig.rotY + targetRY * 0.48 + dragRotY) - masterGroup.rotation.y) * 0.06;
+        masterGroup.rotation.x += ((targetRX * 0.34 + dragRotX) - masterGroup.rotation.x) * 0.06;
 
         if (!reducedMotion) {
-          corePivot.position.y = 0.48 + Math.sin(t * 1.35) * 0.13;
-          crystalCube.rotation.y = Math.PI / 4 + t * 0.22 + dragY;
-          crystalCube.rotation.x = Math.PI / 4 + Math.sin(t * 0.52) * 0.08;
+          // Central Energy Core organic breathing & counter-rotating cages
+          const pulse = 1 + Math.sin(t * 2.2) * 0.055;
+          plasmaCore.scale.setScalar(pulse);
+          plasmaCore.rotation.y = t * 0.38;
+          plasmaCore.rotation.x = t * 0.22;
+          outerCage.rotation.y = -t * 0.24;
+          outerCage.rotation.z = t * 0.16;
+          innerLattice.rotation.x = -t * 0.32;
+          innerLattice.rotation.y = t * 0.28;
+          coreRingA.rotation.z = t * 0.72;
+          coreRingB.rotation.z = -t * 0.54;
 
-          slGroup.rotation.y = Math.sin(t * 0.78) * 0.2 + targetRY * 0.8 + dragY * 0.35;
-          slGroup.rotation.x = targetRX * 0.5;
-
-          ringPrimary.rotation.z = t * 0.7;
-          ringSecondary.rotation.z = -t * 0.46;
-          ringSecondary.scale.setScalar(worldRig.ringSpread);
-          sparkNode.position.set(Math.cos(t * 1.75) * 2.45, Math.sin(t * 1.75) * 2.45, 0);
-
-          shards.forEach(s => {
-            s.position.y = s.userData.y + Math.sin(t * s.userData.speed + s.userData.phase) * 0.16;
-            s.rotation.x += 0.004;
-            s.rotation.y += 0.006;
-          });
-          starField.rotation.y = t * 0.014;
-          starField.position.y = -window.scrollY * 0.0008;
+          localSparks.rotation.y = t * 0.09;
+          localSparks.rotation.x = Math.sin(t * 0.2) * 0.14;
+          stars.rotation.y = t * 0.012;
+          stars.position.y = -window.scrollY * 0.0007;
         }
 
-        masterGroup.rotation.y += ((worldRig.rotY + targetRY * 0.5) - masterGroup.rotation.y) * 0.05;
-        masterGroup.rotation.x += (targetRX * 0.3 - masterGroup.rotation.x) * 0.05;
+        // Orbit & Depth-of-Field update for every floating 3D technology logo
+        const slowFactor = activeNodeIdx >= 0 ? 0.28 : 1.0;
+
+        techNodes.forEach((node, idx) => {
+          const isHovered = idx === activeNodeIdx;
+          if (!reducedMotion) {
+            node.angle += node.plane.def.speed * dt * slowFactor;
+          }
+          const r = node.plane.def.radius;
+          const bob = reducedMotion ? 0 : Math.sin(t * 1.6 + node.bobPhase) * 0.09;
+          node.group.position.set(Math.cos(node.angle) * r, Math.sin(node.angle) * r, bob);
+
+          // Billboard logo gently toward camera so official logos stay crisp & readable
+          node.group.quaternion.copy(camera.quaternion);
+
+          // Depth-of-Field simulation based on real 3D Z-depth relative to core
+          node.group.getWorldPosition(node.worldPos);
+          const relZ = node.worldPos.z - masterGroup.position.z;
+          const depthNorm = THREE.MathUtils.clamp((relZ + 3.6) / 7.2, 0, 1);
+
+          node.hoverFactor += ((isHovered ? 1 : 0) - node.hoverFactor) * 0.14;
+
+          const dofScale = (0.78 + depthNorm * 0.32) * (1 + node.hoverFactor * 0.34);
+          node.group.scale.setScalar(dofScale);
+
+          const dofOpacity = THREE.MathUtils.clamp(0.42 + depthNorm * 0.58 + node.hoverFactor * 0.5, 0.38, 1);
+          node.badgeMat.opacity = dofOpacity;
+          node.rimMat.opacity = THREE.MathUtils.clamp(0.32 + depthNorm * 0.55 + node.hoverFactor * 0.45, 0.3, 1);
+          node.rimMat.color.setHex(isHovered ? 0xe0f2fe : 0x38bdf8);
+          node.aura.material.opacity = (0.22 + depthNorm * 0.42) + node.hoverFactor * 0.45;
+
+          // Keep floating tooltip locked above hovered/tapped 3D node
+          if (isHovered && tooltip.classList.contains("visible")) {
+            projVec.copy(node.worldPos).project(camera);
+            const sx = (projVec.x * 0.5 + 0.5) * window.innerWidth;
+            const sy = (-projVec.y * 0.5 + 0.5) * window.innerHeight;
+            tooltip.style.left = `${THREE.MathUtils.clamp(sx, 86, window.innerWidth - 86)}px`;
+            tooltip.style.top = `${THREE.MathUtils.clamp(sy - 26, 70, window.innerHeight - 50)}px`;
+          }
+        });
+
         renderer.render(scene, camera);
       }
-      loop();
+      animate();
     }
 
     /* =========================================================================
@@ -2914,14 +3156,14 @@
 
     function setTheme(theme) {
       document.documentElement.setAttribute("data-theme", theme);
-      localStorage.setItem("sl-theme", theme);
+      localStorage.setItem("portfolio-theme", theme);
       $("#themeIcon").innerHTML = theme === "dark" ? SUN_SVG : MOON_SVG;
       const meta = $('meta[name="theme-color"]');
       if (meta) meta.setAttribute("content", theme === "dark" ? "#02040a" : "#edf3ff");
     }
 
     function initTheme() {
-      setTheme(localStorage.getItem("sl-theme") || "dark");
+      setTheme(localStorage.getItem("portfolio-theme") || "dark");
       $("#themeToggle").addEventListener("click", () => {
         const cur = document.documentElement.getAttribute("data-theme");
         setTheme(cur === "dark" ? "light" : "dark");
@@ -2929,22 +3171,26 @@
     }
 
     /* =========================================================================
-       CONTENT RENDERING (ZERO GITHUB LINKS)
+       POPULATE CONTENT (PHONE +91 9101318482, INSTAGRAM, NO WEBSITE LINK)
     ========================================================================= */
     function renderContent() {
       $("#navBrandName").textContent = SITE_DATA.name;
       $("#heroStatus").textContent = SITE_DATA.hero.status;
       $("#heroDesc").textContent = SITE_DATA.hero.description;
-      $("#heroDomain").textContent = SITE_DATA.domain;
+      $("#heroInstaLink").textContent = `@${SITE_DATA.instagramHandle}`;
+      $("#heroInstaLink").href = SITE_DATA.instagramUrl;
       $("#aboutBio").textContent = SITE_DATA.about.bio;
       $("#contactEmailDisplay").textContent = SITE_DATA.email;
-      $("#contactDomainDisplay").textContent = `https://${SITE_DATA.domain}`;
+      $("#contactPhoneLink").textContent = SITE_DATA.phone;
+      $("#contactPhoneLink").href = `tel:${SITE_DATA.phoneRaw}`;
+      $("#contactInstaLink").textContent = `@${SITE_DATA.instagramHandle}`;
+      $("#contactInstaLink").href = SITE_DATA.instagramUrl;
       $("#footerCopy").textContent = `© ${new Date().getFullYear()} ${SITE_DATA.name}`;
 
       if (SITE_DATA.avatarImage) {
         $("#avatarFrame").innerHTML = `
           <img src="${esc(SITE_DATA.avatarImage)}" alt="${esc(SITE_DATA.name)}" loading="lazy" />
-          <div class="portrait-hud"><span>ID // SL-DEV</span><span>STATUS: ACTIVE</span></div>
+          <div class="portrait-hud"><span>DEV // ANDROID &amp; WEB</span><span>STATUS: ACTIVE</span></div>
         `;
       }
 
@@ -2980,10 +3226,13 @@
 
       $("#directLinks").innerHTML = `
         <a class="social-btn" href="mailto:${esc(SITE_DATA.email)}">Direct Email</a>
-        <a class="social-btn" href="https://${esc(SITE_DATA.domain)}" target="_blank" rel="noopener">${esc(SITE_DATA.domain)}</a>
+        <a class="social-btn" href="tel:${esc(SITE_DATA.phoneRaw)}">Call ${esc(SITE_DATA.phone)}</a>
+        <a class="social-btn" href="${esc(SITE_DATA.instagramUrl)}" target="_blank" rel="noopener">Instagram @${esc(SITE_DATA.instagramHandle)}</a>
       `;
 
       $("#copyEmailBtn").addEventListener("click", () => copyText(SITE_DATA.email, "Email copied!"));
+      $("#copyPhoneBtn").addEventListener("click", () => copyText(SITE_DATA.phone, "Phone number copied!"));
+      $("#copyInstaBtn").addEventListener("click", () => copyText(`@${SITE_DATA.instagramHandle}`, "Instagram handle copied!"));
     }
 
     /* =========================================================================
@@ -3062,15 +3311,11 @@
           </div>
           <div class="card-footer">
             <a href="#project/${encodeURIComponent(p.slug)}" class="btn btn-electric btn-sm">Explore Case &rarr;</a>
-            <div class="card-mini-group">
-              ${p.liveUrl ? `<a class="mini-orb" href="${esc(p.liveUrl)}" target="_blank" rel="noopener" aria-label="Open live site" title="Open live site">${ICONS.external}</a>` : ""}
-              <button type="button" class="mini-orb" data-share-slug="${esc(p.slug)}" aria-label="Copy direct project link" title="Copy direct link">${ICONS.share}</button>
-            </div>
+            <button type="button" class="mini-orb" data-share-slug="${esc(p.slug)}" aria-label="Copy direct project link" title="Copy direct link">${ICONS.share}</button>
           </div>
         </article>
       `).join("");
 
-      // 3D Tilt & Reactive Glare on Pointer
       $$("[data-tilt]", grid).forEach(card => {
         card.addEventListener("pointermove", (e) => {
           if (e.pointerType === "touch") return;
@@ -3083,9 +3328,7 @@
           card.style.setProperty("--my", `${y}px`);
           card.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg) translateY(-5px)`;
         });
-        card.addEventListener("pointerleave", () => {
-          card.style.transform = "";
-        });
+        card.addEventListener("pointerleave", () => { card.style.transform = ""; });
       });
 
       $$("[data-share-slug]", grid).forEach(btn => {
@@ -3159,8 +3402,7 @@
           </div>
 
           <div style="display:flex; flex-wrap:wrap; gap:12px;">
-            ${p.liveUrl ? `<a class="btn btn-electric" href="${esc(p.liveUrl)}" target="_blank" rel="noopener">Visit Live Site &rarr;</a>` : ""}
-            <a class="btn ${p.liveUrl ? "btn-glass" : "btn-electric"}" href="#contact">Discuss This Build &rarr;</a>
+            <a class="btn btn-electric" href="#contact">Discuss This Build &rarr;</a>
           </div>
         </article>
 
@@ -3217,7 +3459,7 @@
         currentView = "home";
         $("#projectView").hidden = true;
         $("#homeView").hidden = false;
-        document.title = `${SITE_DATA.name} — Digital Architect & Developer`;
+        document.title = `${SITE_DATA.name} — Developer & Digital Architect`;
         if (hash && hash !== "#home") {
           const target = $(hash);
           if (target) target.scrollIntoView({ behavior: fromProject ? "instant" : "smooth" });
@@ -3345,7 +3587,6 @@
 
       $("#backToTop").addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
-      // Cursor spotlight & magnetic buttons (desktop only)
       const aura = $("#cursorAura");
       if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
         window.addEventListener("pointermove", (e) => {
@@ -3365,7 +3606,6 @@
         });
       }
 
-      // Scroll progress & chapter sync
       const chapterIds = ["home", "about", "projects", "skills", "journey", "contact"];
       window.addEventListener("scroll", () => {
         const y = window.scrollY;
@@ -3387,7 +3627,6 @@
         storyDots.forEach(dot => dot.classList.toggle("active", dot.dataset.jump === `#${activeId}`));
       }, { passive: true });
 
-      // GSAP Kinetic Entrance, Reveals & Journey Laser Scrub
       if (typeof gsap !== "undefined" && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
         try {
           if (typeof ScrollTrigger !== "undefined") gsap.registerPlugin(ScrollTrigger);
