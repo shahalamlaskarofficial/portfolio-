@@ -3,71 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="Shahalam Laskar — Developer. Builder. Digital Creator. Futuristic 3D developer portfolio showcasing Android apps, voice AI, and high-performance web experiences." />
-  <meta name="theme-color" content="#02050d" />
-  <title>Shahalam Laskar — Developer. Builder. Digital Creator.</title>
+  <meta name="description" content="Shahalam Laskar — Developer. Builder. Digital Creator. Cinematic 3D developer portfolio featuring Android systems, voice AI, and interactive web engineering." />
+  <meta name="theme-color" content="#02040a" />
+  <title>Shahalam Laskar — Digital Architect &amp; Developer</title>
 
-  <!-- Inline Illuminated SL Monogram Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%2360a5fa'/%3E%3Cstop offset='100%25' stop-color='%232563eb'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%23030712'/%3E%3Cpolygon points='32,6 56,19 56,45 32,58 8,45 8,19' fill='none' stroke='url(%23g)' stroke-width='3'/%3E%3Cpath d='M30 22H19l-2 9h10l-1.5 11H14l1-5h7l.5-3H13l2.5-15h15zM35 22h5.5L38 37h9.5l-1 5H32z' fill='url(%23g)'/%3E%3C/svg%3E" />
+  <!-- Illuminated SL Monogram Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%237dd3fc'/%3E%3Cstop offset='100%25' stop-color='%232563eb'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%2302040a'/%3E%3Cpolygon points='32,5 56,18.5 56,45.5 32,59 8,45.5 8,18.5' fill='none' stroke='url(%23g)' stroke-width='2.8'/%3E%3Cpath d='M30 21H19l-2 9h10l-1.5 11H14l1-5h7l.5-3H13l2.5-15h15zM35 21h5.5L38 36h9.5l-1 5H32z' fill='url(%23g)'/%3E%3C/svg%3E" />
 
-  <!-- Cinematic Fonts -->
+  <!-- Editorial & Futuristic Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
 
-  <!-- Three.js & GSAP + ScrollTrigger (Zero-Build CDN, GitHub Pages Ready) -->
+  <!-- Three.js & GSAP + ScrollTrigger (Zero-Build CDN) -->
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
   <style>
     /* =========================================================================
-       DESIGN SYSTEM — DEEP OBSIDIAN & ELECTRIC BLUE 3D ATMOSPHERE
+       DESIGN TOKENS — CINEMATIC OBSIDIAN & ELECTRIC BLUE ATMOSPHERE
     ========================================================================= */
     :root {
-      --bg-void: #02050d;
-      --bg-deep: #050b18;
-      --bg-surface: rgba(8, 15, 30, 0.72);
-      --bg-surface-strong: rgba(10, 19, 38, 0.88);
-      --bg-pill: rgba(12, 22, 42, 0.65);
+      --bg-void: #02040a;
+      --bg-deep: #050a16;
+      --surface: rgba(8, 15, 30, 0.62);
+      --surface-strong: rgba(10, 19, 38, 0.86);
+      --surface-pill: rgba(9, 17, 34, 0.72);
       --border: rgba(96, 165, 250, 0.16);
-      --border-bright: rgba(56, 189, 248, 0.45);
-      --text-primary: #f8fafc;
+      --border-strong: rgba(56, 189, 248, 0.45);
+      --text: #f8fafc;
       --text-secondary: #94a3b8;
       --text-muted: #64748b;
-      --electric: #38bdf8;
-      --cobalt: #2563eb;
-      --indigo: #6366f1;
-      --emerald: #10b981;
+      --cyan: #38bdf8;
+      --blue: #2563eb;
+      --ice: #bae6fd;
+      --violet: #818cf8;
+      --emerald: #34d399;
       --danger: #f87171;
-      --glow-blue: 0 0 28px rgba(37, 99, 235, 0.45), 0 0 64px rgba(56, 189, 248, 0.2);
-      --glow-soft: 0 18px 50px rgba(0, 0, 0, 0.65);
-      --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
-      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --shadow-deep: 0 24px 64px rgba(0, 0, 0, 0.65);
+      --glow-electric: 0 0 28px rgba(37, 99, 235, 0.45), 0 0 60px rgba(56, 189, 248, 0.18);
+      --font-hero: 'Syne', 'Space Grotesk', sans-serif;
+      --font-display: 'Space Grotesk', -apple-system, sans-serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       --font-mono: 'JetBrains Mono', ui-monospace, monospace;
-      --radius-xl: 26px;
+      --container: 1200px;
+      --nav-h: 78px;
+      --radius-xl: 28px;
       --radius-lg: 20px;
       --radius-md: 14px;
-      --container: 1180px;
-      --nav-h: 76px;
       --ease: cubic-bezier(0.22, 1, 0.36, 1);
     }
 
     [data-theme="light"] {
-      --bg-void: #eef4ff;
+      --bg-void: #edf3ff;
       --bg-deep: #e2ecff;
-      --bg-surface: rgba(255, 255, 255, 0.78);
-      --bg-surface-strong: rgba(255, 255, 255, 0.94);
-      --bg-pill: rgba(255, 255, 255, 0.8);
+      --surface: rgba(255, 255, 255, 0.76);
+      --surface-strong: rgba(255, 255, 255, 0.94);
+      --surface-pill: rgba(255, 255, 255, 0.82);
       --border: rgba(37, 99, 235, 0.16);
-      --border-bright: rgba(37, 99, 235, 0.48);
-      --text-primary: #061024;
+      --border-strong: rgba(37, 99, 235, 0.5);
+      --text: #061024;
       --text-secondary: #334155;
       --text-muted: #64748b;
-      --electric: #0284c7;
-      --cobalt: #1d4ed8;
-      --glow-blue: 0 10px 28px rgba(37, 99, 235, 0.25);
-      --glow-soft: 0 18px 40px rgba(15, 23, 42, 0.09);
+      --cyan: #0284c7;
+      --blue: #1d4ed8;
+      --ice: #0369a1;
+      --shadow-deep: 0 20px 50px rgba(15, 23, 42, 0.09);
+      --glow-electric: 0 12px 30px rgba(37, 99, 235, 0.24);
     }
 
     *, *::before, *::after { box-sizing: border-box; }
@@ -82,8 +85,8 @@
       margin: 0;
       font-family: var(--font-sans);
       background: var(--bg-void);
-      color: var(--text-primary);
-      line-height: 1.6;
+      color: var(--text);
+      line-height: 1.65;
       overflow-x: hidden;
       min-height: 100vh;
       transition: background-color 350ms var(--ease), color 350ms var(--ease);
@@ -95,7 +98,7 @@
     img, svg { display: block; }
 
     :focus-visible {
-      outline: 2px solid var(--electric);
+      outline: 2px solid var(--cyan);
       outline-offset: 3px;
       border-radius: 8px;
     }
@@ -104,117 +107,242 @@
       width: 100%;
       max-width: var(--container);
       margin: 0 auto;
-      padding: 0 22px;
+      padding: 0 24px;
       position: relative;
-      z-index: 2;
+      z-index: 3;
     }
 
     /* =========================================================================
-       CINEMATIC PRELOADER & PAGE TRANSITION CURTAIN
+       LAYERED ATMOSPHERIC ENVIRONMENT (FIXED 3D + DEPTH GRID + FILM GRAIN)
+    ========================================================================= */
+    .environment-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(960px circle at 76% 18%, rgba(37, 99, 235, 0.22), transparent 58%),
+        radial-gradient(740px circle at 14% 48%, rgba(56, 189, 248, 0.09), transparent 56%),
+        radial-gradient(800px circle at 82% 88%, rgba(37, 99, 235, 0.14), transparent 54%),
+        linear-gradient(180deg, var(--bg-void) 0%, var(--bg-deep) 52%, var(--bg-void) 100%);
+    }
+
+    [data-theme="light"] .environment-backdrop {
+      background:
+        radial-gradient(900px circle at 78% 16%, rgba(37, 99, 235, 0.14), transparent 58%),
+        radial-gradient(700px circle at 12% 52%, rgba(56, 189, 248, 0.12), transparent 56%),
+        linear-gradient(180deg, #f4f8ff 0%, #e5efff 55%, #eef4ff 100%);
+    }
+
+    /* Subtle architectural coordinate grid */
+    .depth-grid {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.26;
+      background-image:
+        linear-gradient(rgba(96, 165, 250, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(96, 165, 250, 0.08) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, #000 18%, transparent 80%);
+      -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, #000 18%, transparent 80%);
+    }
+
+    /* Ultra-subtle cinema film grain (zero external assets) */
+    .film-grain {
+      position: fixed;
+      inset: 0;
+      z-index: 4;
+      pointer-events: none;
+      opacity: 0.032;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    /* Persistent Full-Viewport Three.js Canvas */
+    #worldCanvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* Desktop reactive cursor aura */
+    .cursor-aura {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 440px;
+      height: 440px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.11), rgba(37, 99, 235, 0.04) 42%, transparent 70%);
+      pointer-events: none;
+      z-index: 2;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 300ms ease;
+    }
+
+    @media (hover: none), (pointer: coarse) {
+      .cursor-aura { display: none; }
+    }
+
+    /* Scroll Telemetry Top Bar & Side Progress Rail */
+    .scroll-rail-top {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 2px;
+      width: 0%;
+      z-index: 240;
+      background: linear-gradient(90deg, var(--blue), var(--cyan), #e0f2fe);
+      box-shadow: 0 0 14px var(--cyan);
+    }
+
+    .story-rail {
+      position: fixed;
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 120;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      pointer-events: auto;
+    }
+
+    .story-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 99px;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      background: transparent;
+      padding: 0;
+      transition: all 280ms var(--ease);
+    }
+
+    .story-dot.active {
+      height: 26px;
+      border-color: var(--cyan);
+      background: linear-gradient(180deg, var(--cyan), var(--blue));
+      box-shadow: 0 0 14px rgba(56, 189, 248, 0.75);
+    }
+
+    @media (max-width: 960px) {
+      .story-rail { display: none; }
+    }
+
+    /* =========================================================================
+       PRELOADER & CINEMATIC SHUTTER PAGE TRANSITION
     ========================================================================= */
     .preloader {
       position: fixed;
       inset: 0;
-      z-index: 300;
-      background: #02050d;
+      z-index: 320;
+      background: #02040a;
       display: grid;
       place-items: center;
-      pointer-events: none;
-      transition: opacity 550ms var(--ease), visibility 550ms var(--ease);
+      transition: opacity 600ms var(--ease), visibility 600ms var(--ease);
     }
 
     .preloader.done {
       opacity: 0;
       visibility: hidden;
+      pointer-events: none;
     }
 
-    .preloader-core {
+    .preloader-box {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 14px;
+      gap: 16px;
     }
 
-    .preloader-mark {
-      width: 68px;
-      height: 68px;
-      filter: drop-shadow(0 0 24px rgba(56, 189, 248, 0.75));
-      animation: floatPulse 1.6s ease-in-out infinite;
+    .preloader-emblem {
+      width: 78px;
+      height: 78px;
+      filter: drop-shadow(0 0 28px rgba(56, 189, 248, 0.8));
+      animation: emblemPulse 1.6s ease-in-out infinite;
     }
 
-    .preloader-bar {
-      width: 130px;
+    .preloader-label {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.28em;
+      color: rgba(147, 197, 253, 0.8);
+      text-transform: uppercase;
+    }
+
+    .preloader-track {
+      width: 150px;
       height: 2px;
+      background: rgba(255, 255, 255, 0.08);
       border-radius: 99px;
-      background: rgba(255, 255, 255, 0.1);
       overflow: hidden;
     }
 
-    .preloader-bar::after {
+    .preloader-track::after {
       content: "";
       display: block;
-      width: 45%;
+      width: 48%;
       height: 100%;
-      background: linear-gradient(90deg, var(--cobalt), var(--electric));
-      animation: loadSlide 0.85s ease-in-out infinite;
+      background: linear-gradient(90deg, var(--blue), var(--cyan));
+      animation: trackSweep 0.85s ease-in-out infinite;
     }
 
-    @keyframes loadSlide {
-      0% { transform: translateX(-100%); }
+    @keyframes emblemPulse {
+      0%, 100% { transform: scale(1) translateY(0); }
+      50% { transform: scale(1.06) translateY(-5px); }
+    }
+
+    @keyframes trackSweep {
+      0% { transform: translateX(-110%); }
       100% { transform: translateX(260%); }
     }
 
-    @keyframes floatPulse {
-      0%, 100% { transform: translateY(0) scale(1); }
-      50% { transform: translateY(-6px) scale(1.04); }
-    }
-
-    .page-curtain {
+    /* Dual Shutter Page Transition */
+    .shutter-wrap {
       position: fixed;
       inset: 0;
-      z-index: 260;
+      z-index: 290;
       pointer-events: none;
-      background: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.28), #02050d 72%);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    .shutter-panel {
+      background: #020510;
+      transform: scaleY(0);
+    }
+
+    .shutter-top {
+      transform-origin: top center;
+      border-bottom: 1px solid rgba(56, 189, 248, 0.45);
+    }
+
+    .shutter-bottom {
+      transform-origin: bottom center;
+      border-top: 1px solid rgba(56, 189, 248, 0.45);
+    }
+
+    .shutter-badge {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.8);
+      z-index: 295;
+      pointer-events: none;
       opacity: 0;
-      transform: scale(1.04);
-    }
-
-    /* Global Starfield & Ambient Light Beams */
-    .cosmic-bg {
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-      pointer-events: none;
-      overflow: hidden;
-      background:
-        radial-gradient(900px circle at 78% 14%, rgba(37, 99, 235, 0.18), transparent 58%),
-        radial-gradient(720px circle at 12% 42%, rgba(56, 189, 248, 0.08), transparent 55%),
-        radial-gradient(760px circle at 85% 86%, rgba(37, 99, 235, 0.14), transparent 55%),
-        linear-gradient(180deg, var(--bg-void) 0%, var(--bg-deep) 55%, var(--bg-void) 100%);
-    }
-
-    [data-theme="light"] .cosmic-bg {
-      background:
-        radial-gradient(820px circle at 80% 10%, rgba(37, 99, 235, 0.15), transparent 58%),
-        radial-gradient(700px circle at 10% 45%, rgba(56, 189, 248, 0.12), transparent 55%),
-        linear-gradient(180deg, #f3f7ff 0%, #e5efff 50%, #eef4ff 100%);
-    }
-
-    .scroll-line {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 2.5px;
-      width: 0%;
-      z-index: 210;
-      background: linear-gradient(90deg, var(--cobalt), var(--electric), #93c5fd);
-      box-shadow: 0 0 12px var(--electric);
+      width: 64px;
+      height: 64px;
+      filter: drop-shadow(0 0 24px rgba(56, 189, 248, 0.9));
     }
 
     /* =========================================================================
-       FLOATING GLASS NAVIGATION
+       ANIMATED GLASS NAVIGATION (NO GITHUB LINK)
     ========================================================================= */
     .navbar {
       position: fixed;
@@ -222,7 +350,7 @@
       left: 0;
       right: 0;
       height: var(--nav-h);
-      z-index: 160;
+      z-index: 180;
       display: flex;
       align-items: center;
       transition: background 300ms var(--ease), border-color 300ms var(--ease), backdrop-filter 300ms var(--ease);
@@ -230,8 +358,8 @@
 
     .navbar.scrolled {
       background: color-mix(in srgb, var(--bg-void) 76%, transparent);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border);
     }
 
@@ -245,621 +373,737 @@
     .brand {
       display: inline-flex;
       align-items: center;
-      gap: 11px;
+      gap: 12px;
       font-family: var(--font-display);
       font-weight: 700;
-      font-size: 1.05rem;
+      font-size: 1.04rem;
       letter-spacing: -0.02em;
     }
 
-    .brand-logo {
-      width: 36px;
-      height: 36px;
-      filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.55));
-      transition: transform 300ms var(--ease);
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      filter: drop-shadow(0 0 14px rgba(56, 189, 248, 0.6));
+      transition: transform 320ms var(--ease);
     }
 
-    .brand:hover .brand-logo {
-      transform: scale(1.08) rotate(-4deg);
+    .brand:hover .brand-mark {
+      transform: scale(1.08) rotate(-6deg);
     }
 
-    .nav-pill {
+    .nav-dock {
+      position: relative;
       display: flex;
       align-items: center;
-      gap: 4px;
+      gap: 2px;
       padding: 5px;
       border-radius: 999px;
-      background: var(--bg-pill);
+      background: var(--surface-pill);
       border: 1px solid var(--border);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: 0 10px 32px rgba(0, 0, 0, 0.28);
     }
 
-    .nav-pill a {
+    .nav-slider {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      height: calc(100% - 10px);
+      border-radius: 999px;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.92), rgba(56, 189, 248, 0.72));
+      box-shadow: 0 0 22px rgba(37, 99, 235, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+      transition: transform 360ms var(--ease), width 360ms var(--ease), opacity 240ms ease;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .nav-dock a {
+      position: relative;
+      z-index: 1;
       padding: 8px 16px;
       border-radius: 999px;
-      font-size: 0.88rem;
+      font-size: 0.87rem;
       font-weight: 500;
       color: var(--text-secondary);
-      transition: color 220ms var(--ease), background 220ms var(--ease), box-shadow 220ms var(--ease);
+      transition: color 220ms ease;
     }
 
-    .nav-pill a:hover {
-      color: var(--text-primary);
-    }
+    .nav-dock a:hover { color: var(--text); }
+    .nav-dock a.active { color: #ffffff; }
 
-    .nav-pill a.active {
-      color: #ffffff;
-      background: linear-gradient(135deg, rgba(37, 99, 235, 0.9), rgba(56, 189, 248, 0.65));
-      box-shadow: 0 0 20px rgba(37, 99, 235, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.35);
-    }
-
-    .nav-right {
+    .nav-controls {
       display: flex;
       align-items: center;
       gap: 10px;
     }
 
-    .glass-icon-btn {
-      width: 40px;
-      height: 40px;
+    .nav-cta {
+      padding: 9px 18px;
       border-radius: 999px;
-      border: 1px solid var(--border);
-      background: var(--bg-pill);
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: #ffffff;
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.22), rgba(37, 99, 235, 0.42));
+      border: 1px solid var(--border-strong);
       backdrop-filter: blur(12px);
-      display: grid;
-      place-items: center;
-      color: var(--text-primary);
-      transition: border-color 220ms var(--ease), transform 220ms var(--ease), box-shadow 220ms var(--ease);
+      transition: all 240ms var(--ease);
     }
 
-    .glass-icon-btn:hover {
-      border-color: var(--border-bright);
-      box-shadow: 0 0 18px rgba(56, 189, 248, 0.32);
+    .nav-cta:hover {
+      background: linear-gradient(135deg, var(--cyan), var(--blue));
+      box-shadow: 0 0 24px rgba(56, 189, 248, 0.5);
       transform: translateY(-1px);
     }
 
-    .menu-btn { display: none; }
+    .icon-orb {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--surface-pill);
+      backdrop-filter: blur(12px);
+      display: grid;
+      place-items: center;
+      color: var(--text);
+      transition: all 240ms var(--ease);
+    }
 
-    /* Mobile Full-Glass Drawer */
-    .mobile-menu {
+    .icon-orb:hover {
+      border-color: var(--border-strong);
+      box-shadow: 0 0 18px rgba(56, 189, 248, 0.35);
+      transform: translateY(-1px);
+    }
+
+    .menu-toggle { display: none; }
+
+    /* Mobile Glass Drawer */
+    .mobile-drawer {
       position: fixed;
       inset: 0;
-      z-index: 155;
-      background: color-mix(in srgb, var(--bg-void) 92%, transparent);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
+      z-index: 175;
+      background: color-mix(in srgb, var(--bg-void) 94%, transparent);
+      backdrop-filter: blur(26px);
+      -webkit-backdrop-filter: blur(26px);
+      padding: 96px 26px 36px;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 90px 28px 36px;
       gap: 12px;
       opacity: 0;
       pointer-events: none;
-      transform: translateY(-12px);
+      transform: translateY(-14px);
       transition: opacity 280ms var(--ease), transform 280ms var(--ease);
     }
 
-    .mobile-menu.open {
+    .mobile-drawer.open {
       opacity: 1;
       pointer-events: auto;
       transform: translateY(0);
     }
 
-    .mobile-menu a {
+    .mobile-drawer a {
       font-family: var(--font-display);
-      font-size: 1.45rem;
+      font-size: 1.42rem;
       font-weight: 700;
       padding: 15px 20px;
       border-radius: var(--radius-md);
-      background: var(--bg-surface);
+      background: var(--surface);
       border: 1px solid var(--border);
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
+    .mobile-drawer a span {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      color: var(--cyan);
+    }
+
     /* =========================================================================
-       BUTTONS & GLOWING CONTROLS
+       BUTTONS & MAGNETIC MICRO-INTERACTIONS
     ========================================================================= */
     .btn {
+      position: relative;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 9px;
-      padding: 13px 24px;
+      padding: 13px 26px;
       border-radius: 999px;
       font-weight: 600;
-      font-size: 0.93rem;
+      font-size: 0.92rem;
       border: 1px solid transparent;
+      overflow: hidden;
       transition: transform 240ms var(--ease), box-shadow 240ms var(--ease), border-color 240ms var(--ease), background 240ms var(--ease);
     }
 
-    .btn:active { transform: scale(0.97); }
+    .btn:active { transform: scale(0.96); }
 
     .btn-electric {
       color: #ffffff;
-      background: linear-gradient(135deg, #38bdf8 0%, #2563eb 55%, #1d4ed8 100%);
-      box-shadow: 0 0 26px rgba(37, 99, 235, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+      background: linear-gradient(135deg, #38bdf8 0%, #2563eb 52%, #1d4ed8 100%);
+      box-shadow: 0 0 28px rgba(37, 99, 235, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.35);
     }
+
+    .btn-electric::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(110deg, transparent 25%, rgba(255, 255, 255, 0.28) 50%, transparent 75%);
+      transform: translateX(-120%);
+      transition: transform 600ms var(--ease);
+    }
+
+    .btn-electric:hover::after { transform: translateX(120%); }
 
     .btn-electric:hover {
       transform: translateY(-2px);
-      box-shadow: 0 0 38px rgba(56, 189, 248, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.45);
+      box-shadow: 0 0 40px rgba(56, 189, 248, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.48);
     }
 
     .btn-glass {
-      color: var(--text-primary);
-      background: var(--bg-pill);
+      color: var(--text);
+      background: var(--surface-pill);
       border-color: var(--border);
-      backdrop-filter: blur(12px);
+      backdrop-filter: blur(14px);
     }
 
     .btn-glass:hover {
-      border-color: var(--border-bright);
-      background: var(--bg-surface-strong);
+      border-color: var(--border-strong);
+      background: var(--surface-strong);
       transform: translateY(-2px);
-      box-shadow: 0 0 22px rgba(56, 189, 248, 0.22);
+      box-shadow: 0 0 22px rgba(56, 189, 248, 0.24);
     }
 
-    .btn-sm {
-      padding: 9px 16px;
-      font-size: 0.83rem;
-    }
+    .btn-sm { padding: 9px 18px; font-size: 0.83rem; }
 
     /* =========================================================================
-       MASSIVE INTERACTIVE 3D HERO
+       CHAPTER 01 — IMMERSIVE 3D HERO STAGE
     ========================================================================= */
     .hero {
       position: relative;
       min-height: 100svh;
-      padding: calc(var(--nav-h) + 28px) 0 96px;
+      padding: calc(var(--nav-h) + 30px) 0 88px;
       display: flex;
       align-items: center;
+      z-index: 3;
       overflow: hidden;
     }
 
-    /* Real-Time Three.js 3D Stage */
-    #heroCanvas {
+    /* Interactive Drag Zone over 3D canvas */
+    .hero-drag-surface {
       position: absolute;
       inset: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
+      z-index: 2;
       touch-action: pan-y;
     }
 
-    /* Subtle Planetary Rim & Atmospheric Horizon Mountains */
     .hero-planet {
       position: absolute;
-      top: -90px;
+      top: -110px;
       right: -110px;
-      width: 420px;
-      height: 420px;
+      width: 460px;
+      height: 460px;
       border-radius: 50%;
-      background: radial-gradient(circle at 28% 35%, rgba(147, 197, 253, 0.28), rgba(15, 23, 42, 0.78) 48%, rgba(2, 5, 13, 0.95) 75%);
-      box-shadow: inset 18px 18px 50px rgba(96, 165, 250, 0.25), 0 0 80px rgba(37, 99, 235, 0.22);
-      opacity: 0.6;
+      background: radial-gradient(circle at 28% 34%, rgba(147, 197, 253, 0.24), rgba(10, 18, 38, 0.82) 48%, rgba(2, 4, 10, 0.96) 76%);
+      box-shadow: inset 20px 20px 55px rgba(96, 165, 250, 0.25), 0 0 90px rgba(37, 99, 235, 0.22);
+      opacity: 0.58;
       pointer-events: none;
-      z-index: 0;
+      z-index: 1;
     }
 
-    [data-theme="light"] .hero-planet {
-      opacity: 0.22;
-    }
-
-    .hero-horizon {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -2px;
-      width: 100%;
-      height: 150px;
-      z-index: 2;
-      pointer-events: none;
-    }
+    [data-theme="light"] .hero-planet { opacity: 0.16; }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.08fr 0.92fr;
+      grid-template-columns: 1.06fr 0.94fr;
       align-items: center;
-      gap: 24px;
+      gap: 28px;
       min-height: calc(100svh - 190px);
     }
 
     .hero-copy {
       position: relative;
-      z-index: 3;
-      max-width: 590px;
+      z-index: 4;
+      max-width: 620px;
     }
 
-    .availability-pill {
+    .status-chip {
       display: inline-flex;
       align-items: center;
-      gap: 9px;
-      padding: 7px 15px;
+      gap: 10px;
+      padding: 7px 16px;
       border-radius: 999px;
-      background: var(--bg-pill);
+      background: var(--surface-pill);
       border: 1px solid var(--border);
-      backdrop-filter: blur(12px);
-      font-size: 0.82rem;
-      color: var(--text-secondary);
-      margin-bottom: 20px;
+      backdrop-filter: blur(14px);
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      letter-spacing: 0.04em;
+      color: var(--ice);
+      margin-bottom: 22px;
     }
 
-    .pulse-dot {
+    .live-dot {
       width: 8px;
       height: 8px;
       border-radius: 50%;
       background: #22c55e;
-      box-shadow: 0 0 10px #22c55e;
-      animation: livePulse 2s infinite;
+      box-shadow: 0 0 12px #22c55e;
+      animation: livePulse 2.1s infinite;
     }
 
     @keyframes livePulse {
       0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.55); }
-      50% { box-shadow: 0 0 0 7px rgba(34, 197, 94, 0); }
+      50% { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
     }
 
     .hero-title {
-      font-family: var(--font-display);
-      margin: 0 0 18px;
-      line-height: 0.94;
-      letter-spacing: -0.04em;
+      font-family: var(--font-hero);
+      margin: 0 0 20px;
+      line-height: 0.92;
+      letter-spacing: -0.045em;
       font-weight: 800;
       text-transform: uppercase;
     }
 
-    .hero-title .line-top {
+    .hero-title .t-light {
       display: block;
-      font-size: clamp(2.85rem, 6.2vw, 5.15rem);
-      background: linear-gradient(180deg, #ffffff 15%, #cbd5e1 100%);
+      font-size: clamp(2.8rem, 6vw, 5.1rem);
+      background: linear-gradient(180deg, #ffffff 20%, #cbd5e1 100%);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      filter: drop-shadow(0 6px 26px rgba(255, 255, 255, 0.14));
+      filter: drop-shadow(0 8px 28px rgba(255, 255, 255, 0.14));
     }
 
-    [data-theme="light"] .hero-title .line-top {
-      background: linear-gradient(180deg, #09152c 15%, #1e3a8a 100%);
+    [data-theme="light"] .hero-title .t-light {
+      background: linear-gradient(180deg, #061024 20%, #1e3a8a 100%);
       -webkit-background-clip: text;
       background-clip: text;
     }
 
-    .hero-title .line-bottom {
+    .hero-title .t-blue {
       display: block;
-      font-size: clamp(3.15rem, 7vw, 5.8rem);
-      background: linear-gradient(135deg, #7dd3fc 0%, #3b82f6 48%, #1d4ed8 100%);
+      font-size: clamp(3.15rem, 7.1vw, 5.95rem);
+      background: linear-gradient(130deg, #bae6fd 0%, #38bdf8 34%, #2563eb 78%, #1d4ed8 100%);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      filter: drop-shadow(0 0 32px rgba(37, 99, 235, 0.5));
+      filter: drop-shadow(0 0 38px rgba(37, 99, 235, 0.52));
     }
 
-    .hero-roles {
+    .hero-tagline {
       font-family: var(--font-display);
-      font-size: clamp(1.12rem, 2.2vw, 1.5rem);
+      font-size: clamp(1.12rem, 2.2vw, 1.55rem);
       font-weight: 700;
-      margin: 0 0 12px;
-      letter-spacing: -0.015em;
+      margin: 0 0 14px;
+      letter-spacing: -0.02em;
     }
 
-    .hero-roles .highlight {
-      color: var(--electric);
+    .hero-tagline .accent {
+      color: var(--cyan);
       text-shadow: 0 0 22px rgba(56, 189, 248, 0.45);
     }
 
     .hero-desc {
-      margin: 0 0 28px;
+      margin: 0 0 30px;
       color: var(--text-secondary);
-      font-size: clamp(0.96rem, 1.5vw, 1.07rem);
-      max-width: 48ch;
+      font-size: clamp(0.96rem, 1.5vw, 1.08rem);
+      max-width: 50ch;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 13px;
-      margin-bottom: 34px;
+      gap: 14px;
+      margin-bottom: 36px;
+    }
+
+    .hero-telemetry {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 22px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(96, 165, 250, 0.14);
+    }
+
+    .telemetry-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .telemetry-item span {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .telemetry-item strong {
+      font-family: var(--font-display);
+      font-size: 0.92rem;
+      color: var(--text);
+    }
+
+    .hero-stage-hud {
+      min-height: 450px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      pointer-events: none;
+      position: relative;
+      z-index: 4;
+    }
+
+    .hud-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(2, 6, 18, 0.6);
+      border: 1px solid rgba(56, 189, 248, 0.28);
+      backdrop-filter: blur(10px);
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      color: rgba(186, 230, 253, 0.85);
+      text-transform: uppercase;
     }
 
     .scroll-cue {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 5;
       display: inline-flex;
+      flex-direction: column;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
       color: var(--text-muted);
-      font-size: 0.82rem;
-      letter-spacing: 0.03em;
     }
 
-    .mouse-icon {
-      width: 18px;
-      height: 28px;
-      border-radius: 99px;
-      border: 1.5px solid var(--border-bright);
+    .scroll-stem {
+      width: 1px;
+      height: 36px;
+      background: linear-gradient(180deg, var(--cyan), transparent);
       position: relative;
+      overflow: hidden;
     }
 
-    .mouse-icon::after {
+    .scroll-stem::after {
       content: "";
       position: absolute;
-      top: 5px;
-      left: 50%;
-      width: 3px;
-      height: 6px;
-      border-radius: 99px;
-      background: var(--electric);
-      transform: translateX(-50%);
-      animation: mouseWheel 1.8s ease-in-out infinite;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 14px;
+      background: #ffffff;
+      animation: stemDrop 1.7s ease-in-out infinite;
     }
 
-    @keyframes mouseWheel {
-      0% { opacity: 1; transform: translate(-50%, 0); }
-      100% { opacity: 0; transform: translate(-50%, 10px); }
-    }
-
-    /* Interactive 3D Stage Spacer (Desktop Right / Mobile Top-Compact) */
-    .hero-stage-spacer {
-      min-height: 440px;
-      position: relative;
-      z-index: 2;
-      pointer-events: none;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-    }
-
-    .stage-hint {
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      color: rgba(147, 197, 253, 0.72);
-      background: rgba(2, 6, 18, 0.55);
-      border: 1px solid rgba(56, 189, 248, 0.22);
-      padding: 5px 12px;
-      border-radius: 999px;
-      backdrop-filter: blur(8px);
-      letter-spacing: 0.04em;
+    @keyframes stemDrop {
+      0% { transform: translateY(-14px); opacity: 0; }
+      40% { opacity: 1; }
+      100% { transform: translateY(36px); opacity: 0; }
     }
 
     /* =========================================================================
-       SHARED SECTION STYLING
+       CONNECTED CHAPTER HEADERS & SHARED SECTIONS
     ========================================================================= */
-    section.block {
-      padding: 86px 0;
+    section.chapter {
+      padding: 104px 0;
       position: relative;
       z-index: 3;
-      scroll-margin-top: var(--nav-h);
+      scroll-margin-top: calc(var(--nav-h) - 10px);
     }
 
-    .section-header {
+    .chapter-divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.28), transparent);
+      margin-bottom: 0;
+      position: relative;
+      z-index: 3;
+    }
+
+    .chapter-head {
       display: flex;
       flex-wrap: wrap;
       align-items: flex-end;
       justify-content: space-between;
-      gap: 18px;
-      margin-bottom: 34px;
+      gap: 20px;
+      margin-bottom: 42px;
     }
 
-    .eyebrow-row {
+    .chapter-tag {
       display: inline-flex;
       align-items: center;
       gap: 12px;
       font-family: var(--font-mono);
-      font-size: 0.78rem;
+      font-size: 0.74rem;
       font-weight: 600;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: var(--electric);
-      margin-bottom: 8px;
+      color: var(--cyan);
+      margin-bottom: 10px;
     }
 
-    .eyebrow-row::after {
+    .chapter-tag::after {
       content: "";
-      width: 58px;
-      height: 1.5px;
-      background: linear-gradient(90deg, var(--electric), transparent);
+      width: 56px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--cyan), transparent);
     }
 
-    .section-title {
+    .chapter-title {
       font-family: var(--font-display);
       margin: 0;
-      font-size: clamp(1.75rem, 3.2vw, 2.35rem);
-      letter-spacing: -0.025em;
+      font-size: clamp(1.9rem, 3.6vw, 2.75rem);
+      letter-spacing: -0.03em;
+      line-height: 1.08;
     }
 
-    .section-sub {
-      margin: 6px 0 0;
+    .chapter-sub {
+      margin: 8px 0 0;
       color: var(--text-secondary);
-      font-size: 0.96rem;
+      font-size: 0.98rem;
+      max-width: 58ch;
     }
 
     /* =========================================================================
-       ABOUT ME — LUMINOUS GLASS PANEL
+       CHAPTER 02 — ABOUT ME (ART-DIRECTED HOLOGRAPHIC DOSSIER)
     ========================================================================= */
-    .about-glass {
+    .dossier-shell {
       position: relative;
       border-radius: var(--radius-xl);
-      background: var(--bg-surface);
+      background: var(--surface);
       border: 1px solid var(--border);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      padding: 28px;
-      box-shadow: var(--glow-soft), inset 0 1px 0 rgba(147, 197, 253, 0.16);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+      padding: 34px;
+      box-shadow: var(--shadow-deep), inset 0 1px 0 rgba(186, 230, 253, 0.16);
       overflow: hidden;
     }
 
-    /* Electric Orbital Glow Curve */
-    .about-glass::before {
+    .dossier-shell::before {
       content: "";
       position: absolute;
-      inset: -1px;
+      inset: 0;
       border-radius: inherit;
       padding: 1px;
-      background: linear-gradient(125deg, rgba(56, 189, 248, 0.55), transparent 36%, transparent 68%, rgba(37, 99, 235, 0.45));
+      background: linear-gradient(125deg, rgba(56, 189, 248, 0.55), transparent 34%, transparent 66%, rgba(37, 99, 235, 0.5));
       -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
       -webkit-mask-composite: xor;
       mask-composite: exclude;
       pointer-events: none;
     }
 
-    .about-grid {
+    .dossier-grid {
       display: grid;
       grid-template-columns: 0.95fr 1.15fr 0.95fr;
-      gap: 28px;
+      gap: 32px;
       align-items: center;
     }
 
-    /* Stylized Atmospheric Cyberpunk Avatar Frame */
-    .avatar-frame {
+    .holo-portrait {
       position: relative;
-      border-radius: 18px;
+      border-radius: 20px;
       overflow: hidden;
-      aspect-ratio: 4 / 3.2;
-      background: radial-gradient(circle at 50% 35%, #1e3a8a 0%, #091228 55%, #030712 100%);
-      border: 1px solid rgba(96, 165, 250, 0.25);
-      box-shadow: 0 0 36px rgba(37, 99, 235, 0.28);
+      aspect-ratio: 4 / 3.4;
+      background: radial-gradient(circle at 50% 35%, #1e3a8a 0%, #071127 56%, #02050d 100%);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      box-shadow: 0 0 42px rgba(37, 99, 235, 0.28);
     }
 
-    .avatar-frame img {
+    .holo-portrait img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
 
-    .avatar-art {
-      width: 100%;
-      height: 100%;
+    /* Animated subtle holographic scanline */
+    .holo-portrait::after {
+      content: "";
+      position: absolute;
+      inset: -40% 0 auto 0;
+      height: 36%;
+      background: linear-gradient(180deg, transparent, rgba(56, 189, 248, 0.16), transparent);
+      animation: holoScan 5.2s linear infinite;
+      pointer-events: none;
     }
 
-    .about-center h2 {
+    @keyframes holoScan {
+      0% { transform: translateY(-40%); }
+      100% { transform: translateY(420%); }
+    }
+
+    .portrait-hud {
+      position: absolute;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 7px 11px;
+      border-radius: 10px;
+      background: rgba(2, 6, 18, 0.72);
+      border: 1px solid rgba(56, 189, 248, 0.26);
+      backdrop-filter: blur(8px);
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: #bae6fd;
+      z-index: 2;
+    }
+
+    .about-manifesto h2 {
       font-family: var(--font-display);
-      font-size: clamp(1.45rem, 2.5vw, 1.95rem);
-      margin: 4px 0 12px;
-      letter-spacing: -0.02em;
+      font-size: clamp(1.55rem, 2.7vw, 2.15rem);
+      margin: 4px 0 14px;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
     }
 
-    .about-center p {
-      margin: 0 0 22px;
+    .about-manifesto p {
+      margin: 0 0 18px;
       color: var(--text-secondary);
-      font-size: 0.95rem;
+      font-size: 0.96rem;
     }
 
-    .interest-list {
+    .manifesto-quote {
+      margin: 0 0 24px;
+      padding: 12px 16px;
+      border-left: 2px solid var(--cyan);
+      background: color-mix(in srgb, var(--bg-void) 45%, transparent);
+      border-radius: 0 12px 12px 0;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--ice);
+    }
+
+    .focus-stack {
       display: grid;
-      gap: 13px;
+      gap: 12px;
     }
 
-    .interest-item {
+    .focus-tile {
       display: flex;
       align-items: flex-start;
-      gap: 13px;
-      padding: 10px 12px;
-      border-radius: 13px;
-      background: color-mix(in srgb, var(--bg-void) 42%, transparent);
-      border: 1px solid rgba(96, 165, 250, 0.12);
-      transition: border-color 220ms var(--ease), transform 220ms var(--ease);
+      gap: 14px;
+      padding: 13px 14px;
+      border-radius: 15px;
+      background: color-mix(in srgb, var(--bg-void) 46%, transparent);
+      border: 1px solid rgba(96, 165, 250, 0.14);
+      transition: transform 240ms var(--ease), border-color 240ms var(--ease), box-shadow 240ms var(--ease);
     }
 
-    .interest-item:hover {
-      border-color: var(--border-bright);
-      transform: translateX(4px);
+    .focus-tile:hover {
+      transform: translateX(5px);
+      border-color: var(--border-strong);
+      box-shadow: 0 0 22px rgba(37, 99, 235, 0.24);
     }
 
-    .interest-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 10px;
+    .focus-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 11px;
       flex-shrink: 0;
       display: grid;
       place-items: center;
-      color: var(--electric);
-      background: linear-gradient(135deg, rgba(37, 99, 235, 0.25), rgba(56, 189, 248, 0.12));
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      box-shadow: 0 0 14px rgba(37, 99, 235, 0.25);
+      color: var(--cyan);
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.26), rgba(56, 189, 248, 0.1));
+      border: 1px solid rgba(56, 189, 248, 0.34);
     }
 
-    .interest-item strong {
+    .focus-tile strong {
       display: block;
-      font-size: 0.88rem;
-      line-height: 1.25;
+      font-size: 0.89rem;
       margin-bottom: 2px;
     }
 
-    .interest-item span {
+    .focus-tile span {
       display: block;
       font-size: 0.8rem;
       color: var(--text-secondary);
-      line-height: 1.35;
+      line-height: 1.38;
     }
 
     /* =========================================================================
-       FEATURED PROJECTS — 3D PERSPECTIVE SHOWCASE CARDS
+       CHAPTER 03 — CINEMATIC 3D PROJECT SHOWCASES
     ========================================================================= */
-    .filter-drawer {
+    .filter-bar {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 24px;
-      padding: 14px 16px;
+      gap: 14px;
+      margin-bottom: 28px;
+      padding: 14px 18px;
       border-radius: var(--radius-md);
-      background: var(--bg-surface);
+      background: var(--surface);
       border: 1px solid var(--border);
-      backdrop-filter: blur(14px);
+      backdrop-filter: blur(16px);
     }
 
-    .filter-drawer[hidden] { display: none; }
+    .filter-bar[hidden] { display: none; }
 
-    .filter-chips {
+    .chip-row {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
     }
 
     .chip {
-      padding: 7px 14px;
+      padding: 7px 15px;
       border-radius: 999px;
       border: 1px solid var(--border);
       background: transparent;
       color: var(--text-secondary);
       font-size: 0.83rem;
       font-weight: 500;
-      transition: all 200ms var(--ease);
+      transition: all 220ms var(--ease);
     }
 
-    .chip:hover { color: var(--text-primary); border-color: var(--border-bright); }
+    .chip:hover { color: var(--text); border-color: var(--border-strong); }
     .chip.active {
-      color: #fff;
-      background: linear-gradient(135deg, var(--cobalt), var(--electric));
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
       border-color: transparent;
-      box-shadow: 0 0 16px rgba(37, 99, 235, 0.45);
+      box-shadow: 0 0 18px rgba(37, 99, 235, 0.5);
     }
 
-    .search-input-wrap {
+    .search-wrap {
       position: relative;
       flex: 1 1 220px;
-      max-width: 290px;
+      max-width: 300px;
     }
 
-    .search-input-wrap input {
+    .search-wrap input {
       width: 100%;
-      padding: 9px 14px 9px 36px;
+      padding: 9px 14px 9px 38px;
       border-radius: 999px;
       border: 1px solid var(--border);
       background: color-mix(in srgb, var(--bg-void) 55%, transparent);
       font-size: 0.86rem;
     }
 
-    .search-input-wrap input:focus {
-      outline: none;
-      border-color: var(--electric);
-    }
-
-    .search-input-wrap svg {
+    .search-wrap input:focus { outline: none; border-color: var(--cyan); }
+    .search-wrap svg {
       position: absolute;
-      left: 12px;
+      left: 13px;
       top: 50%;
       transform: translateY(-50%);
       color: var(--text-muted);
@@ -869,133 +1113,154 @@
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
-      perspective: 1200px;
+      gap: 24px;
+      perspective: 1400px;
     }
 
     .project-card {
       position: relative;
       border-radius: var(--radius-lg);
-      background: var(--bg-surface);
+      background: var(--surface);
       border: 1px solid var(--border);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
       padding: 20px;
       display: flex;
       flex-direction: column;
       gap: 16px;
       overflow: hidden;
       transform-style: preserve-3d;
-      transition: border-color 280ms var(--ease), box-shadow 280ms var(--ease), transform 180ms ease-out;
-      box-shadow: var(--glow-soft);
+      will-change: transform;
+      transition: border-color 300ms var(--ease), box-shadow 300ms var(--ease), transform 200ms ease-out;
+      box-shadow: var(--shadow-deep);
     }
 
+    .project-card[data-accent="blue"] {
+      --p-glow: rgba(37, 99, 235, 0.36);
+      --p-rim: rgba(56, 189, 248, 0.58);
+    }
+    .project-card[data-accent="violet"] {
+      --p-glow: rgba(124, 58, 237, 0.36);
+      --p-rim: rgba(167, 139, 250, 0.58);
+    }
+    .project-card[data-accent="emerald"] {
+      --p-glow: rgba(16, 185, 129, 0.34);
+      --p-rim: rgba(52, 211, 153, 0.56);
+    }
+
+    /* Dynamic Reactive Specular Glare */
     .project-card::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: radial-gradient(360px circle at var(--mx, 50%) var(--my, 20%), var(--card-glow, rgba(56, 189, 248, 0.22)), transparent 62%);
-      opacity: 0.45;
+      background: radial-gradient(380px circle at var(--mx, 50%) var(--my, 15%), var(--p-glow), transparent 62%);
+      opacity: 0.42;
       pointer-events: none;
       transition: opacity 280ms ease;
     }
 
     .project-card:hover {
-      border-color: var(--card-border, var(--border-bright));
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7), 0 0 32px var(--card-glow, rgba(37, 99, 235, 0.28));
+      border-color: var(--p-rim);
+      box-shadow: 0 28px 66px rgba(0, 0, 0, 0.72), 0 0 36px var(--p-glow);
     }
 
-    .project-card:hover::before { opacity: 0.9; }
+    .project-card:hover::before { opacity: 0.95; }
 
-    .project-card[data-accent="blue"] {
-      --card-glow: rgba(37, 99, 235, 0.34);
-      --card-border: rgba(56, 189, 248, 0.55);
-    }
-
-    .project-card[data-accent="violet"] {
-      --card-glow: rgba(124, 58, 237, 0.36);
-      --card-border: rgba(139, 92, 246, 0.6);
-    }
-
-    .project-card[data-accent="emerald"] {
-      --card-glow: rgba(16, 185, 129, 0.32);
-      --card-border: rgba(52, 211, 153, 0.55);
-    }
-
-    .project-visual {
-      height: 158px;
-      border-radius: 14px;
-      background: radial-gradient(circle at 35% 50%, var(--card-glow, rgba(37, 99, 235, 0.3)), rgba(3, 7, 18, 0.92) 76%);
-      border: 1px solid rgba(255, 255, 255, 0.07);
-      display: grid;
-      place-items: center;
+    /* Cinematic Preview Stage */
+    .project-stage {
+      height: 184px;
+      border-radius: 15px;
       position: relative;
       overflow: hidden;
-      transform: translateZ(20px);
+      background: radial-gradient(circle at 38% 45%, var(--p-glow), rgba(3, 7, 18, 0.95) 78%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transform: translateZ(24px);
     }
 
-    .project-visual svg {
+    .project-stage::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 58%, rgba(2, 5, 13, 0.75) 100%);
+      pointer-events: none;
+    }
+
+    .project-stage svg {
       width: 100%;
       height: 100%;
-      transition: transform 350ms var(--ease);
+      transition: transform 420ms var(--ease);
     }
 
-    .project-card:hover .project-visual svg {
-      transform: scale(1.06) translateY(-3px);
+    .project-card:hover .project-stage svg {
+      transform: scale(1.07) translateY(-4px);
     }
 
-    .project-head {
+    .stage-badge {
+      position: absolute;
+      top: 11px;
+      left: 11px;
+      z-index: 2;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(2, 6, 18, 0.72);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      backdrop-filter: blur(8px);
+      font-family: var(--font-mono);
+      font-size: 0.67rem;
+      letter-spacing: 0.06em;
+      color: #e2e8f0;
+      text-transform: uppercase;
+    }
+
+    .project-meta-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 10px;
-      position: relative;
-      z-index: 1;
+      transform: translateZ(14px);
     }
 
-    .project-head h3 {
+    .project-meta-row h3 {
       font-family: var(--font-display);
       margin: 0;
-      font-size: 1.24rem;
+      font-size: 1.28rem;
       letter-spacing: -0.02em;
     }
 
-    .badge-featured {
-      font-size: 0.72rem;
+    .featured-pill {
+      font-size: 0.7rem;
       font-weight: 600;
       padding: 4px 10px;
       border-radius: 999px;
-      color: #fff;
-      background: linear-gradient(135deg, var(--electric), var(--cobalt));
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--cyan), var(--blue));
       box-shadow: 0 0 14px rgba(56, 189, 248, 0.45);
     }
 
-    .badge-year {
+    .year-label {
       font-family: var(--font-mono);
       font-size: 0.74rem;
       color: var(--text-muted);
     }
 
-    .project-summary {
+    .project-desc {
       margin: 0;
-      font-size: 0.9rem;
+      font-size: 0.91rem;
       color: var(--text-secondary);
       flex: 1;
-      position: relative;
-      z-index: 1;
+      transform: translateZ(10px);
     }
 
-    .stack-row {
+    .tag-row {
       display: flex;
       flex-wrap: wrap;
       gap: 7px;
-      position: relative;
-      z-index: 1;
+      transform: translateZ(12px);
     }
 
-    .stack-tag {
+    .tech-tag {
       font-family: var(--font-mono);
-      font-size: 0.72rem;
+      font-size: 0.71rem;
       padding: 4px 10px;
       border-radius: 8px;
       background: rgba(15, 23, 42, 0.72);
@@ -1003,252 +1268,319 @@
       color: #cbd5e1;
     }
 
-    [data-theme="light"] .stack-tag {
+    [data-theme="light"] .tech-tag {
       background: rgba(37, 99, 235, 0.08);
       color: #1e3a8a;
     }
 
-    .project-actions {
+    .card-footer {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 10px;
-      padding-top: 12px;
+      padding-top: 14px;
       border-top: 1px solid rgba(148, 163, 184, 0.12);
-      position: relative;
-      z-index: 1;
+      transform: translateZ(16px);
     }
 
-    .project-icon-links {
+    .card-mini-group {
       display: flex;
       align-items: center;
       gap: 8px;
     }
 
-    .mini-icon {
-      width: 34px;
-      height: 34px;
+    .mini-orb {
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
       border: 1px solid var(--border);
-      background: var(--bg-pill);
+      background: var(--surface-pill);
       display: grid;
       place-items: center;
       color: var(--text-secondary);
       transition: all 220ms var(--ease);
     }
 
-    .mini-icon:hover {
-      color: #fff;
-      border-color: var(--electric);
-      box-shadow: 0 0 14px rgba(56, 189, 248, 0.4);
-      transform: translateY(-1px);
+    .mini-orb:hover {
+      color: #ffffff;
+      border-color: var(--cyan);
+      box-shadow: 0 0 16px rgba(56, 189, 248, 0.45);
+      transform: translateY(-2px);
     }
 
     /* =========================================================================
-       SKILLS & MY JOURNEY SPLIT SECTION
+       CHAPTER 04 — TECHNICAL ARSENAL
     ========================================================================= */
-    .split-grid {
+    .skills-layout {
       display: grid;
-      grid-template-columns: 1.02fr 0.98fr;
-      gap: 36px;
+      grid-template-columns: 0.72fr 1.28fr;
+      gap: 32px;
       align-items: center;
     }
 
-    .skills-wrap {
-      display: grid;
-      grid-template-columns: 112px 1fr;
-      gap: 20px;
-      align-items: center;
+    .arsenal-core {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 30px;
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow-deep);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 18px;
     }
 
-    .code-emblem {
-      width: 108px;
-      height: 108px;
+    .orbital-code {
+      width: 96px;
+      height: 96px;
       border-radius: 50%;
       position: relative;
       display: grid;
       place-items: center;
-      background: radial-gradient(circle, rgba(37, 99, 235, 0.28), transparent 70%);
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.3), transparent 72%);
     }
 
-    .code-emblem::before {
+    .orbital-code::before {
       content: "";
       position: absolute;
-      inset: 4px;
+      inset: 3px;
       border-radius: 50%;
-      border: 1.5px solid rgba(56, 189, 248, 0.55);
+      border: 1.5px solid rgba(56, 189, 248, 0.65);
       border-left-color: transparent;
-      box-shadow: 0 0 22px rgba(56, 189, 248, 0.35);
-      animation: spinSlow 10s linear infinite;
+      box-shadow: 0 0 22px rgba(56, 189, 248, 0.4);
+      animation: spinOrbit 9s linear infinite;
     }
 
-    @keyframes spinSlow {
-      to { transform: rotate(360deg); }
-    }
+    @keyframes spinOrbit { to { transform: rotate(360deg); } }
 
-    .code-emblem span {
+    .orbital-code span {
       font-family: var(--font-mono);
       font-weight: 700;
-      font-size: 1.85rem;
-      color: var(--electric);
-      text-shadow: 0 0 20px rgba(56, 189, 248, 0.7);
+      font-size: 1.65rem;
+      color: var(--cyan);
+      text-shadow: 0 0 20px rgba(56, 189, 248, 0.8);
     }
 
-    .skills-pills {
+    .skills-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px;
-      margin-top: 18px;
+      gap: 14px;
     }
 
-    .skill-pill {
+    .skill-tile {
+      position: relative;
+      padding: 16px;
+      border-radius: 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+      transition: transform 240ms var(--ease), border-color 240ms var(--ease), box-shadow 240ms var(--ease);
+    }
+
+    .skill-tile:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-strong);
+      box-shadow: 0 0 24px rgba(37, 99, 235, 0.28);
+    }
+
+    .skill-top {
       display: flex;
       align-items: center;
-      gap: 9px;
-      padding: 10px 12px;
-      border-radius: 12px;
-      background: var(--bg-surface);
-      border: 1px solid var(--border);
-      font-size: 0.84rem;
-      font-weight: 600;
-      backdrop-filter: blur(12px);
-      transition: transform 220ms var(--ease), border-color 220ms var(--ease), box-shadow 220ms var(--ease);
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 10px;
     }
 
-    .skill-pill:hover {
-      transform: translateY(-3px);
-      border-color: var(--border-bright);
-      box-shadow: 0 0 20px rgba(37, 99, 235, 0.28);
-    }
-
-    .skill-dot {
-      width: 24px;
-      height: 24px;
-      border-radius: 7px;
+    .skill-badge {
+      width: 30px;
+      height: 30px;
+      border-radius: 9px;
       display: grid;
       place-items: center;
       font-family: var(--font-mono);
-      font-size: 0.68rem;
+      font-size: 0.72rem;
       font-weight: 700;
-      color: #fff;
-      flex-shrink: 0;
+      color: #ffffff;
     }
 
-    /* Horizontal Glowing Journey Timeline */
-    .journey-panel {
-      background: var(--bg-surface);
-      border: 1px solid var(--border);
+    .skill-tier {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .skill-tile strong {
+      display: block;
+      font-size: 0.94rem;
+      margin-bottom: 6px;
+    }
+
+    .skill-bar {
+      height: 4px;
+      border-radius: 99px;
+      background: rgba(148, 163, 184, 0.16);
+      overflow: hidden;
+    }
+
+    .skill-bar i {
+      display: block;
+      height: 100%;
+      width: var(--lvl, 85%);
+      border-radius: 99px;
+      background: linear-gradient(90deg, var(--blue), var(--cyan));
+    }
+
+    /* =========================================================================
+       CHAPTER 05 — CHRONOLOGY (SCROLL-SCRUBBED LASER TIMELINE)
+    ========================================================================= */
+    .journey-stage {
+      position: relative;
+      padding: 36px 30px;
       border-radius: var(--radius-xl);
-      padding: 28px 24px;
-      backdrop-filter: blur(16px);
-      box-shadow: var(--glow-soft);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(20px);
+      box-shadow: var(--shadow-deep);
+      overflow: hidden;
     }
 
-    .timeline {
+    .timeline-track {
       position: relative;
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 26px;
+      gap: 20px;
+      padding-top: 12px;
     }
 
-    .timeline::before {
-      content: "";
+    .timeline-rail-bg,
+    .timeline-rail-fill {
       position: absolute;
-      top: 24px;
-      left: 12%;
-      right: 12%;
+      top: 38px;
+      left: 8%;
+      right: 8%;
       height: 2px;
-      background: linear-gradient(90deg, rgba(56, 189, 248, 0.2), var(--electric), rgba(37, 99, 235, 0.85));
-      box-shadow: 0 0 14px rgba(56, 189, 248, 0.55);
-      z-index: 0;
+      border-radius: 99px;
+      pointer-events: none;
     }
 
-    .milestone {
+    .timeline-rail-bg {
+      background: rgba(148, 163, 184, 0.18);
+    }
+
+    .timeline-rail-fill {
+      background: linear-gradient(90deg, var(--blue), var(--cyan), #e0f2fe);
+      box-shadow: 0 0 18px var(--cyan);
+      transform-origin: left center;
+      transform: scaleX(1);
+    }
+
+    .milestone-card {
       position: relative;
-      z-index: 1;
-      text-align: center;
+      z-index: 2;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 10px;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 20px 18px;
+      border-radius: 18px;
+      background: color-mix(in srgb, var(--bg-void) 50%, transparent);
+      border: 1px solid rgba(96, 165, 250, 0.14);
+      transition: transform 260ms var(--ease), border-color 260ms var(--ease), box-shadow 260ms var(--ease);
     }
 
-    .milestone-node {
-      width: 48px;
-      height: 48px;
+    .milestone-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--border-strong);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45), 0 0 24px rgba(37, 99, 235, 0.28);
+    }
+
+    .milestone-orb {
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
       display: grid;
       place-items: center;
       background: #061229;
-      border: 1.5px solid var(--electric);
-      color: var(--electric);
-      box-shadow: 0 0 22px rgba(56, 189, 248, 0.45), inset 0 0 12px rgba(37, 99, 235, 0.4);
-      transition: transform 240ms var(--ease), box-shadow 240ms var(--ease);
+      border: 1.5px solid var(--cyan);
+      color: var(--cyan);
+      box-shadow: 0 0 24px rgba(56, 189, 248, 0.45), inset 0 0 14px rgba(37, 99, 235, 0.4);
     }
 
-    [data-theme="light"] .milestone-node {
-      background: #ffffff;
-    }
+    [data-theme="light"] .milestone-orb { background: #ffffff; }
 
-    .milestone:hover .milestone-node {
-      transform: scale(1.12);
-      box-shadow: 0 0 30px rgba(56, 189, 248, 0.75);
-    }
-
-    .milestone strong {
-      font-size: 0.85rem;
-      line-height: 1.28;
-    }
-
-    .milestone span {
+    .milestone-year {
       font-family: var(--font-mono);
-      font-size: 0.74rem;
-      color: var(--text-muted);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      color: var(--cyan);
+    }
+
+    .milestone-card h3 {
+      font-family: var(--font-display);
+      margin: 0;
+      font-size: 1.08rem;
+    }
+
+    .milestone-card p {
+      margin: 0;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
     }
 
     /* =========================================================================
-       GET IN TOUCH (3-COLUMN GLASS LAYOUT)
+       CHAPTER 06 — TRANSMISSION (CONTACT SECTION, NO GITHUB)
     ========================================================================= */
-    .contact-grid {
+    .contact-shell {
       display: grid;
-      grid-template-columns: 0.82fr 1.38fr 0.88fr;
+      grid-template-columns: 0.86fr 1.28fr 0.86fr;
       gap: 24px;
       align-items: start;
     }
 
-    .social-row {
+    .social-orbs {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 20px;
+      margin-top: 22px;
     }
 
-    .social-orb {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: var(--bg-surface);
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: var(--surface);
       border: 1px solid var(--border);
-      display: grid;
-      place-items: center;
-      color: var(--text-primary);
+      font-size: 0.84rem;
+      font-weight: 500;
+      backdrop-filter: blur(12px);
       transition: all 220ms var(--ease);
     }
 
-    .social-orb:hover {
-      border-color: var(--electric);
-      color: var(--electric);
-      transform: translateY(-3px);
-      box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+    .social-btn:hover {
+      border-color: var(--cyan);
+      color: var(--cyan);
+      transform: translateY(-2px);
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.32);
     }
 
     .contact-form {
       display: grid;
       gap: 12px;
+      padding: 26px;
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow-deep);
     }
 
-    .input-pair {
+    .form-pair {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 12px;
@@ -1259,197 +1591,185 @@
       width: 100%;
       padding: 13px 16px;
       border-radius: 13px;
-      background: var(--bg-surface);
+      background: color-mix(in srgb, var(--bg-void) 58%, transparent);
       border: 1px solid var(--border);
-      backdrop-filter: blur(12px);
       font-size: 0.92rem;
-      transition: border-color 220ms var(--ease), box-shadow 220ms var(--ease);
+      transition: border-color 220ms ease, box-shadow 220ms ease;
     }
 
-    .field textarea {
-      min-height: 112px;
-      resize: vertical;
-    }
+    .field textarea { min-height: 118px; resize: vertical; }
 
     .field input:focus,
     .field textarea:focus {
       outline: none;
-      border-color: var(--electric);
+      border-color: var(--cyan);
       box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.14);
     }
 
     .field-err {
-      font-size: 0.76rem;
+      font-size: 0.75rem;
       color: var(--danger);
       min-height: 1em;
       margin-top: 4px;
     }
 
-    .form-row-actions {
+    .form-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
       align-items: center;
     }
 
-    .form-row-actions .btn-electric {
-      flex: 1;
-    }
+    .form-actions .btn-electric { flex: 1; }
 
     .form-status {
-      font-size: 0.86rem;
-      color: #34d399;
+      font-size: 0.85rem;
+      color: var(--emerald);
       min-height: 1.2em;
     }
 
-    .contact-info-card {
-      background: var(--bg-surface);
-      border: 1px solid var(--border);
+    .channel-card {
+      padding: 24px;
       border-radius: var(--radius-lg);
-      padding: 20px;
-      backdrop-filter: blur(16px);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(18px);
       display: grid;
-      gap: 16px;
-      box-shadow: var(--glow-soft);
+      gap: 18px;
+      box-shadow: var(--shadow-deep);
     }
 
-    .info-row {
+    .channel-row {
       display: flex;
-      align-items: center;
-      gap: 13px;
+      align-items: flex-start;
+      gap: 14px;
     }
 
-    .info-badge {
+    .channel-orb {
       width: 44px;
       height: 44px;
       border-radius: 50%;
       flex-shrink: 0;
       display: grid;
       place-items: center;
-      color: var(--electric);
-      background: linear-gradient(135deg, rgba(37, 99, 235, 0.3), rgba(56, 189, 248, 0.12));
-      border: 1px solid rgba(56, 189, 248, 0.4);
-      box-shadow: 0 0 18px rgba(37, 99, 235, 0.35);
+      color: var(--cyan);
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.28), rgba(56, 189, 248, 0.1));
+      border: 1px solid rgba(56, 189, 248, 0.38);
+      box-shadow: 0 0 18px rgba(37, 99, 235, 0.3);
     }
 
-    .info-row strong {
-      display: block;
-      font-size: 0.9rem;
-    }
+    .channel-row strong { display: block; font-size: 0.9rem; margin-bottom: 2px; }
+    .channel-row small { display: block; font-size: 0.8rem; color: var(--text-secondary); word-break: break-all; }
 
-    .info-row small {
-      display: block;
-      font-size: 0.79rem;
-      color: var(--text-secondary);
-      word-break: break-all;
-    }
-
-    .copy-chip {
-      margin-top: 4px;
-      padding: 3px 10px;
+    .copy-pill {
+      margin-top: 7px;
+      padding: 4px 11px;
       border-radius: 999px;
-      font-size: 0.72rem;
-      font-family: var(--font-mono);
       border: 1px solid var(--border);
       background: transparent;
-      color: var(--electric);
+      color: var(--cyan);
+      font-family: var(--font-mono);
+      font-size: 0.71rem;
+      transition: all 200ms ease;
+    }
+
+    .copy-pill:hover {
+      border-color: var(--cyan);
+      background: rgba(56, 189, 248, 0.12);
     }
 
     /* =========================================================================
-       DEDICATED DIRECT-LINK PROJECT CASE STUDY VIEW
+       DIRECT-LINK PROJECT CASE STUDY VIEW (#project/<slug>)
     ========================================================================= */
     .project-detail-view {
-      padding: calc(var(--nav-h) + 38px) 0 96px;
+      padding: calc(var(--nav-h) + 42px) 0 100px;
       position: relative;
       z-index: 3;
-      min-height: 90vh;
+      min-height: 92vh;
     }
 
     .project-detail-view[hidden],
-    .home-view[hidden] {
-      display: none;
-    }
+    .home-view[hidden] { display: none; }
 
-    .detail-topbar {
+    .detail-nav-bar {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       gap: 12px;
-      margin-bottom: 26px;
+      margin-bottom: 28px;
     }
 
     .detail-hero {
-      background: var(--bg-surface);
+      background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius-xl);
-      padding: 34px;
-      backdrop-filter: blur(20px);
-      box-shadow: var(--glow-soft);
+      padding: 36px;
+      backdrop-filter: blur(22px);
+      box-shadow: var(--shadow-deep);
       margin-bottom: 24px;
-      position: relative;
-      overflow: hidden;
     }
 
     .detail-hero h1 {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 4.4vw, 3.2rem);
-      margin: 14px 0 12px;
+      font-family: var(--font-hero);
+      font-size: clamp(2.1rem, 4.6vw, 3.3rem);
+      margin: 14px 0 14px;
       letter-spacing: -0.03em;
-      line-height: 1.08;
+      line-height: 1.06;
     }
 
     .detail-overview {
-      font-size: 1.04rem;
+      font-size: 1.05rem;
       color: var(--text-secondary);
       max-width: 68ch;
-      margin: 0 0 24px;
+      margin: 0 0 26px;
     }
 
-    .meta-strip {
+    .detail-meta {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 12px;
       margin-bottom: 24px;
     }
 
-    .meta-cell {
+    .meta-box {
       padding: 14px 16px;
-      border-radius: 13px;
+      border-radius: 14px;
       background: color-mix(in srgb, var(--bg-void) 55%, transparent);
       border: 1px solid var(--border);
     }
 
-    .meta-cell span {
+    .meta-box span {
       display: block;
       font-family: var(--font-mono);
-      font-size: 0.72rem;
-      color: var(--electric);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      color: var(--cyan);
       margin-bottom: 4px;
     }
 
-    .detail-columns {
+    .detail-cols {
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
       gap: 20px;
-      margin-bottom: 24px;
+      margin-bottom: 26px;
     }
 
-    .detail-box {
-      background: var(--bg-surface);
+    .detail-card {
+      background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
-      padding: 24px;
-      backdrop-filter: blur(16px);
+      padding: 26px;
+      backdrop-filter: blur(18px);
     }
 
-    .detail-box h2 {
+    .detail-card h2 {
       font-family: var(--font-display);
       margin: 0 0 14px;
-      font-size: 1.22rem;
+      font-size: 1.24rem;
     }
 
-    .detail-box ul {
+    .detail-card ul {
       margin: 0;
       padding-left: 18px;
       display: grid;
@@ -1464,26 +1784,26 @@
       gap: 16px;
     }
 
-    .pager-card {
-      padding: 18px 20px;
+    .pager-link {
+      padding: 20px;
       border-radius: var(--radius-md);
-      background: var(--bg-surface);
+      background: var(--surface);
       border: 1px solid var(--border);
-      transition: all 220ms var(--ease);
+      transition: all 240ms var(--ease);
     }
 
-    .pager-card:hover {
-      border-color: var(--electric);
-      transform: translateY(-2px);
-      box-shadow: 0 0 22px rgba(37, 99, 235, 0.26);
+    .pager-link:hover {
+      border-color: var(--cyan);
+      transform: translateY(-3px);
+      box-shadow: 0 0 24px rgba(37, 99, 235, 0.28);
     }
 
-    .pager-card span {
+    .pager-link span {
       display: block;
       font-family: var(--font-mono);
       font-size: 0.72rem;
       color: var(--text-muted);
-      margin-bottom: 4px;
+      margin-bottom: 5px;
     }
 
     /* =========================================================================
@@ -1493,7 +1813,7 @@
       position: relative;
       z-index: 3;
       border-top: 1px solid var(--border);
-      padding: 24px 0 34px;
+      padding: 26px 0 36px;
       background: color-mix(in srgb, var(--bg-void) 86%, transparent);
     }
 
@@ -1503,37 +1823,24 @@
       align-items: center;
       justify-content: space-between;
       gap: 14px;
-      font-size: 0.86rem;
+      font-size: 0.85rem;
       color: var(--text-secondary);
     }
 
-    .footer-left {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .footer-right {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .top-btn {
-      width: 38px;
-      height: 38px;
+    .top-orb {
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
-      border: 1px solid var(--border-bright);
-      background: var(--bg-pill);
-      color: var(--electric);
+      border: 1px solid var(--border-strong);
+      background: var(--surface-pill);
+      color: var(--cyan);
       display: grid;
       place-items: center;
-      box-shadow: 0 0 18px rgba(56, 189, 248, 0.25);
-      transition: transform 220ms var(--ease), box-shadow 220ms var(--ease);
+      box-shadow: 0 0 18px rgba(56, 189, 248, 0.28);
+      transition: all 220ms var(--ease);
     }
 
-    .top-btn:hover {
+    .top-orb:hover {
       transform: translateY(-3px);
       box-shadow: 0 0 26px rgba(56, 189, 248, 0.55);
     }
@@ -1543,15 +1850,15 @@
       bottom: 24px;
       left: 50%;
       transform: translateX(-50%) translateY(18px);
-      z-index: 280;
-      padding: 10px 20px;
+      z-index: 310;
+      padding: 10px 22px;
       border-radius: 999px;
-      background: rgba(6, 16, 36, 0.94);
-      border: 1px solid var(--electric);
+      background: rgba(4, 12, 28, 0.94);
+      border: 1px solid var(--cyan);
       color: #f8fafc;
       font-size: 0.86rem;
       font-weight: 500;
-      box-shadow: var(--glow-blue);
+      box-shadow: var(--glow-electric);
       opacity: 0;
       pointer-events: none;
       transition: opacity 240ms ease, transform 240ms ease;
@@ -1563,58 +1870,56 @@
     }
 
     /* =========================================================================
-       RESPONSIVE BREAKPOINTS (SILKY ANDROID EXPERIENCE)
+       ANDROID-FIRST RESPONSIVE BREAKPOINTS
     ========================================================================= */
-    @media (max-width: 1024px) {
-      .about-grid,
-      .split-grid,
-      .contact-grid,
-      .detail-columns {
+    @media (max-width: 1080px) {
+      .dossier-grid,
+      .skills-layout,
+      .contact-shell,
+      .detail-cols {
         grid-template-columns: 1fr;
       }
       .projects-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
+      .timeline-track {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .timeline-rail-bg,
+      .timeline-rail-fill { display: none; }
       .hero-grid {
         grid-template-columns: 1fr;
-        gap: 12px;
+        gap: 10px;
       }
-      .hero-stage-spacer {
-        min-height: 300px;
+      .hero-stage-hud {
+        min-height: 290px;
         order: -1;
       }
-      .hero-copy {
-        max-width: 100%;
-      }
+      .hero-copy { max-width: 100%; }
     }
 
     @media (max-width: 760px) {
-      .nav-pill { display: none; }
-      .menu-btn { display: grid; }
-      section.block { padding: 62px 0; }
-      .hero { padding: calc(var(--nav-h) + 12px) 0 74px; }
-      .hero-stage-spacer { min-height: 270px; }
+      .nav-dock,
+      .nav-cta { display: none; }
+      .menu-toggle { display: grid; }
+      section.chapter { padding: 70px 0; }
+      .hero { padding: calc(var(--nav-h) + 14px) 0 74px; }
+      .hero-stage-hud { min-height: 260px; }
+      .scroll-cue { display: none; }
       .projects-grid,
-      .meta-strip,
+      .timeline-track,
+      .detail-meta,
       .detail-pager,
-      .input-pair {
+      .form-pair {
         grid-template-columns: 1fr;
       }
-      .skills-wrap {
-        grid-template-columns: 1fr;
-      }
-      .code-emblem { display: none; }
-      .skills-pills {
+      .skills-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
-      .timeline {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 20px;
-      }
-      .timeline::before { display: none; }
-      .about-glass,
+      .dossier-shell,
+      .journey-stage,
       .detail-hero {
-        padding: 20px;
+        padding: 22px;
       }
     }
 
@@ -1628,47 +1933,73 @@
   </style>
 </head>
 <body>
-  <!-- Preloader -->
+  <!-- Cinematic Preloader -->
   <div class="preloader" id="preloader" aria-hidden="true">
-    <div class="preloader-core">
-      <svg class="preloader-mark" viewBox="0 0 64 64" fill="none">
+    <div class="preloader-box">
+      <svg class="preloader-emblem" viewBox="0 0 64 64" fill="none">
         <defs>
-          <linearGradient id="preGrad" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#7dd3fc"/>
+          <linearGradient id="preG" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#bae6fd"/>
+            <stop offset="55%" stop-color="#38bdf8"/>
             <stop offset="100%" stop-color="#2563eb"/>
           </linearGradient>
         </defs>
-        <polygon points="32,4 58,18 58,46 32,60 6,46 6,18" stroke="url(#preGrad)" stroke-width="2.5" fill="rgba(37,99,235,0.14)"/>
-        <path d="M29.5 21H18.5L16.5 30H26.5L25 41H14L15 36.2H22L22.5 33.4H13L15.4 18H30.5Z M35.5 21H41L38.4 36.2H48L47 41H32.5Z" fill="url(#preGrad)"/>
+        <polygon points="32,4 58,18 58,46 32,60 6,46 6,18" stroke="url(#preG)" stroke-width="2.4" fill="rgba(37,99,235,0.14)"/>
+        <path d="M29.5 21H18.5L16.5 30H26.5L25 41H14L15 36.2H22L22.5 33.4H13L15.4 18H30.5Z M35.5 21H41L38.4 36.2H48L47 41H32.5Z" fill="url(#preG)"/>
       </svg>
-      <div class="preloader-bar"></div>
+      <div class="preloader-label">INITIALIZING SL // ENGINE</div>
+      <div class="preloader-track"></div>
     </div>
   </div>
 
-  <!-- GSAP Page Transition Curtain -->
-  <div class="page-curtain" id="pageCurtain" aria-hidden="true"></div>
-  <div class="scroll-line" id="scrollLine" aria-hidden="true"></div>
-  <div class="cosmic-bg" aria-hidden="true"></div>
+  <!-- Cinematic Dual-Shutter Route Transition -->
+  <div class="shutter-wrap" aria-hidden="true">
+    <div class="shutter-panel shutter-top" id="shutterTop"></div>
+    <div class="shutter-panel shutter-bottom" id="shutterBottom"></div>
+  </div>
+  <svg class="shutter-badge" id="shutterBadge" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+    <polygon points="32,4 58,18 58,46 32,60 6,46 6,18" stroke="#38bdf8" stroke-width="2.4" fill="#030816"/>
+    <path d="M29.5 21H18.5L16.5 30H26.5L25 41H14L15 36.2H22L22.5 33.4H13L15.4 18H30.5Z M35.5 21H41L38.4 36.2H48L47 41H32.5Z" fill="#7dd3fc"/>
+  </svg>
 
-  <!-- FLOATING NAVIGATION -->
+  <!-- Layered Environment -->
+  <div class="environment-backdrop" aria-hidden="true"></div>
+  <div class="depth-grid" aria-hidden="true"></div>
+  <canvas id="worldCanvas" aria-hidden="true"></canvas>
+  <div class="cursor-aura" id="cursorAura" aria-hidden="true"></div>
+  <div class="film-grain" aria-hidden="true"></div>
+  <div class="scroll-rail-top" id="scrollRailTop" aria-hidden="true"></div>
+
+  <!-- Connected Chapter Indicator Rail -->
+  <aside class="story-rail" id="storyRail" aria-label="Section progress">
+    <button type="button" class="story-dot active" data-jump="#home" aria-label="Jump to Hero"></button>
+    <button type="button" class="story-dot" data-jump="#about" aria-label="Jump to About"></button>
+    <button type="button" class="story-dot" data-jump="#projects" aria-label="Jump to Projects"></button>
+    <button type="button" class="story-dot" data-jump="#skills" aria-label="Jump to Skills"></button>
+    <button type="button" class="story-dot" data-jump="#journey" aria-label="Jump to Journey"></button>
+    <button type="button" class="story-dot" data-jump="#contact" aria-label="Jump to Contact"></button>
+  </aside>
+
+  <!-- FLOATING GLASS NAVIGATION -->
   <header class="navbar" id="navbar">
     <div class="container nav-inner">
-      <a href="#home" class="brand" id="brandHomeLink">
-        <svg class="brand-logo" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+      <a href="#home" class="brand">
+        <svg class="brand-mark" viewBox="0 0 64 64" fill="none" aria-hidden="true">
           <defs>
-            <linearGradient id="brandG" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#7dd3fc"/>
-              <stop offset="55%" stop-color="#3b82f6"/>
-              <stop offset="100%" stop-color="#1d4ed8"/>
+            <linearGradient id="navG" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#bae6fd"/>
+              <stop offset="50%" stop-color="#38bdf8"/>
+              <stop offset="100%" stop-color="#2563eb"/>
             </linearGradient>
           </defs>
-          <polygon points="32,4 57,18 57,46 32,60 7,46 7,18" stroke="url(#brandG)" stroke-width="2.6" fill="rgba(15,23,42,0.75)"/>
-          <path d="M29.5 21H18.5L16.5 30H26.5L25 41H14L15 36.2H22L22.5 33.4H13L15.4 18H30.5Z M35.5 21H41L38.4 36.2H48L47 41H32.5Z" fill="url(#brandG)"/>
+          <polygon points="32,4 57,18 57,46 32,60 7,46 7,18" stroke="url(#navG)" stroke-width="2.6" fill="rgba(6,14,32,0.82)"/>
+          <path d="M29.5 21H18.5L16.5 30H26.5L25 41H14L15 36.2H22L22.5 33.4H13L15.4 18H30.5Z M35.5 21H41L38.4 36.2H48L47 41H32.5Z" fill="url(#navG)"/>
         </svg>
         <span id="navBrandName">Shahalam Laskar</span>
       </a>
 
-      <nav class="nav-pill" id="desktopNav" aria-label="Main navigation">
+      <nav class="nav-dock" id="navDock" aria-label="Primary navigation">
+        <div class="nav-slider" id="navSlider" aria-hidden="true"></div>
         <a href="#home" class="active">Home</a>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
@@ -1677,16 +2008,12 @@
         <a href="#contact">Contact</a>
       </nav>
 
-      <div class="nav-right">
-        <button class="glass-icon-btn" id="themeToggle" type="button" aria-label="Toggle theme" title="Switch theme">
+      <div class="nav-controls">
+        <button class="icon-orb" id="themeToggle" type="button" aria-label="Toggle color theme" title="Toggle theme">
           <svg id="themeIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg>
         </button>
-        <a class="glass-icon-btn" id="navGithub" href="https://github.com/shahalamlaskarofficial" target="_blank" rel="noopener" aria-label="GitHub profile">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.54 2.87 8.39 6.84 9.75.5.09.68-.22.68-.49 0-.24-.01-1.05-.01-1.9-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05A9.38 9.38 0 0 1 12 6.84c.85 0 1.71.12 2.51.35 1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.82 0 .27.18.59.69.49A10.27 10.27 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/>
-          </svg>
-        </a>
-        <button class="glass-icon-btn menu-btn" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <a href="#contact" class="nav-cta">Let's Talk</a>
+        <button class="icon-orb menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
             <line x1="4" y1="7" x2="20" y2="7"></line>
             <line x1="4" y1="12" x2="20" y2="12"></line>
@@ -1697,155 +2024,157 @@
     </div>
   </header>
 
-  <!-- MOBILE MENU DRAWER -->
-  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
-    <a href="#home" data-mobile-link>Home <span>&rarr;</span></a>
-    <a href="#about" data-mobile-link>About <span>&rarr;</span></a>
-    <a href="#projects" data-mobile-link>Projects <span>&rarr;</span></a>
-    <a href="#skills" data-mobile-link>Skills <span>&rarr;</span></a>
-    <a href="#journey" data-mobile-link>Journey <span>&rarr;</span></a>
-    <a href="#contact" data-mobile-link>Contact <span>&rarr;</span></a>
+  <!-- MOBILE DRAWER -->
+  <nav class="mobile-drawer" id="mobileDrawer" aria-label="Mobile navigation">
+    <a href="#home" data-mobile-link>Home <span>01</span></a>
+    <a href="#about" data-mobile-link>About <span>02</span></a>
+    <a href="#projects" data-mobile-link>Projects <span>03</span></a>
+    <a href="#skills" data-mobile-link>Skills <span>04</span></a>
+    <a href="#journey" data-mobile-link>Journey <span>05</span></a>
+    <a href="#contact" data-mobile-link>Contact <span>06</span></a>
   </nav>
 
   <!-- =========================================================================
-       HOME VIEW
+       HOME ENVIRONMENT
   ========================================================================= -->
   <main id="homeView" class="home-view">
-    <!-- CINEMATIC 3D HERO -->
+    <!-- 01 // CORE — HERO -->
     <section class="hero" id="home">
       <div class="hero-planet" aria-hidden="true"></div>
-      <canvas id="heroCanvas" aria-label="Interactive 3D illuminated SL crystal monogram"></canvas>
+      <div class="hero-drag-surface" id="heroDragSurface" aria-hidden="true"></div>
 
       <div class="container hero-grid">
         <div class="hero-copy">
-          <div class="availability-pill gs-hero">
-            <span class="pulse-dot" aria-hidden="true"></span>
-            <span id="heroBadgeText">Available for projects</span>
+          <div class="status-chip gs-hero">
+            <span class="live-dot" aria-hidden="true"></span>
+            <span id="heroStatus">01 // AVAILABLE FOR NEW BUILDS</span>
           </div>
 
           <h1 class="hero-title gs-hero">
-            <span class="line-top">SHAHALAM</span>
-            <span class="line-bottom">LASKAR</span>
+            <span class="t-light">SHAHALAM</span>
+            <span class="t-blue">LASKAR</span>
           </h1>
 
-          <p class="hero-roles gs-hero">
-            Developer. Builder. <span class="highlight">Digital Creator.</span>
+          <p class="hero-tagline gs-hero">
+            Developer. Builder. <span class="accent">Digital Architect.</span>
           </p>
 
           <p class="hero-desc gs-hero" id="heroDesc"></p>
 
           <div class="hero-actions gs-hero">
-            <a href="#projects" class="btn btn-electric">Explore Projects &rarr;</a>
-            <a href="#about" class="btn btn-glass">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-              About Me
-            </a>
+            <a href="#projects" class="btn btn-electric magnetic">Explore Projects &rarr;</a>
+            <a href="#about" class="btn btn-glass magnetic">About Identity</a>
           </div>
 
-          <a href="#about" class="scroll-cue gs-hero">
-            <span class="mouse-icon" aria-hidden="true"></span>
-            <span>Scroll to explore</span>
-          </a>
+          <div class="hero-telemetry gs-hero">
+            <div class="telemetry-item">
+              <span>Specialization</span>
+              <strong>Android &amp; Interactive Web</strong>
+            </div>
+            <div class="telemetry-item">
+              <span>Architecture</span>
+              <strong>Offline-First Systems</strong>
+            </div>
+            <div class="telemetry-item">
+              <span>Domain</span>
+              <strong id="heroDomain">shahalamlaskar.click</strong>
+            </div>
+          </div>
         </div>
 
-        <div class="hero-stage-spacer">
-          <span class="stage-hint">Drag or move to rotate 3D core</span>
+        <div class="hero-stage-hud">
+          <span class="hud-pill">Interactive 3D Core &middot; Drag to Rotate</span>
         </div>
       </div>
 
-      <!-- Dark Atmospheric Mountain Horizon Silhouette -->
-      <svg class="hero-horizon" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
-        <defs>
-          <linearGradient id="mtnFill" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#0b1834" stop-opacity="0.72"/>
-            <stop offset="65%" stop-color="#030712" stop-opacity="0.96"/>
-            <stop offset="100%" stop-color="#02050d" stop-opacity="1"/>
-          </linearGradient>
-        </defs>
-        <path d="M0,130 L90,95 L180,118 L295,62 L390,112 L520,126 L650,98 L780,128 L930,84 L1065,112 L1200,54 L1325,92 L1440,68 L1440,160 L0,160 Z" fill="url(#mtnFill)"/>
-      </svg>
+      <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+        <span>Scroll</span>
+        <span class="scroll-stem"></span>
+      </a>
     </section>
 
-    <!-- ABOUT ME -->
-    <section class="block" id="about">
+    <div class="chapter-divider"></div>
+
+    <!-- 02 // IDENTITY — ABOUT -->
+    <section class="chapter" id="about">
       <div class="container">
-        <div class="about-glass gs-reveal">
-          <div class="about-grid">
-            <!-- Atmospheric Cyberpunk Silhouette Visual (Replaceable via SITE_DATA.avatarImage) -->
-            <div class="avatar-frame" id="avatarFrame">
-              <svg class="avatar-art" viewBox="0 0 420 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shahalam Laskar stylized futuristic developer silhouette">
+        <div class="dossier-shell gs-reveal">
+          <div class="dossier-grid">
+            <div class="holo-portrait" id="avatarFrame">
+              <svg viewBox="0 0 420 340" width="100%" height="100%" fill="none" role="img" aria-label="Shahalam Laskar futuristic silhouette">
                 <defs>
-                  <radialGradient id="skyGlow" cx="50%" cy="32%" r="65%">
-                    <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.45"/>
-                    <stop offset="55%" stop-color="#0f172a" stop-opacity="0.9"/>
+                  <radialGradient id="pSky" cx="50%" cy="32%" r="68%">
+                    <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.5"/>
+                    <stop offset="56%" stop-color="#0b1530" stop-opacity="0.92"/>
                     <stop offset="100%" stop-color="#02050d"/>
                   </radialGradient>
-                  <linearGradient id="hoodieGrad" x1="0" y1="0" x2="1" y2="1">
+                  <linearGradient id="pHood" x1="0" y1="0" x2="1" y2="1">
                     <stop offset="0%" stop-color="#1e293b"/>
-                    <stop offset="55%" stop-color="#0b1120"/>
-                    <stop offset="100%" stop-color="#020617"/>
+                    <stop offset="55%" stop-color="#091021"/>
+                    <stop offset="100%" stop-color="#02050d"/>
                   </linearGradient>
-                  <linearGradient id="arcBeam" x1="0" y1="0" x2="1" y2="0">
+                  <linearGradient id="pRing" x1="0" y1="0" x2="1" y2="0">
                     <stop offset="0%" stop-color="#38bdf8" stop-opacity="0"/>
-                    <stop offset="50%" stop-color="#60a5fa" stop-opacity="0.95"/>
+                    <stop offset="50%" stop-color="#7dd3fc" stop-opacity="0.95"/>
                     <stop offset="100%" stop-color="#2563eb" stop-opacity="0"/>
                   </linearGradient>
-                  <filter id="neonBlur"><feGaussianBlur stdDeviation="4"/></filter>
+                  <filter id="pGlow"><feGaussianBlur stdDeviation="4.5"/></filter>
                 </defs>
-                <rect width="420" height="320" fill="url(#skyGlow)"/>
-                <!-- Distant Neon Skyline -->
-                <g opacity="0.42" fill="#0f1c3a">
-                  <rect x="18" y="130" width="38" height="190"/>
-                  <rect x="66" y="96" width="44" height="224"/>
-                  <rect x="122" y="150" width="34" height="170"/>
-                  <rect x="275" y="112" width="42" height="208"/>
-                  <rect x="330" y="76" width="50" height="244"/>
-                  <rect x="388" y="140" width="32" height="180"/>
+                <rect width="420" height="340" fill="url(#pSky)"/>
+                <g opacity="0.38" fill="#0c1936">
+                  <rect x="16" y="138" width="38" height="202"/><rect x="66" y="96" width="46" height="244"/>
+                  <rect x="126" y="152" width="34" height="188"/><rect x="276" y="114" width="44" height="226"/>
+                  <rect x="332" y="74" width="52" height="266"/>
                 </g>
-                <!-- City Bokeh Lights -->
-                <g fill="#60a5fa" opacity="0.65">
-                  <circle cx="42" cy="184" r="3"/><circle cx="90" cy="142" r="2.5"/><circle cx="352" cy="128" r="3"/>
-                  <circle cx="300" cy="168" r="2"/><circle cx="370" cy="196" r="3.5"/><circle cx="78" cy="215" r="2"/>
+                <g fill="#7dd3fc" opacity="0.65">
+                  <circle cx="42" cy="184" r="3"/><circle cx="90" cy="140" r="2.5"/><circle cx="356" cy="126" r="3"/>
+                  <circle cx="300" cy="170" r="2.2"/><circle cx="372" cy="202" r="3.4"/>
                 </g>
-                <!-- Glowing Orbital Arc Behind Silhouette -->
-                <ellipse cx="210" cy="215" rx="195" ry="64" stroke="url(#arcBeam)" stroke-width="3" transform="rotate(-11 210 215)" filter="url(#neonBlur)"/>
-                <ellipse cx="210" cy="215" rx="195" ry="64" stroke="url(#arcBeam)" stroke-width="1.3" transform="rotate(-11 210 215)"/>
-                <!-- Developer Silhouette in Hoodie -->
-                <path d="M98 320 C105 245 135 206 168 194 C156 172 156 132 174 108 C192 84 232 84 250 108 C268 132 266 170 254 194 C288 206 318 245 324 320 Z" fill="url(#hoodieGrad)" stroke="rgba(96,165,250,0.35)" stroke-width="1.5"/>
-                <!-- Illuminated SL Monogram on Back -->
-                <text x="210" y="274" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="800" font-size="30" font-style="italic" fill="#38bdf8" filter="url(#neonBlur)" opacity="0.85">SL</text>
-                <text x="210" y="274" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="800" font-size="30" font-style="italic" fill="#e0f2fe">SL</text>
+                <ellipse cx="210" cy="218" rx="196" ry="62" stroke="url(#pRing)" stroke-width="3.2" transform="rotate(-12 210 218)" filter="url(#pGlow)"/>
+                <ellipse cx="210" cy="218" rx="196" ry="62" stroke="url(#pRing)" stroke-width="1.4" transform="rotate(-12 210 218)"/>
+                <path d="M96 340 C104 256 134 214 168 202 C156 180 156 138 174 114 C192 90 232 90 250 114 C268 138 266 178 254 202 C288 214 318 256 326 340 Z" fill="url(#pHood)" stroke="rgba(96,165,250,0.4)" stroke-width="1.6"/>
+                <text x="210" y="280" text-anchor="middle" font-family="Syne, sans-serif" font-weight="800" font-size="32" font-style="italic" fill="#38bdf8" filter="url(#pGlow)" opacity="0.9">SL</text>
+                <text x="210" y="280" text-anchor="middle" font-family="Syne, sans-serif" font-weight="800" font-size="32" font-style="italic" fill="#e0f2fe">SL</text>
               </svg>
+              <div class="portrait-hud">
+                <span>ID // SL-DEV</span>
+                <span>STATUS: ACTIVE</span>
+              </div>
             </div>
 
-            <div class="about-center">
-              <div class="eyebrow-row">About Me</div>
-              <h2>Hello, I'm Shahalam Laskar</h2>
+            <div class="about-manifesto">
+              <div class="chapter-tag">02 // Identity</div>
+              <h2>Engineering clarity inside futuristic craft.</h2>
               <p id="aboutBio"></p>
-              <a href="#journey" class="btn btn-glass btn-sm">Learn More &rarr;</a>
+              <blockquote class="manifesto-quote">
+                &ldquo;Software should feel effortless, stay dependable offline, and look unforgettable.&rdquo;
+              </blockquote>
+              <a href="#journey" class="btn btn-glass btn-sm">Explore My Journey &rarr;</a>
             </div>
 
-            <div class="interest-list" id="interestList"></div>
+            <div class="focus-stack" id="focusStack"></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FEATURED PROJECTS -->
-    <section class="block" id="projects">
+    <div class="chapter-divider"></div>
+
+    <!-- 03 // ARCHIVE — FEATURED PROJECTS -->
+    <section class="chapter" id="projects">
       <div class="container">
-        <div class="section-header gs-reveal">
+        <div class="chapter-head gs-reveal">
           <div>
-            <div class="eyebrow-row">Featured Projects</div>
-            <h2 class="section-title">Selected Builds & Systems</h2>
-            <p class="section-sub">Interactive showcases with full case studies and direct shareable URLs.</p>
+            <div class="chapter-tag">03 // Selected Archive</div>
+            <h2 class="chapter-title">Featured Projects</h2>
+            <p class="chapter-sub">Interactive 3D showcases engineered for real-world utility—open any project for its complete architectural breakdown.</p>
           </div>
           <button type="button" class="btn btn-glass btn-sm" id="toggleFilterBtn">Filter &amp; Search &rarr;</button>
         </div>
 
-        <div class="filter-drawer" id="filterDrawer" hidden>
-          <div class="filter-chips" id="projectFilters" role="tablist" aria-label="Filter projects by category"></div>
-          <div class="search-input-wrap">
+        <div class="filter-bar" id="filterBar" hidden>
+          <div class="chip-row" id="projectFilters" role="tablist" aria-label="Filter projects"></div>
+          <div class="search-wrap">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
             <input type="search" id="projectSearch" placeholder="Search projects or stack..." autocomplete="off" />
           </div>
@@ -1855,43 +2184,73 @@
       </div>
     </section>
 
-    <!-- TECHNICAL SKILLS & MY JOURNEY -->
-    <section class="block" id="skills">
-      <div class="container split-grid">
-        <div class="gs-reveal">
-          <div class="skills-wrap">
-            <div class="code-emblem" aria-hidden="true"><span>&lt;/&gt;</span></div>
+    <div class="chapter-divider"></div>
+
+    <!-- 04 // ARSENAL — TECHNICAL SKILLS -->
+    <section class="chapter" id="skills">
+      <div class="container">
+        <div class="skills-layout">
+          <div class="arsenal-core gs-reveal">
+            <div class="orbital-code" aria-hidden="true"><span>&lt;/&gt;</span></div>
             <div>
-              <div class="eyebrow-row">Technical Skills</div>
-              <h2 class="section-title">Tech Arsenal</h2>
-              <p class="section-sub">Technologies &amp; mobile-first workflows I build with.</p>
+              <div class="chapter-tag">04 // Tech Arsenal</div>
+              <h2 class="chapter-title">Systems &amp; Craft</h2>
+              <p class="chapter-sub">From native Android Kotlin architecture and cloud CI automation to zero-bloat WebGL web interfaces.</p>
             </div>
           </div>
-          <div class="skills-pills" id="skillsPills"></div>
-        </div>
 
-        <div class="journey-panel gs-reveal" id="journey">
-          <div class="eyebrow-row">My Journey</div>
-          <h2 class="section-title">Timeline &amp; Milestones</h2>
-          <p class="section-sub">From writing first lines of code to shipping Android APKs and live web systems.</p>
-          <div class="timeline" id="journeyTimeline"></div>
+          <div class="skills-grid gs-reveal" id="skillsGrid"></div>
         </div>
       </div>
     </section>
 
-    <!-- GET IN TOUCH -->
-    <section class="block" id="contact">
+    <div class="chapter-divider"></div>
+
+    <!-- 05 // CHRONOLOGY — JOURNEY -->
+    <section class="chapter" id="journey">
       <div class="container">
-        <div class="contact-grid gs-reveal">
+        <div class="chapter-head gs-reveal">
           <div>
-            <div class="eyebrow-row">Get In Touch</div>
-            <h2 class="section-title">Let's Build Something.</h2>
-            <p class="section-sub">Have a project in mind, an Android app concept, or just want to connect? Reach out anytime.</p>
-            <div class="social-row" id="socialOrbs"></div>
+            <div class="chapter-tag">05 // Chronology</div>
+            <h2 class="chapter-title">Evolution &amp; Milestones</h2>
+            <p class="chapter-sub">Every phase builds toward sharper mobile engineering and more expressive interactive software.</p>
+          </div>
+        </div>
+
+        <div class="journey-stage gs-reveal">
+          <div class="timeline-track">
+            <div class="timeline-rail-bg" aria-hidden="true"></div>
+            <div class="timeline-rail-fill" id="timelineLaser" aria-hidden="true"></div>
+            <div id="journeyNodes" style="display:contents;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="chapter-divider"></div>
+
+    <!-- 06 // TRANSMISSION — CONTACT -->
+    <section class="chapter" id="contact">
+      <div class="container">
+        <div class="chapter-head gs-reveal">
+          <div>
+            <div class="chapter-tag">06 // Transmission</div>
+            <h2 class="chapter-title">Start a Conversation</h2>
+            <p class="chapter-sub">Have an Android app idea, a custom web experience, or a collaboration in mind? Let's connect.</p>
+          </div>
+        </div>
+
+        <div class="contact-shell gs-reveal">
+          <div>
+            <h3 style="font-family:var(--font-display); margin:0 0 10px; font-size:1.35rem;">Direct Signal</h3>
+            <p style="margin:0; color:var(--text-secondary); font-size:0.94rem;">
+              Every message lands straight in my inbox. Use the interactive form or copy my email with a single tap.
+            </p>
+            <div class="social-orbs" id="directLinks"></div>
           </div>
 
           <form class="contact-form" id="contactForm" novalidate>
-            <div class="input-pair">
+            <div class="form-pair">
               <div class="field">
                 <input id="senderName" type="text" placeholder="Your Name" required />
                 <div class="field-err" id="errName"></div>
@@ -1902,35 +2261,35 @@
               </div>
             </div>
             <div class="field">
-              <textarea id="senderMessage" placeholder="Your Message" required></textarea>
+              <textarea id="senderMessage" placeholder="Tell me about your project, idea, or question..." required></textarea>
               <div class="field-err" id="errMessage"></div>
             </div>
-            <div class="form-row-actions">
-              <button type="submit" class="btn btn-electric">Send Message &rarr;</button>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-electric magnetic">Send Transmission &rarr;</button>
               <button type="button" class="btn btn-glass btn-sm" id="copyDraftBtn">Copy Draft</button>
             </div>
             <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
           </form>
 
-          <div class="contact-info-card">
-            <div class="info-row">
-              <div class="info-badge">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          <div class="channel-card">
+            <div class="channel-row">
+              <div class="channel-orb">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
               </div>
               <div>
                 <strong>Email Me</strong>
-                <small id="contactEmailText"></small>
-                <button type="button" class="copy-chip" id="copyEmailBtn">Copy Email</button>
+                <small id="contactEmailDisplay"></small>
+                <button type="button" class="copy-pill" id="copyEmailBtn">Copy Email</button>
               </div>
             </div>
 
-            <div class="info-row">
-              <div class="info-badge">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <div class="channel-row">
+              <div class="channel-orb">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
               </div>
               <div>
-                <strong>Follow &amp; Web</strong>
-                <small>GitHub &middot; shahalamlaskar.click</small>
+                <strong>Web Presence</strong>
+                <small id="contactDomainDisplay"></small>
               </div>
             </div>
           </div>
@@ -1940,7 +2299,7 @@
   </main>
 
   <!-- =========================================================================
-       DIRECT-LINK PROJECT CASE STUDY VIEW (#project/<slug>)
+       DEDICATED DIRECT-LINK PROJECT CASE STUDY VIEW (#project/<slug>)
   ========================================================================= -->
   <main id="projectView" class="project-detail-view" hidden>
     <div class="container" id="projectDetailRoot"></div>
@@ -1949,16 +2308,16 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
-      <div class="footer-left">
-        <strong style="font-family:var(--font-display); color:var(--text-primary); letter-spacing:-0.02em;">
-          <span style="color:var(--electric); font-style:italic; margin-right:6px;">SL</span> Shahalam Laskar
+      <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+        <strong style="font-family:var(--font-display); color:var(--text);">
+          <span style="color:var(--cyan); font-style:italic; margin-right:6px;">SL</span> Shahalam Laskar
         </strong>
-        <span style="opacity:0.4;">|</span>
-        <span>Building ideas into digital experiences.</span>
+        <span style="opacity:0.35;">|</span>
+        <span>Crafted as an interactive digital environment.</span>
       </div>
-      <div class="footer-right">
-        <span id="footerYear"></span>
-        <button type="button" class="top-btn" id="backToTop" aria-label="Scroll to top">&uarr;</button>
+      <div style="display:flex; align-items:center; gap:14px;">
+        <span id="footerCopy"></span>
+        <button type="button" class="top-orb" id="backToTop" aria-label="Back to top">&uarr;</button>
       </div>
     </div>
   </footer>
@@ -1968,28 +2327,27 @@
 
   <script>
     /* =========================================================================
-       SITE DATA — EDIT ALL CONTENT HERE DIRECTLY FROM ANDROID GITHUB
+       CENTRALIZED SITE DATA — EDIT DIRECTLY FROM ANDROID
     ========================================================================= */
     const SITE_DATA = {
       name: "Shahalam Laskar",
       domain: "shahalamlaskar.click",
       email: "shahalamlaskar.official@gmail.com",
-      githubUrl: "https://github.com/shahalamlaskarofficial",
-      // Optional: upload a photo to assets/avatar.jpg and set "./assets/avatar.jpg"
+      // Optional: upload a portrait to assets/avatar.jpg and set "./assets/avatar.jpg"
       avatarImage: "",
       // Optional: paste a Formspree endpoint (e.g. "https://formspree.io/f/xxxxxx")
       formEndpoint: "",
       hero: {
-        status: "Available for projects",
-        description: "I build digital experiences, explore technology, and turn ideas into functional software — engineered for speed, offline resilience, and sleek visual craft."
+        status: "01 // AVAILABLE FOR PROJECTS",
+        description: "I craft offline-first Android applications, intelligent multilingual voice assistants, and atmospheric 3D web experiences engineered to run smoothly on any device."
       },
       about: {
-        bio: "I'm a technology enthusiast and software developer passionate about building offline-first Android apps, custom voice assistants, and futuristic web experiences directly through cloud-automated workflows.",
+        bio: "I'm a software builder focused on bridging purposeful mobile engineering with bold visual design. Every project I ship is structured for speed, reliability without constant connectivity, and clean cloud-automated delivery.",
         interests: [
-          { title: "Development Interests", detail: "Android, Kotlin, Modern Web", icon: "code" },
-          { title: "Tech Interests", detail: "AI Voice Systems, CI/CD, UI/UX", icon: "spark" },
-          { title: "Current Activity", detail: "Building EduTrack & 3D Web Systems", icon: "rocket" },
-          { title: "Goal", detail: "Create impactful software that runs anywhere", icon: "target" }
+          { title: "Mobile Engineering", detail: "Kotlin, Jetpack Compose & Room offline systems", icon: "code" },
+          { title: "Voice & AI Interfaces", detail: "Multilingual speech pipelines & native controls", icon: "spark" },
+          { title: "Interactive 3D Web", detail: "Three.js lighting, GSAP motion & zero-bloat UI", icon: "cube" },
+          { title: "Core Mission", detail: "Turn ambitious concepts into polished software", icon: "target" }
         ]
       },
       projects: [
@@ -2000,104 +2358,96 @@
           year: "2026",
           featured: true,
           accent: "blue",
-          visualType: "phone",
+          visualType: "edutrack",
           status: "Active Development",
           role: "Creator & Android Developer",
-          summary: "An offline-first Android academic tracker for Classes 9–12 & competitive exams powered by Kotlin, Jetpack Compose, and Room.",
-          overview: "EduTrack keeps syllabus tracking, revision progress, and chapter checklists fast and reliable with zero internet dependency. Every release is compiled and published automatically via GitHub Actions cloud pipelines.",
-          stack: ["Kotlin", "Jetpack Compose", "Room DB", "GitHub Actions"],
+          summary: "Offline-first Android academic companion for Classes 9–12 & competitive exams powered by Kotlin, Jetpack Compose, and Room.",
+          overview: "EduTrack is designed to keep chapter mastery, syllabus checklists, and revision analytics instant even with zero internet access. Cloud-automated build pipelines compile and ship clean APK releases seamlessly.",
+          stack: ["Kotlin", "Jetpack Compose", "Room DB", "Material 3"],
           features: [
-            "100% offline-first persistence layer built with Android Room.",
-            "Structured NCERT & competitive exam syllabus tracker for Classes 9–12.",
-            "Modern Material 3 / Jetpack Compose interface tuned for one-handed speed.",
-            "Automated APK compilation and GitHub Releases publishing workflow."
+            "100% offline-first local Room database for uninterrupted study tracking.",
+            "Structured syllabus hierarchies covering Classes 9–12 and competitive exam tracks.",
+            "Fluid Jetpack Compose UI tuned for one-handed smartphone ergonomics.",
+            "Automated cloud APK build and release workflow."
           ],
           decisions: [
-            "Prioritized local Room storage so students stay productive without constant connectivity.",
-            "Automated Gradle builds in GitHub Actions to iterate and ship APKs completely from Android."
+            "Engineered local-first persistence so poor mobile signal never blocks study sessions.",
+            "Built modular Compose screens so syllabus expansions stay fast and maintainable."
           ],
-          repoUrl: "https://github.com/shahalamlaskarofficial",
           liveUrl: ""
         },
         {
           slug: "jarvis-assistant",
-          title: "Jarvis AI Assistant",
+          title: "Jarvis Voice AI",
           category: "Android",
           year: "2026",
           featured: false,
           accent: "violet",
-          visualType: "orb",
+          visualType: "jarvis",
           status: "Released APK",
-          role: "Creator & Systems Builder",
+          role: "Creator & Systems Developer",
           summary: "Custom multilingual Android default voice assistant APK supporting English, Hindi, and Bengali with native hardware controls.",
-          overview: "Designed as a custom Android Assist role replacement, Jarvis integrates multilingual speech handling, voice filtering, direct call dialing, and native hardware screen locking built end-to-end via GitHub Actions.",
-          stack: ["Android APK", "Speech APIs", "GitHub Actions", "Multilingual"],
+          overview: "Built as a fast replacement for Android's default voice assistant, Jarvis combines multilingual speech recognition, voice filtering, direct call dialing, and native screen-lock execution inside a lightweight custom APK.",
+          stack: ["Android APK", "Speech APIs", "Multilingual", "Hardware Bridge"],
           features: [
-            "Natural multilingual command recognition across English, Hindi, and Bengali.",
-            "Registers natively as Android's default digital assistant.",
-            "Hands-free voice call dialing and hardware screen lock execution.",
-            "Cloud-compiled APK workflow maintainable straight from a smartphone."
+            "Handles English, Hindi, and Bengali voice commands seamlessly.",
+            "Registers as Android's native default assistant role for instant access.",
+            "Executes hands-free actions including call dialing and hardware screen locking.",
+            "Tuned for crisp, concise spoken responses on mobile audio."
           ],
           decisions: [
-            "Structured Android Assist and Device Admin permissions cleanly for instant voice invocation.",
-            "Kept speech feedback concise and responsive for real-world mobile audio."
+            "Integrated Android Assist and Device Admin permissions cleanly for reliable hardware actions.",
+            "Refined voice recognition thresholds to filter background noise on mobile."
           ],
-          repoUrl: "https://github.com/shahalamlaskarofficial",
           liveUrl: ""
         },
         {
           slug: "personal-web-platform",
-          title: "3D Portfolio Engine",
+          title: "SL 3D Portfolio Engine",
           category: "Web",
           year: "2026",
           featured: false,
           accent: "emerald",
-          visualType: "shield",
+          visualType: "engine",
           status: "Live",
-          role: "Creative Developer & Designer",
-          summary: "Zero-build interactive 3D developer portfolio with real-time WebGL lighting, GSAP motion graphics, and GitHub Pages deep routing.",
-          overview: "Engineered to deliver studio-grade 3D motion, glassmorphism, and direct-linkable project pages inside a single self-contained index.html that can be edited and deployed anywhere on Android.",
-          stack: ["Three.js", "GSAP", "HTML5 / CSS3", "GitHub Pages"],
+          role: "Creative Developer & Art Director",
+          summary: "Cinematic single-file 3D developer portfolio with scroll-choreographed Three.js lighting, GSAP transitions, and deep project routing.",
+          overview: "Art-directed to deliver studio-grade WebGL visuals, glassmorphic depth, and direct-linkable case studies inside a zero-build static architecture that stays fast on Android phones.",
+          stack: ["Three.js", "GSAP", "HTML5 / CSS3", "WebGL"],
           features: [
-            "Interactive Three.js WebGL crystal core with extruded 3D SL monogram & orbiting energy rings.",
-            "GSAP ScrollTrigger choreography and smooth transition curtains between routes.",
-            "3D perspective tilt cards with reactive electric lighting.",
-            "GitHub Pages 404 fallback routing so /project/<slug> links always resolve cleanly."
+            "Persistent Three.js SL monogram crystal core choreographed across every scroll chapter.",
+            "Volumetric neon bloom via procedural canvas glow textures for cool Android GPU thermals.",
+            "Dual-shutter GSAP route transitions with direct-linkable project URLs.",
+            "Zero bundler overhead—instantly editable and maintainable from mobile."
           ],
           decisions: [
-            "Capped mobile WebGL pixel ratio and auto-paused offscreen rendering to stay silky on Android.",
-            "Zero bundler setup so every visual and data update deploys in 60 seconds via GitHub."
+            "Replaced heavy post-processing shaders with procedural glow sprites to lock high FPS on phones.",
+            "Centralized all site data into one clean configuration object for rapid updates."
           ],
-          repoUrl: "https://github.com/shahalamlaskarofficial/portfolio-",
           liveUrl: "https://shahalamlaskar.click"
         }
       ],
       skills: [
-        { name: "Kotlin", code: "Kt", color: "#7c3aed" },
-        { name: "Java", code: "Jv", color: "#ea580c" },
-        { name: "HTML5 / CSS3", code: "UI", color: "#0284c7" },
-        { name: "JavaScript", code: "JS", color: "#ca8a04" },
-        { name: "Jetpack Compose", code: "JC", color: "#16a34a" },
-        { name: "Three.js / 3D", code: "3D", color: "#2563eb" },
-        { name: "GSAP Motion", code: "GS", color: "#059669" },
-        { name: "GitHub Actions", code: "CI", color: "#4f46e5" },
-        { name: "Git & DNS", code: "Gt", color: "#dc2626" }
+        { name: "Kotlin", code: "Kt", color: "#7c3aed", tier: "Core", level: "90%" },
+        { name: "Jetpack Compose", code: "JC", color: "#16a34a", tier: "Core", level: "88%" },
+        { name: "HTML5 & CSS3", code: "UI", color: "#0284c7", tier: "Core", level: "94%" },
+        { name: "JavaScript", code: "JS", color: "#ca8a04", tier: "Core", level: "88%" },
+        { name: "Three.js / 3D", code: "3D", color: "#2563eb", tier: "Creative", level: "84%" },
+        { name: "GSAP Motion", code: "GS", color: "#059669", tier: "Creative", level: "86%" },
+        { name: "Android Systems", code: "OS", color: "#0ea5e9", tier: "Systems", level: "85%" },
+        { name: "Cloud CI/CD", code: "CI", color: "#4f46e5", tier: "Workflow", level: "86%" },
+        { name: "DNS & Hosting", code: "DN", color: "#dc2626", tier: "Infra", level: "84%" }
       ],
       journey: [
-        { title: "Started Coding", year: "(2023)", icon: "cap" },
-        { title: "Built First Websites", year: "(2024)", icon: "laptop" },
-        { title: "Android & Cloud CI", year: "(2025)", icon: "star" },
-        { title: "Building Bigger Dreams", year: "(∞)", icon: "rocket" }
-      ],
-      socials: [
-        { name: "GitHub", url: "https://github.com/shahalamlaskarofficial", icon: "github" },
-        { name: "Website", url: "https://shahalamlaskar.click", icon: "globe" },
-        { name: "Email", url: "mailto:shahalamlaskar.official@gmail.com", icon: "mail" }
+        { year: "2023", title: "Started Coding", desc: "Wrote my first lines of code and discovered how software turns raw ideas into interactive tools.", icon: "cap" },
+        { year: "2024", title: "First Web Launches", desc: "Built and shipped responsive websites, mastered custom DNS hosting, and refined dark UI craft.", icon: "laptop" },
+        { year: "2025", title: "Android & Automation", desc: "Stepped into native Android architecture, cloud APK build workflows, and offline-first design.", icon: "star" },
+        { year: "2026 & BEYOND", title: "Cinematic Systems", desc: "Shipping EduTrack, multilingual voice AI, and immersive 3D web experiences built to last.", icon: "rocket" }
       ]
     };
 
     /* =========================================================================
-       HELPERS & SVG ICON LIBRARY
+       UTILITIES & INLINE ARTWORK
     ========================================================================= */
     const $ = (s, c = document) => c.querySelector(s);
     const $$ = (s, c = document) => Array.from(c.querySelectorAll(s));
@@ -2107,83 +2457,102 @@
     }
 
     const ICONS = {
-      code: '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>',
-      spark: '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>',
-      rocket: '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/></svg>',
-      target: '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>',
-      cap: '<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>',
-      laptop: '<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="12" rx="2"/><line x1="2" y1="20" x2="22" y2="20"/></svg>',
-      star: '<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>',
-      github: '<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.54 2.87 8.39 6.84 9.75.5.09.68-.22.68-.49 0-.24-.01-1.05-.01-1.9-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05A9.38 9.38 0 0 1 12 6.84c.85 0 1.71.12 2.51.35 1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.82 0 .27.18.59.69.49A10.27 10.27 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/></svg>',
-      globe: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>',
-      mail: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>',
-      share: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>'
+      code: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>',
+      spark: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>',
+      cube: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>',
+      target: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>',
+      cap: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>',
+      laptop: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="12" rx="2"/><line x1="2" y1="20" x2="22" y2="20"/></svg>',
+      star: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>',
+      rocket: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/></svg>',
+      share: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>',
+      external: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>'
     };
 
-    function getProjectArtwork(type) {
-      if (type === "phone") {
+    function getShowcaseVisual(type) {
+      if (type === "edutrack") {
         return `
-          <svg viewBox="0 0 320 170" fill="none">
+          <svg viewBox="0 0 360 190" fill="none">
             <defs>
-              <linearGradient id="phG" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#2563eb"/>
+              <linearGradient id="etG" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#7dd3fc"/><stop offset="100%" stop-color="#2563eb"/>
               </linearGradient>
             </defs>
-            <ellipse cx="160" cy="148" rx="95" ry="14" fill="rgba(56,189,248,0.22)"/>
-            <g transform="translate(115 16) rotate(-8 45 70)">
-              <rect x="0" y="0" width="90" height="142" rx="16" fill="#071226" stroke="url(#phG)" stroke-width="2"/>
-              <rect x="28" y="8" width="34" height="4" rx="2" fill="#1e3a8a"/>
-              <rect x="12" y="24" width="66" height="26" rx="7" fill="rgba(56,189,248,0.18)" stroke="rgba(56,189,248,0.45)"/>
-              <rect x="18" y="32" width="34" height="4" rx="2" fill="#7dd3fc"/>
-              <rect x="18" y="40" width="52" height="4" rx="2" fill="rgba(148,163,184,0.4)"/>
-              <rect x="12" y="60" width="66" height="18" rx="6" fill="rgba(37,99,235,0.25)"/>
-              <rect x="12" y="85" width="66" height="18" rx="6" fill="rgba(56,189,248,0.14)"/>
-              <rect x="12" y="110" width="44" height="16" rx="8" fill="url(#phG)"/>
+            <g opacity="0.22" stroke="#60a5fa" stroke-width="1">
+              <line x1="0" y1="150" x2="360" y2="150"/><line x1="40" y1="190" x2="120" y2="120"/><line x1="320" y1="190" x2="240" y2="120"/>
+            </g>
+            <ellipse cx="180" cy="162" rx="110" ry="14" fill="rgba(56,189,248,0.22)"/>
+            <!-- Floating Side Stat Card -->
+            <g transform="translate(28 62)">
+              <rect width="84" height="54" rx="11" fill="rgba(8,18,40,0.88)" stroke="rgba(56,189,248,0.45)"/>
+              <rect x="11" y="13" width="38" height="5" rx="2.5" fill="#7dd3fc"/>
+              <rect x="11" y="25" width="60" height="6" rx="3" fill="rgba(148,163,184,0.22)"/>
+              <rect x="11" y="25" width="44" height="6" rx="3" fill="url(#etG)"/>
+              <rect x="11" y="38" width="28" height="4" rx="2" fill="#34d399"/>
+            </g>
+            <!-- Tilted Hero Phone Device -->
+            <g transform="translate(132 16) rotate(-7 50 78)">
+              <rect width="98" height="156" rx="18" fill="#061024" stroke="url(#etG)" stroke-width="2.2"/>
+              <rect x="33" y="9" width="32" height="4" rx="2" fill="#1e3a8a"/>
+              <rect x="12" y="24" width="74" height="34" rx="9" fill="rgba(56,189,248,0.16)" stroke="rgba(56,189,248,0.45)"/>
+              <rect x="20" y="33" width="36" height="5" rx="2.5" fill="#bae6fd"/>
+              <rect x="20" y="43" width="54" height="4" rx="2" fill="rgba(148,163,184,0.42)"/>
+              <rect x="12" y="68" width="74" height="20" rx="7" fill="rgba(37,99,235,0.25)"/>
+              <rect x="12" y="95" width="74" height="20" rx="7" fill="rgba(56,189,248,0.14)"/>
+              <rect x="12" y="124" width="50" height="17" rx="8.5" fill="url(#etG)"/>
+            </g>
+            <!-- Floating Offline Pill -->
+            <g transform="translate(248 52)">
+              <rect width="84" height="32" rx="16" fill="rgba(6,18,42,0.9)" stroke="rgba(52,211,153,0.5)"/>
+              <circle cx="16" cy="16" r="4" fill="#34d399"/>
+              <rect x="26" y="13" width="44" height="6" rx="3" fill="#a7f3d0"/>
             </g>
           </svg>`;
       }
-      if (type === "orb") {
+      if (type === "jarvis") {
         return `
-          <svg viewBox="0 0 320 170" fill="none">
+          <svg viewBox="0 0 360 190" fill="none">
             <defs>
-              <radialGradient id="orbG" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stop-color="#c4b5fd"/><stop offset="45%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#1e1b4b" stop-opacity="0"/>
+              <radialGradient id="jvOrb" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#ddd6fe"/><stop offset="42%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#1e1b4b" stop-opacity="0"/>
               </radialGradient>
             </defs>
-            <circle cx="160" cy="85" r="68" fill="url(#orbG)" opacity="0.65"/>
-            <ellipse cx="160" cy="85" rx="92" ry="26" stroke="#a78bfa" stroke-width="1.5" opacity="0.65" transform="rotate(-16 160 85)"/>
-            <ellipse cx="160" cy="85" rx="92" ry="26" stroke="#38bdf8" stroke-width="1.5" opacity="0.55" transform="rotate(18 160 85)"/>
-            <g stroke="#e0e7ff" stroke-width="4" stroke-linecap="round">
-              <line x1="130" y1="74" x2="130" y2="96"/><line x1="145" y1="60" x2="145" y2="110"/>
-              <line x1="160" y1="48" x2="160" y2="122"/><line x1="175" y1="62" x2="175" y2="108"/>
-              <line x1="190" y1="76" x2="190" y2="94"/>
+            <circle cx="180" cy="95" r="76" fill="url(#jvOrb)" opacity="0.68"/>
+            <ellipse cx="180" cy="95" rx="116" ry="30" stroke="#a78bfa" stroke-width="1.6" opacity="0.7" transform="rotate(-16 180 95)"/>
+            <ellipse cx="180" cy="95" rx="116" ry="30" stroke="#38bdf8" stroke-width="1.6" opacity="0.6" transform="rotate(17 180 95)"/>
+            <circle cx="180" cy="95" r="44" stroke="rgba(221,214,254,0.45)" stroke-dasharray="6 5" stroke-width="1.4"/>
+            <g stroke="#f5f3ff" stroke-width="4.2" stroke-linecap="round">
+              <line x1="142" y1="84" x2="142" y2="106"/><line x1="156" y1="68" x2="156" y2="122"/>
+              <line x1="170" y1="54" x2="170" y2="136"/><line x1="184" y1="62" x2="184" y2="128"/>
+              <line x1="198" y1="74" x2="198" y2="116"/><line x1="212" y1="84" x2="212" y2="106"/>
             </g>
           </svg>`;
       }
       return `
-        <svg viewBox="0 0 320 170" fill="none">
+        <svg viewBox="0 0 360 190" fill="none">
           <defs>
-            <linearGradient id="shG" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#34d399"/><stop offset="100%" stop-color="#059669"/>
+            <linearGradient id="enG" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#6ee7b7"/><stop offset="100%" stop-color="#059669"/>
             </linearGradient>
           </defs>
-          <ellipse cx="160" cy="146" rx="82" ry="12" fill="rgba(16,185,129,0.22)"/>
-          <path d="M160 22 L212 42 V86 C212 118 188 138 160 148 C132 138 108 118 108 86 V42 Z" fill="rgba(16,185,129,0.16)" stroke="url(#shG)" stroke-width="2.6"/>
-          <polygon points="160,48 188,64 188,96 160,112 132,96 132,64" fill="rgba(52,211,153,0.2)" stroke="#6ee7b7" stroke-width="1.8"/>
-          <text x="160" y="88" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="800" font-size="22" font-style="italic" fill="#d1fae5">SL</text>
+          <ellipse cx="180" cy="162" rx="105" ry="13" fill="rgba(16,185,129,0.22)"/>
+          <polygon points="180,22 246,60 246,134 180,172 114,134 114,60" fill="rgba(16,185,129,0.1)" stroke="url(#enG)" stroke-width="2.2"/>
+          <polygon points="180,44 226,70 226,124 180,150 134,124 134,70" fill="rgba(52,211,153,0.14)" stroke="#6ee7b7" stroke-width="1.4"/>
+          <ellipse cx="180" cy="97" rx="112" ry="26" stroke="#34d399" stroke-width="1.4" opacity="0.65" transform="rotate(-14 180 97)"/>
+          <text x="180" y="108" text-anchor="middle" font-family="Syne, sans-serif" font-weight="800" font-size="30" font-style="italic" fill="#ecfdf5">SL</text>
         </svg>`;
     }
 
     let toastTimer;
     function showToast(msg) {
-      const t = $("#toast");
-      t.textContent = msg;
-      t.classList.add("show");
+      const el = $("#toast");
+      el.textContent = msg;
+      el.classList.add("show");
       clearTimeout(toastTimer);
-      toastTimer = setTimeout(() => t.classList.remove("show"), 2600);
+      toastTimer = setTimeout(() => el.classList.remove("show"), 2600);
     }
 
-    async function copyToClipboard(text, msg = "Copied!") {
+    async function copyText(text, msg = "Copied!") {
       try {
         await navigator.clipboard.writeText(text);
         showToast(msg);
@@ -2201,281 +2570,340 @@
     }
 
     /* =========================================================================
-       REAL-TIME INTERACTIVE THREE.JS 3D HERO SCENE
-       Illuminated Crystal Cube + Extruded 3D SL Monogram + Orbiting Rings + Pedestal
+       PERSISTENT SCROLL-CHOREOGRAPHED 3D SL MONOGRAM WORLD (THREE.JS)
     ========================================================================= */
-    function initHero3D() {
-      if (typeof THREE === "undefined") return;
-      const canvas = $("#heroCanvas");
-      const heroEl = $("#home");
-      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const worldRig = {
+      posX: 2.35, posY: 0.08, posZ: 0,
+      scale: 1.0, rotY: 0, rotX: 0,
+      ringSpread: 1.0, glowOpacity: 0.88
+    };
 
-      const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, powerPreference: "high-performance" });
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.75));
+    function createGlowTexture() {
+      const c = document.createElement("canvas");
+      c.width = 128;
+      c.height = 128;
+      const ctx = c.getContext("2d");
+      const g = ctx.createRadialGradient(64, 64, 4, 64, 64, 64);
+      g.addColorStop(0, "rgba(186, 230, 253, 0.95)");
+      g.addColorStop(0.28, "rgba(56, 189, 248, 0.52)");
+      g.addColorStop(0.62, "rgba(37, 99, 235, 0.16)");
+      g.addColorStop(1, "rgba(2, 4, 10, 0)");
+      ctx.fillStyle = g;
+      ctx.fillRect(0, 0, 128, 128);
+      return new THREE.CanvasTexture(c);
+    }
+
+    function initWorld3D() {
+      if (typeof THREE === "undefined") return;
+      const canvas = $("#worldCanvas");
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const isMobile = window.innerWidth < 1080;
+
+      const renderer = new THREE.WebGLRenderer({ canvas, antialias: !isMobile, alpha: true, powerPreference: "high-performance" });
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, isMobile ? 1.4 : 1.75));
       renderer.setClearColor(0x000000, 0);
 
       const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(42, 1, 0.1, 100);
-      camera.position.set(0, 0.35, 8.6);
+      const camera = new THREE.PerspectiveCamera(42, window.innerWidth / window.innerHeight, 0.1, 100);
+      camera.position.set(0, 0.25, 8.8);
 
-      // Lighting rig — electric blue + cyan rim + crisp top specular
-      scene.add(new THREE.AmbientLight(0x1e3a8a, 1.1));
-      const keyLight = new THREE.PointLight(0x38bdf8, 3.6, 22);
-      keyLight.position.set(3.5, 4.2, 5.2);
+      // Electric-blue atmospheric lighting rig
+      scene.add(new THREE.AmbientLight(0x1e3a8a, 1.25));
+      const keyLight = new THREE.PointLight(0x38bdf8, 3.8, 24);
+      keyLight.position.set(3.8, 4.5, 5.4);
       scene.add(keyLight);
 
-      const coreLight = new THREE.PointLight(0x2563eb, 4.2, 14);
-      coreLight.position.set(0, 0.4, 1.8);
+      const coreLight = new THREE.PointLight(0x2563eb, 4.6, 16);
+      coreLight.position.set(0, 0.4, 2.2);
       scene.add(coreLight);
 
-      const rimLight = new THREE.PointLight(0x93c5fd, 2.4, 18);
-      rimLight.position.set(-4.5, -1.5, -3);
+      const rimLight = new THREE.PointLight(0x93c5fd, 2.4, 20);
+      rimLight.position.set(-4.5, -2.0, -3.0);
       scene.add(rimLight);
 
-      // Master group shifted right on desktop, centered upper on mobile
-      const stageGroup = new THREE.Group();
-      scene.add(stageGroup);
+      const masterGroup = new THREE.Group();
+      scene.add(masterGroup);
 
-      // --- 1. Illuminated Glass Crystal Cube (Balanced on Corner) ---
-      const crystalPivot = new THREE.Group();
-      crystalPivot.position.set(0, 0.52, 0);
-      stageGroup.add(crystalPivot);
-
-      const cubeGeo = new THREE.BoxGeometry(2.25, 2.25, 2.25);
-      const cubeMat = new THREE.MeshPhongMaterial({
-        color: 0x0a1c42,
-        emissive: 0x102a66,
-        emissiveIntensity: 0.65,
-        specular: 0x7dd3fc,
-        shininess: 140,
-        transparent: true,
-        opacity: 0.24,
-        depthWrite: false
-      });
-      const crystalCube = new THREE.Mesh(cubeGeo, cubeMat);
-      crystalCube.rotation.set(Math.PI / 4, Math.PI / 4, 0.22);
-      crystalPivot.add(crystalCube);
-
-      // Glowing wireframe edges + inner facet edges
-      const edgeGeo = new THREE.EdgesGeometry(cubeGeo);
-      const edgeMat = new THREE.LineBasicMaterial({ color: 0x60a5fa, transparent: true, opacity: 0.92 });
-      const cubeEdges = new THREE.LineSegments(edgeGeo, edgeMat);
-      crystalCube.add(cubeEdges);
-
-      const innerCube = new THREE.LineSegments(
-        new THREE.EdgesGeometry(new THREE.BoxGeometry(2.08, 2.08, 2.08)),
-        new THREE.LineBasicMaterial({ color: 0x38bdf8, transparent: true, opacity: 0.38 })
+      // Volumetric Neon Bloom Sprite (lightweight GPU cost)
+      const glowSprite = new THREE.Sprite(
+        new THREE.SpriteMaterial({
+          map: createGlowTexture(),
+          transparent: true,
+          opacity: 0.88,
+          blending: THREE.AdditiveBlending,
+          depthWrite: false
+        })
       );
-      crystalCube.add(innerCube);
+      glowSprite.scale.set(6.4, 6.4, 1);
+      glowSprite.position.set(0, 0.45, -0.6);
+      masterGroup.add(glowSprite);
 
-      // --- 2. Extruded 3D Illuminated "SL" Monogram Inside Crystal ---
-      function makeSlantedShape(pts) {
+      // --- 1. Faceted Crystal Cube Cage ---
+      const corePivot = new THREE.Group();
+      corePivot.position.set(0, 0.48, 0);
+      masterGroup.add(corePivot);
+
+      const cubeGeo = new THREE.BoxGeometry(2.3, 2.3, 2.3);
+      const crystalCube = new THREE.Mesh(
+        cubeGeo,
+        new THREE.MeshPhongMaterial({
+          color: 0x091a3e,
+          emissive: 0x102a66,
+          emissiveIntensity: 0.72,
+          specular: 0xbae6fd,
+          shininess: 160,
+          transparent: true,
+          opacity: 0.22,
+          depthWrite: false
+        })
+      );
+      crystalCube.rotation.set(Math.PI / 4, Math.PI / 4, 0.2);
+      corePivot.add(crystalCube);
+
+      crystalCube.add(new THREE.LineSegments(
+        new THREE.EdgesGeometry(cubeGeo),
+        new THREE.LineBasicMaterial({ color: 0x7dd3fc, transparent: true, opacity: 0.92 })
+      ));
+      crystalCube.add(new THREE.LineSegments(
+        new THREE.EdgesGeometry(new THREE.BoxGeometry(2.1, 2.1, 2.1)),
+        new THREE.LineBasicMaterial({ color: 0x2563eb, transparent: true, opacity: 0.45 })
+      ));
+
+      // --- 2. Signature Extruded 3D Illuminated "SL" Monogram ---
+      function slantShape(points) {
         const s = new THREE.Shape();
-        pts.forEach(([x, y], i) => {
-          const sx = x + y * 0.24; // futuristic speed-italic shear
-          if (i === 0) s.moveTo(sx, y);
-          else s.lineTo(sx, y);
+        points.forEach(([x, y], i) => {
+          const sx = x + y * 0.25;
+          i === 0 ? s.moveTo(sx, y) : s.lineTo(sx, y);
         });
         s.closePath();
         return s;
       }
 
-      const sShape = makeSlantedShape([
-        [0.45, 0.60], [-0.45, 0.60], [-0.45, -0.10], [0.22, -0.10],
-        [0.22, -0.38], [-0.45, -0.38], [-0.45, -0.60], [0.45, -0.60],
-        [0.45, 0.12], [-0.22, 0.12], [-0.22, 0.38], [0.45, 0.38]
-      ]);
+      const sGeo = new THREE.ExtrudeGeometry(slantShape([
+        [0.46, 0.60], [-0.46, 0.60], [-0.46, -0.09], [0.22, -0.09],
+        [0.22, -0.38], [-0.46, -0.38], [-0.46, -0.60], [0.46, -0.60],
+        [0.46, 0.13], [-0.22, 0.13], [-0.22, 0.38], [0.46, 0.38]
+      ]), { depth: 0.3, bevelEnabled: true, bevelThickness: 0.048, bevelSize: 0.036, bevelSegments: 3 });
 
-      const lShape = makeSlantedShape([
-        [-0.18, 0.60], [-0.40, 0.60], [-0.40, -0.60], [0.42, -0.60],
-        [0.42, -0.38], [-0.18, -0.38]
-      ]);
-
-      const extrudeOpts = {
-        depth: 0.28,
-        bevelEnabled: true,
-        bevelThickness: 0.045,
-        bevelSize: 0.035,
-        bevelSegments: 3
-      };
+      const lGeo = new THREE.ExtrudeGeometry(slantShape([
+        [-0.18, 0.60], [-0.40, 0.60], [-0.40, -0.60], [0.44, -0.60],
+        [0.44, -0.38], [-0.18, -0.38]
+      ]), { depth: 0.3, bevelEnabled: true, bevelThickness: 0.048, bevelSize: 0.036, bevelSegments: 3 });
 
       const slMat = new THREE.MeshStandardMaterial({
-        color: 0x60a5fa,
+        color: 0x93c5fd,
         emissive: 0x2563eb,
-        emissiveIntensity: 1.35,
-        metalness: 0.55,
-        roughness: 0.18
+        emissiveIntensity: 1.5,
+        metalness: 0.6,
+        roughness: 0.15
       });
 
       const slGroup = new THREE.Group();
-      const sMesh = new THREE.Mesh(new THREE.ExtrudeGeometry(sShape, extrudeOpts), slMat);
-      sMesh.position.set(-0.54, 0, -0.14);
-      const lMesh = new THREE.Mesh(new THREE.ExtrudeGeometry(lShape, extrudeOpts), slMat);
-      lMesh.position.set(0.50, 0, -0.14);
+      const sMesh = new THREE.Mesh(sGeo, slMat);
+      sMesh.position.set(-0.55, 0, -0.15);
+      const lMesh = new THREE.Mesh(lGeo, slMat);
+      lMesh.position.set(0.50, 0, -0.15);
       slGroup.add(sMesh, lMesh);
-      slGroup.scale.setScalar(0.92);
-      crystalPivot.add(slGroup);
+      slGroup.scale.setScalar(0.94);
+      corePivot.add(slGroup);
 
-      // --- 3. Orbiting Electric-Blue Energy Rings ---
-      const ring1 = new THREE.Mesh(
-        new THREE.TorusGeometry(2.38, 0.022, 16, 120),
-        new THREE.MeshBasicMaterial({ color: 0x38bdf8, transparent: true, opacity: 0.85 })
+      // --- 3. Dual Orbiting Energy Rings + Telemetry Ticks ---
+      const ringPrimary = new THREE.Mesh(
+        new THREE.TorusGeometry(2.45, 0.022, 16, 120),
+        new THREE.MeshBasicMaterial({ color: 0x38bdf8, transparent: true, opacity: 0.88 })
       );
-      ring1.rotation.set(1.25, 0.32, 0);
-      crystalPivot.add(ring1);
+      ringPrimary.rotation.set(1.24, 0.32, 0);
+      corePivot.add(ringPrimary);
 
-      const ring2 = new THREE.Mesh(
-        new THREE.TorusGeometry(2.72, 0.014, 16, 120),
-        new THREE.MeshBasicMaterial({ color: 0x3b82f6, transparent: true, opacity: 0.45 })
-      );
-      ring2.rotation.set(1.62, -0.42, 0.2);
-      crystalPivot.add(ring2);
-
-      // Orbiting Energy Spark Bead
-      const sparkBead = new THREE.Mesh(
-        new THREE.SphereGeometry(0.075, 16, 16),
+      const sparkNode = new THREE.Mesh(
+        new THREE.SphereGeometry(0.08, 14, 14),
         new THREE.MeshBasicMaterial({ color: 0xe0f2fe })
       );
-      ring1.add(sparkBead);
+      ringPrimary.add(sparkNode);
 
-      // --- 4. Dark Futuristic Pedestal Platform ---
-      const pedestalGroup = new THREE.Group();
-      pedestalGroup.position.set(0, -1.98, 0);
-      stageGroup.add(pedestalGroup);
+      const ringSecondary = new THREE.Mesh(
+        new THREE.TorusGeometry(2.86, 0.014, 16, 120),
+        new THREE.MeshBasicMaterial({ color: 0x3b82f6, transparent: true, opacity: 0.45 })
+      );
+      ringSecondary.rotation.set(1.62, -0.45, 0.22);
+      corePivot.add(ringSecondary);
 
-      const darkMetal = new THREE.MeshStandardMaterial({ color: 0x070d1d, metalness: 0.78, roughness: 0.35 });
-      const glowCyan = new THREE.MeshBasicMaterial({ color: 0x38bdf8, transparent: true, opacity: 0.85 });
-
-      const tier1 = new THREE.Mesh(new THREE.CylinderGeometry(1.55, 1.82, 0.22, 48), darkMetal);
-      const tier2 = new THREE.Mesh(new THREE.CylinderGeometry(1.98, 2.28, 0.24, 48), darkMetal);
-      tier2.position.y = -0.24;
-      const tier3 = new THREE.Mesh(new THREE.CylinderGeometry(2.42, 2.68, 0.22, 48), darkMetal);
-      tier3.position.y = -0.48;
-
-      const glowRingTop = new THREE.Mesh(new THREE.TorusGeometry(1.58, 0.02, 12, 72), glowCyan);
-      glowRingTop.rotation.x = Math.PI / 2;
-      glowRingTop.position.y = 0.11;
-
-      const glowRingMid = new THREE.Mesh(new THREE.TorusGeometry(2.02, 0.016, 12, 72), new THREE.MeshBasicMaterial({ color: 0x2563eb, transparent: true, opacity: 0.7 }));
-      glowRingMid.rotation.x = Math.PI / 2;
-      glowRingMid.position.y = -0.12;
-
-      pedestalGroup.add(tier1, tier2, tier3, glowRingTop, glowRingMid);
-
-      // --- 5. Floating Faceted Obsidian Shards ---
+      // --- 4. Floating Obsidian Geometric Shards ---
       const shards = [];
-      const shardGeo = new THREE.IcosahedronGeometry(0.18, 0);
-      const shardMat = new THREE.MeshStandardMaterial({ color: 0x0f172a, metalness: 0.6, roughness: 0.4 });
-      const shardCoords = [
-        [-2.7, 1.9, -0.8, 1.1], [2.6, 1.7, -1.1, 0.9], [-2.2, -1.1, 0.9, 0.85],
-        [2.5, -0.8, 0.6, 1.0], [0.4, 2.5, -1.6, 0.7], [-1.4, 2.3, 0.5, 0.65]
+      const shardGeo = new THREE.OctahedronGeometry(0.2, 0);
+      const shardMat = new THREE.MeshStandardMaterial({ color: 0x0f172a, emissive: 0x0c1e4a, emissiveIntensity: 0.4, metalness: 0.72, roughness: 0.3 });
+      const shardData = [
+        [-2.9, 1.9, -0.8, 1.0], [2.7, 1.7, -1.0, 0.85], [-2.4, -1.4, 0.8, 0.9],
+        [2.6, -1.1, 0.6, 0.95], [0.2, 2.7, -1.5, 0.72], [-1.3, 2.3, 0.4, 0.65]
       ];
-      shardCoords.forEach(([x, y, z, sc], idx) => {
+      shardData.forEach(([x, y, z, s], i) => {
         const m = new THREE.Mesh(shardGeo, shardMat);
         m.position.set(x, y, z);
-        m.scale.setScalar(sc);
-        m.userData = { baseY: y, phase: idx * 1.2, speed: 0.6 + idx * 0.12 };
-        stageGroup.add(m);
+        m.scale.setScalar(s);
+        m.userData = { y, phase: i * 1.15, speed: 0.55 + i * 0.1 };
+        masterGroup.add(m);
         shards.push(m);
       });
 
-      // --- 6. Deep Cosmic Starfield Particles ---
-      const starCount = window.innerWidth < 760 ? 220 : 420;
-      const starPos = new Float32Array(starCount * 3);
-      for (let i = 0; i < starCount; i++) {
-        starPos[i * 3] = (Math.random() - 0.5) * 26;
-        starPos[i * 3 + 1] = (Math.random() - 0.5) * 14;
-        starPos[i * 3 + 2] = -2 - Math.random() * 14;
+      // --- 5. Pedestal Rings Beneath Core ---
+      const pedestal = new THREE.Group();
+      pedestal.position.set(0, -1.96, 0);
+      masterGroup.add(pedestal);
+      const metal = new THREE.MeshStandardMaterial({ color: 0x060c1b, metalness: 0.8, roughness: 0.32 });
+      const t1 = new THREE.Mesh(new THREE.CylinderGeometry(1.48, 1.78, 0.2, 42), metal);
+      const t2 = new THREE.Mesh(new THREE.CylinderGeometry(1.94, 2.26, 0.22, 42), metal);
+      t2.position.y = -0.22;
+      const pRing = new THREE.Mesh(
+        new THREE.TorusGeometry(1.52, 0.02, 10, 64),
+        new THREE.MeshBasicMaterial({ color: 0x38bdf8, transparent: true, opacity: 0.82 })
+      );
+      pRing.rotation.x = Math.PI / 2;
+      pRing.position.y = 0.11;
+      pedestal.add(t1, t2, pRing);
+
+      // --- 6. Ambient Cosmic Particle Field ---
+      const count = isMobile ? 200 : 420;
+      const positions = new Float32Array(count * 3);
+      for (let i = 0; i < count; i++) {
+        positions[i * 3] = (Math.random() - 0.5) * 28;
+        positions[i * 3 + 1] = (Math.random() - 0.5) * 18;
+        positions[i * 3 + 2] = -2 - Math.random() * 14;
       }
-      const starGeo = new THREE.BufferGeometry();
-      starGeo.setAttribute("position", new THREE.BufferAttribute(starPos, 3));
-      const stars = new THREE.Points(
-        starGeo,
+      const pGeo = new THREE.BufferGeometry();
+      pGeo.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+      const starField = new THREE.Points(
+        pGeo,
         new THREE.PointsMaterial({ color: 0x93c5fd, size: 0.055, transparent: true, opacity: 0.72 })
       );
-      scene.add(stars);
+      scene.add(starField);
 
-      // Responsive layout placement
-      function resize() {
-        const w = heroEl.clientWidth || window.innerWidth;
-        const h = heroEl.clientHeight || window.innerHeight;
+      // Layout Calibration
+      function updateViewport() {
+        const w = window.innerWidth;
+        const h = window.innerHeight;
         renderer.setSize(w, h, false);
         camera.aspect = w / h;
         camera.updateProjectionMatrix();
-
-        if (w > 1024) {
-          stageGroup.position.set(2.35, 0.05, 0);
-          stageGroup.scale.setScalar(1.0);
-        } else {
-          stageGroup.position.set(0, 1.75, -0.6);
-          stageGroup.scale.setScalar(0.68);
-        }
+        const mobileNow = w < 1080;
+        worldRig.posX = mobileNow ? 0 : 2.35;
+        worldRig.posY = mobileNow ? 1.65 : 0.05;
+        worldRig.scale = mobileNow ? 0.64 : 1.0;
       }
-      resize();
-      window.addEventListener("resize", resize);
+      updateViewport();
+      window.addEventListener("resize", updateViewport);
 
-      // Interactive pointer / touch drag rotation
-      let targetRX = 0, targetRY = 0;
-      let dragOffsetY = 0;
-      let dragging = false, lastX = 0;
+      // Interactive pointer / drag rotation
+      let targetRX = 0, targetRY = 0, dragY = 0, dragging = false, prevX = 0;
+      const dragSurface = $("#heroDragSurface");
 
-      heroEl.addEventListener("pointermove", (e) => {
-        const rect = heroEl.getBoundingClientRect();
-        const nx = ((e.clientX - rect.left) / rect.width) * 2 - 1;
-        const ny = ((e.clientY - rect.top) / rect.height) * 2 - 1;
-        targetRY = nx * 0.42;
-        targetRX = ny * 0.22;
+      window.addEventListener("pointermove", (e) => {
+        const nx = (e.clientX / window.innerWidth) * 2 - 1;
+        const ny = (e.clientY / window.innerHeight) * 2 - 1;
+        targetRY = nx * 0.36;
+        targetRX = ny * 0.18;
         if (dragging) {
-          dragOffsetY += (e.clientX - lastX) * 0.008;
-          lastX = e.clientX;
+          dragY += (e.clientX - prevX) * 0.009;
+          prevX = e.clientX;
         }
       }, { passive: true });
 
-      heroEl.addEventListener("pointerdown", (e) => {
+      dragSurface.addEventListener("pointerdown", (e) => {
         dragging = true;
-        lastX = e.clientX;
+        prevX = e.clientX;
       }, { passive: true });
-
       window.addEventListener("pointerup", () => { dragging = false; }, { passive: true });
 
-      // Pause rendering when hero is off-screen for cool Android thermals
-      let heroVisible = true;
-      const visObserver = new IntersectionObserver((entries) => {
-        heroVisible = entries[0].isIntersecting;
-      }, { threshold: 0.02 });
-      visObserver.observe(heroEl);
+      // Connected Scroll-Based 3D Storytelling via GSAP ScrollTrigger
+      if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined" && !reducedMotion) {
+        gsap.registerPlugin(ScrollTrigger);
+        const desktop = () => window.innerWidth >= 1080;
+
+        gsap.timeline({
+          scrollTrigger: {
+            trigger: "#homeView",
+            start: "top top",
+            end: "bottom bottom",
+            scrub: 1.2
+          }
+        })
+          .to(worldRig, {
+            posX: () => desktop() ? -2.2 : 0,
+            posY: () => desktop() ? 0.2 : 0.5,
+            posZ: -2.4,
+            scale: () => desktop() ? 0.78 : 0.56,
+            rotY: Math.PI * 0.65,
+            glowOpacity: 0.52,
+            duration: 1
+          })
+          .to(worldRig, {
+            posX: 0,
+            posY: 0.15,
+            posZ: -3.2,
+            scale: () => desktop() ? 0.72 : 0.52,
+            rotY: Math.PI * 1.4,
+            ringSpread: 1.18,
+            glowOpacity: 0.44,
+            duration: 1.2
+          })
+          .to(worldRig, {
+            posX: () => desktop() ? 2.1 : 0,
+            posY: -0.1,
+            posZ: -2.0,
+            scale: () => desktop() ? 0.86 : 0.58,
+            rotY: Math.PI * 2.1,
+            ringSpread: 1.0,
+            glowOpacity: 0.74,
+            duration: 1
+          });
+      }
 
       const clock = new THREE.Clock();
-      function animate() {
-        requestAnimationFrame(animate);
-        if (!heroVisible || document.hidden) return;
+      function loop() {
+        requestAnimationFrame(loop);
+        if (document.hidden) return;
         const t = clock.getElapsedTime();
 
+        // Smooth interpolation toward scroll-choreographed rig state
+        masterGroup.position.x += (worldRig.posX - masterGroup.position.x) * 0.06;
+        masterGroup.position.y += (worldRig.posY - masterGroup.position.y) * 0.06;
+        masterGroup.position.z += (worldRig.posZ - masterGroup.position.z) * 0.06;
+        const sc = masterGroup.scale.x + (worldRig.scale - masterGroup.scale.x) * 0.06;
+        masterGroup.scale.setScalar(sc);
+        glowSprite.material.opacity += (worldRig.glowOpacity - glowSprite.material.opacity) * 0.06;
+
+        // Fade pedestal gracefully as user scrolls past hero
+        const heroProgress = Math.min(1, window.scrollY / (window.innerHeight * 0.65));
+        pedestal.visible = heroProgress < 0.98 && !$("#homeView").hidden;
+        pedestal.position.y = -1.96 - heroProgress * 1.2;
+
         if (!reducedMotion) {
-          crystalPivot.position.y = 0.52 + Math.sin(t * 1.4) * 0.14;
-          crystalCube.rotation.y = Math.PI / 4 + t * 0.24 + dragOffsetY;
-          crystalCube.rotation.x = Math.PI / 4 + Math.sin(t * 0.55) * 0.09;
+          corePivot.position.y = 0.48 + Math.sin(t * 1.35) * 0.13;
+          crystalCube.rotation.y = Math.PI / 4 + t * 0.22 + dragY;
+          crystalCube.rotation.x = Math.PI / 4 + Math.sin(t * 0.52) * 0.08;
 
-          slGroup.rotation.y = Math.sin(t * 0.8) * 0.22 + targetRY * 0.9 + dragOffsetY * 0.35;
-          slGroup.rotation.x = targetRX * 0.6;
+          slGroup.rotation.y = Math.sin(t * 0.78) * 0.2 + targetRY * 0.8 + dragY * 0.35;
+          slGroup.rotation.x = targetRX * 0.5;
 
-          ring1.rotation.z = t * 0.72;
-          ring2.rotation.z = -t * 0.48;
-          sparkBead.position.set(Math.cos(t * 1.8) * 2.38, Math.sin(t * 1.8) * 2.38, 0);
+          ringPrimary.rotation.z = t * 0.7;
+          ringSecondary.rotation.z = -t * 0.46;
+          ringSecondary.scale.setScalar(worldRig.ringSpread);
+          sparkNode.position.set(Math.cos(t * 1.75) * 2.45, Math.sin(t * 1.75) * 2.45, 0);
 
           shards.forEach(s => {
-            s.position.y = s.userData.baseY + Math.sin(t * s.userData.speed + s.userData.phase) * 0.16;
+            s.position.y = s.userData.y + Math.sin(t * s.userData.speed + s.userData.phase) * 0.16;
             s.rotation.x += 0.004;
             s.rotation.y += 0.006;
           });
-          stars.rotation.y = t * 0.015;
+          starField.rotation.y = t * 0.014;
+          starField.position.y = -window.scrollY * 0.0008;
         }
 
-        stageGroup.rotation.y += (targetRY * 0.55 - stageGroup.rotation.y) * 0.05;
-        stageGroup.rotation.x += (targetRX * 0.35 - stageGroup.rotation.x) * 0.05;
+        masterGroup.rotation.y += ((worldRig.rotY + targetRY * 0.5) - masterGroup.rotation.y) * 0.05;
+        masterGroup.rotation.x += (targetRX * 0.3 - masterGroup.rotation.x) * 0.05;
         renderer.render(scene, camera);
       }
-      animate();
+      loop();
     }
 
     /* =========================================================================
@@ -2489,12 +2917,11 @@
       localStorage.setItem("sl-theme", theme);
       $("#themeIcon").innerHTML = theme === "dark" ? SUN_SVG : MOON_SVG;
       const meta = $('meta[name="theme-color"]');
-      if (meta) meta.setAttribute("content", theme === "dark" ? "#02050d" : "#eef4ff");
+      if (meta) meta.setAttribute("content", theme === "dark" ? "#02040a" : "#edf3ff");
     }
 
     function initTheme() {
-      const saved = localStorage.getItem("sl-theme") || "dark";
-      setTheme(saved);
+      setTheme(localStorage.getItem("sl-theme") || "dark");
       $("#themeToggle").addEventListener("click", () => {
         const cur = document.documentElement.getAttribute("data-theme");
         setTheme(cur === "dark" ? "light" : "dark");
@@ -2502,24 +2929,28 @@
     }
 
     /* =========================================================================
-       POPULATE CONTENT
+       CONTENT RENDERING (ZERO GITHUB LINKS)
     ========================================================================= */
     function renderContent() {
       $("#navBrandName").textContent = SITE_DATA.name;
-      $("#navGithub").href = SITE_DATA.githubUrl;
-      $("#heroBadgeText").textContent = SITE_DATA.hero.status;
+      $("#heroStatus").textContent = SITE_DATA.hero.status;
       $("#heroDesc").textContent = SITE_DATA.hero.description;
+      $("#heroDomain").textContent = SITE_DATA.domain;
       $("#aboutBio").textContent = SITE_DATA.about.bio;
-      $("#contactEmailText").textContent = SITE_DATA.email;
-      $("#footerYear").textContent = `© ${new Date().getFullYear()} ${SITE_DATA.name}. All rights reserved.`;
+      $("#contactEmailDisplay").textContent = SITE_DATA.email;
+      $("#contactDomainDisplay").textContent = `https://${SITE_DATA.domain}`;
+      $("#footerCopy").textContent = `© ${new Date().getFullYear()} ${SITE_DATA.name}`;
 
       if (SITE_DATA.avatarImage) {
-        $("#avatarFrame").innerHTML = `<img src="${esc(SITE_DATA.avatarImage)}" alt="${esc(SITE_DATA.name)}" loading="lazy" />`;
+        $("#avatarFrame").innerHTML = `
+          <img src="${esc(SITE_DATA.avatarImage)}" alt="${esc(SITE_DATA.name)}" loading="lazy" />
+          <div class="portrait-hud"><span>ID // SL-DEV</span><span>STATUS: ACTIVE</span></div>
+        `;
       }
 
-      $("#interestList").innerHTML = SITE_DATA.about.interests.map(item => `
-        <div class="interest-item">
-          <div class="interest-icon">${ICONS[item.icon] || ICONS.code}</div>
+      $("#focusStack").innerHTML = SITE_DATA.about.interests.map(item => `
+        <div class="focus-tile">
+          <div class="focus-icon">${ICONS[item.icon] || ICONS.code}</div>
           <div>
             <strong>${esc(item.title)}</strong>
             <span>${esc(item.detail)}</span>
@@ -2527,49 +2958,53 @@
         </div>
       `).join("");
 
-      $("#skillsPills").innerHTML = SITE_DATA.skills.map(s => `
-        <div class="skill-pill">
-          <span class="skill-dot" style="background:${esc(s.color)}; box-shadow:0 0 12px ${esc(s.color)}66;">${esc(s.code)}</span>
-          <span>${esc(s.name)}</span>
+      $("#skillsGrid").innerHTML = SITE_DATA.skills.map(s => `
+        <div class="skill-tile">
+          <div class="skill-top">
+            <span class="skill-badge" style="background:${esc(s.color)}; box-shadow:0 0 14px ${esc(s.color)}66;">${esc(s.code)}</span>
+            <span class="skill-tier">${esc(s.tier)}</span>
+          </div>
+          <strong>${esc(s.name)}</strong>
+          <div class="skill-bar"><i style="--lvl:${esc(s.level)};"></i></div>
         </div>
       `).join("");
 
-      $("#journeyTimeline").innerHTML = SITE_DATA.journey.map(m => `
-        <div class="milestone">
-          <div class="milestone-node">${ICONS[m.icon] || ICONS.star}</div>
-          <strong>${esc(m.title)}</strong>
-          <span>${esc(m.year)}</span>
-        </div>
+      $("#journeyNodes").innerHTML = SITE_DATA.journey.map(m => `
+        <article class="milestone-card">
+          <div class="milestone-orb">${ICONS[m.icon] || ICONS.star}</div>
+          <span class="milestone-year">${esc(m.year)}</span>
+          <h3>${esc(m.title)}</h3>
+          <p>${esc(m.desc)}</p>
+        </article>
       `).join("");
 
-      $("#socialOrbs").innerHTML = SITE_DATA.socials.map(s => `
-        <a class="social-orb" href="${esc(s.url)}" ${s.url.startsWith("http") ? 'target="_blank" rel="noopener"' : ""} aria-label="${esc(s.name)}" title="${esc(s.name)}">
-          ${ICONS[s.icon] || ICONS.globe}
-        </a>
-      `).join("");
+      $("#directLinks").innerHTML = `
+        <a class="social-btn" href="mailto:${esc(SITE_DATA.email)}">Direct Email</a>
+        <a class="social-btn" href="https://${esc(SITE_DATA.domain)}" target="_blank" rel="noopener">${esc(SITE_DATA.domain)}</a>
+      `;
 
-      $("#copyEmailBtn").addEventListener("click", () => copyToClipboard(SITE_DATA.email, "Email copied!"));
+      $("#copyEmailBtn").addEventListener("click", () => copyText(SITE_DATA.email, "Email copied!"));
     }
 
     /* =========================================================================
-       PROJECTS GRID WITH 3D PERSPECTIVE TILT & FILTERING
+       PROJECTS SHOWCASE WITH 3D TILT, SEARCH & FILTER
     ========================================================================= */
     let activeCat = "All";
     let searchTerm = "";
 
     function initProjects() {
       const cats = ["All", ...new Set(SITE_DATA.projects.map(p => p.category))];
-      const filtersEl = $("#projectFilters");
+      const filters = $("#projectFilters");
 
-      filtersEl.innerHTML = cats.map(c => `
+      filters.innerHTML = cats.map(c => `
         <button type="button" class="chip ${c === "All" ? "active" : ""}" data-cat="${esc(c)}">${esc(c)}</button>
       `).join("");
 
-      filtersEl.addEventListener("click", (e) => {
+      filters.addEventListener("click", (e) => {
         const btn = e.target.closest(".chip");
         if (!btn) return;
         activeCat = btn.dataset.cat;
-        $$(".chip", filtersEl).forEach(el => el.classList.toggle("active", el === btn));
+        $$(".chip", filters).forEach(el => el.classList.toggle("active", el === btn));
         renderProjects();
       });
 
@@ -2579,9 +3014,9 @@
       });
 
       $("#toggleFilterBtn").addEventListener("click", () => {
-        const drawer = $("#filterDrawer");
-        drawer.hidden = !drawer.hidden;
-        if (!drawer.hidden) $("#projectSearch").focus();
+        const bar = $("#filterBar");
+        bar.hidden = !bar.hidden;
+        if (!bar.hidden) $("#projectSearch").focus();
       });
 
       renderProjects();
@@ -2597,11 +3032,11 @@
 
       if (!list.length) {
         grid.innerHTML = `
-          <div style="grid-column:1/-1; text-align:center; padding:42px; border:1px dashed var(--border); border-radius:20px; color:var(--text-secondary);">
-            <p style="margin:0 0 12px;">No projects matched "<strong>${esc(searchTerm)}</strong>".</p>
-            <button type="button" class="btn btn-glass btn-sm" id="clearSearchBtn">Reset Filters</button>
+          <div style="grid-column:1/-1; text-align:center; padding:44px; border:1px dashed var(--border); border-radius:20px; color:var(--text-secondary);">
+            <p style="margin:0 0 12px;">No projects matched &ldquo;<strong>${esc(searchTerm)}</strong>&rdquo;.</p>
+            <button type="button" class="btn btn-glass btn-sm" id="resetFilterBtn">Reset Filters</button>
           </div>`;
-        $("#clearSearchBtn").addEventListener("click", () => {
+        $("#resetFilterBtn").addEventListener("click", () => {
           activeCat = "All";
           searchTerm = "";
           $("#projectSearch").value = "";
@@ -2613,37 +3048,40 @@
 
       grid.innerHTML = list.map(p => `
         <article class="project-card" data-accent="${esc(p.accent || "blue")}" data-tilt>
-          <div class="project-visual">${getProjectArtwork(p.visualType)}</div>
-          <div class="project-head">
+          <div class="project-stage">
+            <span class="stage-badge">${esc(p.category)} &middot; ${esc(p.status)}</span>
+            ${getShowcaseVisual(p.visualType)}
+          </div>
+          <div class="project-meta-row">
             <h3>${esc(p.title)}</h3>
-            ${p.featured ? '<span class="badge-featured">Featured</span>' : `<span class="badge-year">${esc(p.year)}</span>`}
+            ${p.featured ? '<span class="featured-pill">Featured</span>' : `<span class="year-label">${esc(p.year)}</span>`}
           </div>
-          <p class="project-summary">${esc(p.summary)}</p>
-          <div class="stack-row">
-            ${p.stack.slice(0, 4).map(t => `<span class="stack-tag">${esc(t)}</span>`).join("")}
+          <p class="project-desc">${esc(p.summary)}</p>
+          <div class="tag-row">
+            ${p.stack.slice(0, 4).map(t => `<span class="tech-tag">${esc(t)}</span>`).join("")}
           </div>
-          <div class="project-actions">
-            <a href="#project/${encodeURIComponent(p.slug)}" class="btn btn-electric btn-sm">View Project &rarr;</a>
-            <div class="project-icon-links">
-              ${p.repoUrl ? `<a class="mini-icon" href="${esc(p.repoUrl)}" target="_blank" rel="noopener" aria-label="${esc(p.title)} GitHub">${ICONS.github}</a>` : ""}
-              <button type="button" class="mini-icon" data-share-slug="${esc(p.slug)}" aria-label="Copy direct project link" title="Copy direct link">${ICONS.share}</button>
+          <div class="card-footer">
+            <a href="#project/${encodeURIComponent(p.slug)}" class="btn btn-electric btn-sm">Explore Case &rarr;</a>
+            <div class="card-mini-group">
+              ${p.liveUrl ? `<a class="mini-orb" href="${esc(p.liveUrl)}" target="_blank" rel="noopener" aria-label="Open live site" title="Open live site">${ICONS.external}</a>` : ""}
+              <button type="button" class="mini-orb" data-share-slug="${esc(p.slug)}" aria-label="Copy direct project link" title="Copy direct link">${ICONS.share}</button>
             </div>
           </div>
         </article>
       `).join("");
 
-      // 3D Perspective Card Tilt + Specular Tracking
+      // 3D Tilt & Reactive Glare on Pointer
       $$("[data-tilt]", grid).forEach(card => {
         card.addEventListener("pointermove", (e) => {
           if (e.pointerType === "touch") return;
           const r = card.getBoundingClientRect();
           const x = e.clientX - r.left;
           const y = e.clientY - r.top;
-          const rx = ((y / r.height) - 0.5) * -9;
-          const ry = ((x / r.width) - 0.5) * 9;
+          const rx = ((y / r.height) - 0.5) * -10;
+          const ry = ((x / r.width) - 0.5) * 10;
           card.style.setProperty("--mx", `${x}px`);
           card.style.setProperty("--my", `${y}px`);
-          card.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg) translateY(-4px)`;
+          card.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg) translateY(-5px)`;
         });
         card.addEventListener("pointerleave", () => {
           card.style.transform = "";
@@ -2654,24 +3092,29 @@
         btn.addEventListener("click", () => {
           const slug = btn.dataset.shareSlug;
           const url = `${window.location.origin}${window.location.pathname}#project/${encodeURIComponent(slug)}`;
-          copyToClipboard(url, "Direct project link copied!");
+          copyText(url, "Direct project link copied!");
         });
       });
     }
 
     /* =========================================================================
-       CINEMATIC GSAP PAGE TRANSITIONS & DIRECT-LINK PROJECT ROUTER
+       DUAL-SHUTTER GSAP PAGE TRANSITIONS & DIRECT-LINK ROUTER
     ========================================================================= */
-    function runTransition(swapFn) {
-      const curtain = $("#pageCurtain");
+    function runShutterTransition(swapFn) {
       if (typeof gsap === "undefined" || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
         swapFn();
         return;
       }
+      const top = $("#shutterTop");
+      const bottom = $("#shutterBottom");
+      const badge = $("#shutterBadge");
+
       gsap.timeline()
-        .to(curtain, { opacity: 1, scale: 1, duration: 0.22, ease: "power2.in" })
+        .to([top, bottom], { scaleY: 1, duration: 0.3, ease: "power3.inOut" })
+        .to(badge, { opacity: 1, scale: 1, duration: 0.16, ease: "power2.out" }, "-=0.08")
         .add(swapFn)
-        .to(curtain, { opacity: 0, scale: 1.04, duration: 0.34, ease: "power2.out" });
+        .to(badge, { opacity: 0, scale: 0.8, duration: 0.16, ease: "power2.in" })
+        .to([top, bottom], { scaleY: 0, duration: 0.36, ease: "power3.inOut" }, "-=0.04");
     }
 
     function renderProjectDetail(slug) {
@@ -2692,63 +3135,63 @@
       document.title = `${p.title} — ${SITE_DATA.name}`;
 
       $("#projectDetailRoot").innerHTML = `
-        <div class="detail-topbar">
-          <a href="#projects" class="btn btn-glass btn-sm">&larr; Back to Projects</a>
-          <button type="button" class="btn btn-glass btn-sm" id="copyCaseUrlBtn">Copy Direct Link</button>
+        <div class="detail-nav-bar">
+          <a href="#projects" class="btn btn-glass btn-sm">&larr; Back to Archive</a>
+          <button type="button" class="btn btn-glass btn-sm" id="copyDetailUrlBtn">Copy Direct Link</button>
         </div>
 
         <article class="detail-hero">
           <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center;">
-            <span class="badge-featured">${esc(p.category)}</span>
-            <span class="stack-tag">${esc(p.status)}</span>
+            <span class="featured-pill">${esc(p.category)}</span>
+            <span class="tech-tag">${esc(p.status)}</span>
           </div>
           <h1>${esc(p.title)}</h1>
           <p class="detail-overview">${esc(p.overview)}</p>
 
-          <div class="meta-strip">
-            <div class="meta-cell"><span>YEAR</span><strong>${esc(p.year)}</strong></div>
-            <div class="meta-cell"><span>ROLE</span><strong>${esc(p.role)}</strong></div>
-            <div class="meta-cell"><span>STATUS</span><strong>${esc(p.status)}</strong></div>
+          <div class="detail-meta">
+            <div class="meta-box"><span>YEAR</span><strong>${esc(p.year)}</strong></div>
+            <div class="meta-box"><span>ROLE</span><strong>${esc(p.role)}</strong></div>
+            <div class="meta-box"><span>STATUS</span><strong>${esc(p.status)}</strong></div>
           </div>
 
-          <div class="stack-row" style="margin-bottom:22px;">
-            ${p.stack.map(t => `<span class="stack-tag">${esc(t)}</span>`).join("")}
+          <div class="tag-row" style="margin-bottom:24px;">
+            ${p.stack.map(t => `<span class="tech-tag">${esc(t)}</span>`).join("")}
           </div>
 
           <div style="display:flex; flex-wrap:wrap; gap:12px;">
-            ${p.repoUrl ? `<a class="btn btn-electric" href="${esc(p.repoUrl)}" target="_blank" rel="noopener">View on GitHub &rarr;</a>` : ""}
-            ${p.liveUrl ? `<a class="btn btn-glass" href="${esc(p.liveUrl)}" target="_blank" rel="noopener">Visit Live Site</a>` : ""}
+            ${p.liveUrl ? `<a class="btn btn-electric" href="${esc(p.liveUrl)}" target="_blank" rel="noopener">Visit Live Site &rarr;</a>` : ""}
+            <a class="btn ${p.liveUrl ? "btn-glass" : "btn-electric"}" href="#contact">Discuss This Build &rarr;</a>
           </div>
         </article>
 
-        <div class="detail-columns">
-          <div class="detail-box">
-            <h2>Key Capabilities</h2>
+        <div class="detail-cols">
+          <div class="detail-card">
+            <h2>Core Capabilities</h2>
             <ul>${p.features.map(f => `<li>${esc(f)}</li>`).join("")}</ul>
           </div>
-          <div class="detail-box">
+          <div class="detail-card">
             <h2>Engineering Decisions</h2>
             <ul>${p.decisions.map(d => `<li>${esc(d)}</li>`).join("")}</ul>
           </div>
         </div>
 
         <nav class="detail-pager" aria-label="Adjacent projects">
-          <a href="#project/${encodeURIComponent(prev.slug)}" class="pager-card">
+          <a href="#project/${encodeURIComponent(prev.slug)}" class="pager-link">
             <span>&larr; PREVIOUS PROJECT</span>
             <strong>${esc(prev.title)}</strong>
           </a>
-          <a href="#project/${encodeURIComponent(next.slug)}" class="pager-card" style="text-align:right;">
+          <a href="#project/${encodeURIComponent(next.slug)}" class="pager-link" style="text-align:right;">
             <span>NEXT PROJECT &rarr;</span>
             <strong>${esc(next.title)}</strong>
           </a>
         </nav>
       `;
 
-      $("#copyCaseUrlBtn").addEventListener("click", () => copyToClipboard(directUrl, "Direct link copied!"));
+      $("#copyDetailUrlBtn").addEventListener("click", () => copyText(directUrl, "Direct link copied!"));
       window.scrollTo({ top: 0, behavior: "instant" });
     }
 
-    let currentMode = "home";
+    let currentView = "home";
     function handleRoute(animate = false) {
       const params = new URLSearchParams(window.location.search);
       const qProj = params.get("project");
@@ -2761,33 +3204,33 @@
 
       if (match) {
         const slug = decodeURIComponent(match[1]);
-        const go = () => {
-          currentMode = "project";
+        const openDetail = () => {
+          currentView = "project";
           renderProjectDetail(slug);
         };
-        animate ? runTransition(go) : go();
+        animate ? runShutterTransition(openDetail) : openDetail();
         return;
       }
 
-      const showHome = () => {
-        const wasProject = currentMode === "project";
-        currentMode = "home";
+      const openHome = () => {
+        const fromProject = currentView === "project";
+        currentView = "home";
         $("#projectView").hidden = true;
         $("#homeView").hidden = false;
-        document.title = `${SITE_DATA.name} — Developer. Builder. Digital Creator.`;
+        document.title = `${SITE_DATA.name} — Digital Architect & Developer`;
         if (hash && hash !== "#home") {
           const target = $(hash);
-          if (target) target.scrollIntoView({ behavior: wasProject ? "instant" : "smooth" });
-        } else if (wasProject) {
+          if (target) target.scrollIntoView({ behavior: fromProject ? "instant" : "smooth" });
+        } else if (fromProject) {
           window.scrollTo({ top: 0, behavior: "instant" });
         }
       };
 
-      animate && currentMode === "project" ? runTransition(showHome) : showHome();
+      animate && currentView === "project" ? runShutterTransition(openHome) : openHome();
     }
 
     /* =========================================================================
-       CONTACT FORM (VALIDATED + ZERO-BACKEND MAILTO / FORMSPREE / COPY)
+       VALIDATED CONTACT FORM
     ========================================================================= */
     function initContact() {
       const form = $("#contactForm");
@@ -2804,15 +3247,15 @@
         statusEl.textContent = "";
 
         if (nameEl.value.trim().length < 2) {
-          $("#errName").textContent = "Enter your name.";
+          $("#errName").textContent = "Please enter your name.";
           ok = false;
         }
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value.trim())) {
-          $("#errEmail").textContent = "Enter a valid email.";
+          $("#errEmail").textContent = "Please enter a valid email address.";
           ok = false;
         }
         if (msgEl.value.trim().length < 8) {
-          $("#errMessage").textContent = "Write at least 8 characters.";
+          $("#errMessage").textContent = "Please write at least 8 characters.";
           ok = false;
         }
         return ok;
@@ -2829,7 +3272,7 @@
         };
 
         if (SITE_DATA.formEndpoint) {
-          statusEl.textContent = "Sending...";
+          statusEl.textContent = "Transmitting...";
           try {
             const res = await fetch(SITE_DATA.formEndpoint, {
               method: "POST",
@@ -2838,10 +3281,10 @@
             });
             if (!res.ok) throw new Error();
             form.reset();
-            statusEl.textContent = "Message delivered!";
+            statusEl.textContent = "Transmission delivered!";
             showToast("Message sent!");
           } catch {
-            statusEl.textContent = "Couldn't send online — tap Copy Draft instead.";
+            statusEl.textContent = "Offline or blocked — use Copy Draft instead.";
           }
           return;
         }
@@ -2849,64 +3292,111 @@
         const subject = encodeURIComponent(`Portfolio Inquiry from ${payload.name}`);
         const body = encodeURIComponent(`Name: ${payload.name}\nEmail: ${payload.email}\n\n${payload.message}`);
         window.location.href = `mailto:${SITE_DATA.email}?subject=${subject}&body=${body}`;
-        statusEl.textContent = "Opened your email app with a ready-to-send draft.";
-        showToast("Email draft opened!");
+        statusEl.textContent = "Opened your email app with a pre-filled message.";
+        showToast("Email draft ready!");
       });
 
       $("#copyDraftBtn").addEventListener("click", () => {
         if (!validate()) return;
-        const text = `To: ${SITE_DATA.email}\nFrom: ${nameEl.value.trim()} (${emailEl.value.trim()})\n\n${msgEl.value.trim()}`;
-        copyToClipboard(text, "Formatted message copied!");
+        const formatted = `To: ${SITE_DATA.email}\nFrom: ${nameEl.value.trim()} (${emailEl.value.trim()})\n\n${msgEl.value.trim()}`;
+        copyText(formatted, "Formatted draft copied!");
       });
     }
 
     /* =========================================================================
-       GSAP SCROLL CHOREOGRAPHY & NAVIGATION STATE
+       SLIDING NAV DOCK, MICRO-INTERACTIONS & GSAP CHOREOGRAPHY
     ========================================================================= */
-    function initAnimationsAndNav() {
+    function initNavigationAndMotion() {
       const navbar = $("#navbar");
-      const scrollLine = $("#scrollLine");
-      const mobileMenu = $("#mobileMenu");
+      const scrollTopBar = $("#scrollRailTop");
+      const drawer = $("#mobileDrawer");
       const menuBtn = $("#menuToggle");
-      const navLinks = $$("#desktopNav a");
+      const navDock = $("#navDock");
+      const navSlider = $("#navSlider");
+      const navLinks = $$("#navDock a");
+      const storyDots = $$("#storyRail .story-dot");
+
+      function moveSlider(activeEl) {
+        if (!activeEl || !navSlider || navDock.offsetParent === null) return;
+        const dockRect = navDock.getBoundingClientRect();
+        const elRect = activeEl.getBoundingClientRect();
+        navSlider.style.width = `${elRect.width}px`;
+        navSlider.style.transform = `translateX(${elRect.left - dockRect.left - 5}px)`;
+      }
+
+      moveSlider(navLinks[0]);
+      window.addEventListener("resize", () => moveSlider($("#navDock a.active")));
 
       menuBtn.addEventListener("click", () => {
-        const open = mobileMenu.classList.toggle("open");
+        const open = drawer.classList.toggle("open");
         menuBtn.setAttribute("aria-expanded", String(open));
       });
       $$("[data-mobile-link]").forEach(a => a.addEventListener("click", () => {
-        mobileMenu.classList.remove("open");
+        drawer.classList.remove("open");
         menuBtn.setAttribute("aria-expanded", "false");
       }));
 
+      storyDots.forEach(dot => {
+        dot.addEventListener("click", () => {
+          const target = $(dot.dataset.jump);
+          if (target) target.scrollIntoView({ behavior: "smooth" });
+        });
+      });
+
       $("#backToTop").addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
-      // Scroll progress & active nav highlight
-      const sections = ["home", "about", "projects", "skills", "journey", "contact"];
+      // Cursor spotlight & magnetic buttons (desktop only)
+      const aura = $("#cursorAura");
+      if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+        window.addEventListener("pointermove", (e) => {
+          aura.style.opacity = "1";
+          aura.style.left = `${e.clientX}px`;
+          aura.style.top = `${e.clientY}px`;
+        }, { passive: true });
+
+        $$(".magnetic").forEach(btn => {
+          btn.addEventListener("pointermove", (e) => {
+            const r = btn.getBoundingClientRect();
+            const dx = (e.clientX - (r.left + r.width / 2)) * 0.16;
+            const dy = (e.clientY - (r.top + r.height / 2)) * 0.16;
+            btn.style.transform = `translate(${dx}px, ${dy}px)`;
+          });
+          btn.addEventListener("pointerleave", () => { btn.style.transform = ""; });
+        });
+      }
+
+      // Scroll progress & chapter sync
+      const chapterIds = ["home", "about", "projects", "skills", "journey", "contact"];
       window.addEventListener("scroll", () => {
         const y = window.scrollY;
         navbar.classList.toggle("scrolled", y > 24);
-        const h = document.documentElement.scrollHeight - window.innerHeight;
-        scrollLine.style.width = `${h > 0 ? Math.min(100, (y / h) * 100) : 0}%`;
+        const maxH = document.documentElement.scrollHeight - window.innerHeight;
+        scrollTopBar.style.width = `${maxH > 0 ? Math.min(100, (y / maxH) * 100) : 0}%`;
 
-        let current = "home";
-        for (const id of sections) {
+        let activeId = "home";
+        for (const id of chapterIds) {
           const el = document.getElementById(id);
-          if (el && el.getBoundingClientRect().top <= 160) current = id;
+          if (el && el.getBoundingClientRect().top <= 200) activeId = id;
         }
-        navLinks.forEach(a => a.classList.toggle("active", a.getAttribute("href") === `#${current}`));
+
+        navLinks.forEach(link => {
+          const match = link.getAttribute("href") === `#${activeId}`;
+          link.classList.toggle("active", match);
+          if (match) moveSlider(link);
+        });
+        storyDots.forEach(dot => dot.classList.toggle("active", dot.dataset.jump === `#${activeId}`));
       }, { passive: true });
 
-      // GSAP Entry & ScrollTrigger Reveals (Graceful fallback if offline)
+      // GSAP Kinetic Entrance, Reveals & Journey Laser Scrub
       if (typeof gsap !== "undefined" && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
         try {
           if (typeof ScrollTrigger !== "undefined") gsap.registerPlugin(ScrollTrigger);
 
           gsap.from(".gs-hero", {
-            y: 28,
+            y: 30,
             opacity: 0,
-            duration: 0.85,
-            stagger: 0.09,
+            duration: 0.9,
+            stagger: 0.08,
             ease: "power3.out",
             delay: 0.25
           });
@@ -2914,25 +3404,36 @@
           if (typeof ScrollTrigger !== "undefined") {
             $$(".gs-reveal").forEach(el => {
               gsap.from(el, {
-                y: 36,
+                y: 40,
                 opacity: 0,
-                duration: 0.8,
+                duration: 0.85,
                 ease: "power3.out",
                 scrollTrigger: { trigger: el, start: "top 86%", once: true }
               });
             });
 
             gsap.from(".project-card", {
-              y: 32,
+              y: 36,
               opacity: 0,
-              duration: 0.72,
+              duration: 0.78,
               stagger: 0.12,
               ease: "power3.out",
-              scrollTrigger: { trigger: "#projectsGrid", start: "top 84%", once: true }
+              scrollTrigger: { trigger: "#projectsGrid", start: "top 85%", once: true }
+            });
+
+            gsap.fromTo("#timelineLaser", { scaleX: 0 }, {
+              scaleX: 1,
+              ease: "none",
+              scrollTrigger: {
+                trigger: "#journey",
+                start: "top 75%",
+                end: "center 45%",
+                scrub: 0.8
+              }
             });
           }
         } catch {
-          // Elements remain visible if GSAP ScrollTrigger cannot initialize
+          // Graceful visibility fallback
         }
       }
     }
@@ -2948,15 +3449,14 @@
       handleRoute(false);
       window.addEventListener("hashchange", () => handleRoute(true));
 
-      // Wait briefly for deferred Three.js / GSAP scripts, then dismiss preloader
-      const bootMotion = () => {
-        initHero3D();
-        initAnimationsAndNav();
-        setTimeout(() => $("#preloader").classList.add("done"), 380);
+      const launchStage = () => {
+        initWorld3D();
+        initNavigationAndMotion();
+        setTimeout(() => $("#preloader").classList.add("done"), 420);
       };
 
-      if (document.readyState === "complete") bootMotion();
-      else window.addEventListener("load", bootMotion, { once: true });
+      if (document.readyState === "complete") launchStage();
+      else window.addEventListener("load", launchStage, { once: true });
     });
   </script>
 </body>
